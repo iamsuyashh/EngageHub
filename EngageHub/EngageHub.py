@@ -1,6 +1,6 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 from rxconfig import config
-
+from EngageHub.components import navbar
 import reflex as rx
 
 docs_url = "https://reflex.dev/docs/getting-started/introduction"
@@ -14,32 +14,21 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
-    return rx.fragment(
-        rx.color_mode_button(rx.color_mode_icon(), float="right"),
-        rx.vstack(
-            rx.heading("Welcome to Reflex!", font_size="2em"),
-            rx.box("Get started by editing ", rx.code(filename, font_size="1em")),
-            rx.link(
-                "Check out our docs!",
-                href=docs_url,
-                border="0.1em solid",
-                padding="0.5em",
-                border_radius="0.5em",
-                _hover={
-                    "color": rx.color_mode_cond(
-                        light="rgb(107,99,246)",
-                        dark="rgb(179, 175, 255)",
-                    )
-                },
-            ),
-            spacing="1.5em",
-            font_size="2em",
-            padding_top="10%",
-        ),
-        
+     return rx.vstack(
+        navbar(),
+        # chat.chat(),
+        # chat.action_bar(),
+        # sidebar(),
+        # modal(),
+        # bg=styles.bg_dark_color,
+        # color=styles.text_light_color,
+        min_h="100vh",
+        align_items="stretch",
+        spacing="0",
     )
 
 
 # Create app instance and add index page.
 app = rx.App()
 app.add_page(index)
+app.compile()
