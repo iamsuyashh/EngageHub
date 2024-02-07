@@ -10,7 +10,10 @@ def navbar():
             rx.hstack(
                 rx.breadcrumb(
                     rx.breadcrumb_item(
+                        rx.breadcrumb_link(
                         rx.heading("EngageHub", size="xl", color="indigo",),
+                       href="/"
+                       )
                     ),
                 ),
             ),
@@ -31,11 +34,11 @@ def navbar():
                         "Login",
                         color="indigo",
                         mr="2",
-                        href="/",
+                        href="/signIn",
                 ),
                 rx.link(
-                    rx.button("Example", bg="indigo", color="white"),
-                    href="https://reflex.dev",
+                    rx.button("SignUp", bg="indigo", color="white"),
+                    href="/signUp",
                     # color="rgb(107,99,246)",
                     button=True,
                 ),
@@ -51,4 +54,5 @@ def navbar():
         position="sticky",
         top="0",
         z_index="100",
+        # width="100"
     )

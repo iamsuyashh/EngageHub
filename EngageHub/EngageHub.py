@@ -1,6 +1,7 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 from rxconfig import config
 from EngageHub.components import navbar
+from EngageHub.pages import home, signUp, signIn
 import reflex as rx
 
 docs_url = "https://reflex.dev/docs/getting-started/introduction"
@@ -15,20 +16,16 @@ class State(rx.State):
 
 def index() -> rx.Component:
      return rx.vstack(
-        navbar(),
-        # chat.chat(),
-        # chat.action_bar(),
-        # sidebar(),
-        # modal(),
-        # bg=styles.bg_dark_color,
-        # color=styles.text_light_color,
+        home(),
+       
         min_h="100vh",
-        align_items="stretch",
         spacing="0",
     )
 
 
 # Create app instance and add index page.
 app = rx.App()
-app.add_page(index)
+app.add_page(home, route="/")
+app.add_page(signUp, route="/signUp")
+app.add_page(signIn, route="/signIn")
 app.compile()
