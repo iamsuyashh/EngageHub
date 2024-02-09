@@ -41,7 +41,7 @@ def register_form():
                     margin_bottom="1em",
                     width = "100%"
                 ),
-                rx.button("Create Event", type_="submit" , bg = "indigo" , color = "white",variant="outline" , margin_top = "5em" , style={"margin-top" : "3em"}),
+               
                 rx.input(
                     placeholder="End time",
                     name="end_time",
@@ -65,6 +65,7 @@ def register_form():
                     margin_bottom="1em",
                     width = "100%"
                 ),
+                rx.button("Create Event", type_="submit" , bg = "indigo" , color = "white",variant="outline" , margin_top = "5em" , style={"margin-top" : "3em"}),
             ),
             # on_submit=FormState.handle_submit,
             reset_on_submit=True,

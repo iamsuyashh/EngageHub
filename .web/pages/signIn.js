@@ -55,22 +55,16 @@ export default function Component() {
 </HStack>
 </Box>
   <Heading sx={{"color": "indigo"}}>
-  {`Sign In`}
+  {`Login`}
 </Heading>
   <VStack>
   <Box as={`form`} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
   <VStack>
-  <Input name={`event_title`} placeholder={`Event Title`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
-  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
-  <Input name={`event_venue`} placeholder={`Event Venue`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
-  <Input name={`start_time`} placeholder={`Start time`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
-  <Input name={`start_date`} placeholder={`Start date`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`date`}/>
+  <Input name={`event_title`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
+  <Input name={`email`} placeholder={`Enter Password`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
   <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
-  {`Create Event`}
+  {`Login`}
 </Button>
-  <Input name={`end_time`} placeholder={`End time`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
-  <Input name={`end_date`} placeholder={`End date`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`date`}/>
-  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
 </VStack>
 </Box>
 </VStack>
