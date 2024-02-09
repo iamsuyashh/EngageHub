@@ -7,6 +7,12 @@ import reflex as rx
 docs_url = "https://reflex.dev/docs/getting-started/introduction"
 filename = f"{config.app_name}/{config.app_name}.py"
 
+class FormState(rx.State):
+    form_data: dict = {}
+
+    def handle_submit(self, form_data: dict):
+        """Handle the form submit."""
+        self.form_data = form_data
 
 class State(rx.State):
     """The app state."""
@@ -21,7 +27,6 @@ def index() -> rx.Component:
         min_h="100vh",
         spacing="0",
     )
-
 
 # Create app instance and add index page.
 app = rx.App()
