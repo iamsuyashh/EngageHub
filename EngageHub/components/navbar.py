@@ -20,7 +20,7 @@ def navbar():
             rx.hstack(
                 rx.link(
                     rx.button("Event Gallery",color_scheme="none", color="indigo",size="lg" ),
-                    href="https://reflex.dev",
+                    href="/gallery",
                     button=True,
                 ),
                 rx.link(

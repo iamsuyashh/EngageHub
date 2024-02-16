@@ -1,12 +1,11 @@
 /** @jsxImportSource @emotion/react */
 
 
-import { Fragment, useCallback } from "react"
+import { Fragment } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Input, Link, VStack } from "@chakra-ui/react"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Card, CardBody, CardHeader, Container, Grid, Heading, HStack, Link, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
-import { getRefValue, getRefValues, set_val } from "/utils/state"
 import NextHead from "next/head"
 
 
@@ -16,7 +15,7 @@ export default function Component() {
   return (
     <Fragment>
   <Fragment_fd0e7cb8f9fb4669a6805377d925fba0/>
-  <Container sx={{"max-width": "100vw", "text-align": "center"}}>
+  <Container sx={{"max-width": "100vw"}}>
   <Box sx={{"backdropFilter": "auto", "backdropBlur": "lg", "p": "4", "position": "sticky", "top": "0", "zIndex": "100"}}>
   <HStack justify={`space-between`}>
   <HStack>
@@ -54,23 +53,46 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <Heading sx={{"color": "indigo"}}>
-  {`Sign up`}
+  <Container sx={{"max-width": "100vw"}}>
+  <Grid sx={{"gap": 1}} templateColumns={`repeat(3, 1fr)`}>
+  <Card sx={{"templateColumns": "repeat(1, 1fr)", "h": "em", "width": "80%", "gap": 1}}>
+  <CardHeader>
+  <Heading size={`lg`}>
+  {`Header`}
 </Heading>
-  <VStack>
-  <Box as={`form`} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
-  <VStack>
-  <Input name={`event_title`} placeholder={`Enter your Name`} sx={{"margin-bottom": "1em", "width": "100%"}} type={`text`}/>
-  <Input name={`event_title`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
-  <Input name={`email`} placeholder={`Enter Your phone number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
-  <Input name={`email`} placeholder={`Enter Your Password`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
-  <Input name={`email`} placeholder={`Confirm your password`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
-  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
-  {`Login`}
-</Button>
-</VStack>
-</Box>
-</VStack>
+</CardHeader>
+  <CardBody>
+  <Text>
+  {`Body of the Card Component`}
+</Text>
+</CardBody>
+</Card>
+  <Card sx={{"templateColumns": "repeat(2, 1fr)", "h": "10em", "width": "80%", "gap": 2}}>
+  <CardHeader>
+  <Heading size={`lg`}>
+  {`Header`}
+</Heading>
+</CardHeader>
+  <CardBody>
+  <Text>
+  {`Body of the Card Component`}
+</Text>
+</CardBody>
+</Card>
+  <Card sx={{"templateColumns": "repeat(3, 1fr)", "h": "10em", "width": "80%", "gap": 3}}>
+  <CardHeader>
+  <Heading size={`lg`}>
+  {`Header`}
+</Heading>
+</CardHeader>
+  <CardBody>
+  <Text>
+  {`Body of the Card Component`}
+</Text>
+</CardBody>
+</Card>
+</Grid>
+</Container>
 </Container>
   <NextHead>
   <title>

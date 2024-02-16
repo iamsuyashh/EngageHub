@@ -13,7 +13,6 @@ import NextHead from "next/head"
 
 
 export function Box_73383feecb389896f0fb5c5e6c531475 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
   
     const handleSubmit_70110ad10ab93e8a00802b8b95a11736 = useCallback((ev) => {
         const $form = ev.target
@@ -27,6 +26,7 @@ export function Box_73383feecb389896f0fb5c5e6c531475 () {
         }
     })
     
+  const [addEvents, connectError] = useContext(EventLoopContext);
 
 
   return (
@@ -62,7 +62,7 @@ export default function Component() {
 </Breadcrumb>
 </HStack>
   <HStack>
-  <Link as={NextLink} href={`https://reflex.dev`} sx={{"button": true}}>
+  <Link as={NextLink} href={`/gallery`} sx={{"button": true}}>
   <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
   {`Event Gallery`}
 </Button>
