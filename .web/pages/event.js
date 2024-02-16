@@ -1,53 +1,22 @@
 /** @jsxImportSource @emotion/react */
 
 
-import { Fragment, useCallback, useContext } from "react"
+import { Fragment, useCallback } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Input, Link, VStack } from "@chakra-ui/react"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Input, Link, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
-import { EventLoopContext } from "/utils/context"
-import { Event, getRefValue, getRefValues, set_val } from "/utils/state"
+import { getRefValue, getRefValues, set_val } from "/utils/state"
 import NextHead from "next/head"
 
 
-
-export function Box_203eea19fd3d2dd6fb9ad705bbd0aa68 () {
-  
-    const handleSubmit_72fd6f722e4659be8309b08bdaabae8e = useCallback((ev) => {
-        const $form = ev.target
-        ev.preventDefault()
-        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
-
-        addEvents([Event("state.form_data.handle_submit", {form_data:form_data})])
-
-        if (true) {
-            $form.reset()
-        }
-    })
-    
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-
-  return (
-    <Box as={`form`} onSubmit={handleSubmit_72fd6f722e4659be8309b08bdaabae8e} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
-  <VStack>
-  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
-  <Input name={`password`} placeholder={`Enter Password`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`password`}/>
-  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
-  {`Login`}
-</Button>
-</VStack>
-</Box>
-  )
-}
 
 export default function Component() {
 
   return (
     <Fragment>
   <Fragment_fd0e7cb8f9fb4669a6805377d925fba0/>
-  <Container sx={{"max-width": "100vw", "text-align": "center"}}>
+  <Container sx={{"max-width": "100vw"}}>
   <Box sx={{"backdropFilter": "auto", "backdropBlur": "lg", "p": "4", "position": "sticky", "top": "0", "zIndex": "100"}}>
   <HStack justify={`space-between`}>
   <HStack>
@@ -85,11 +54,25 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <Heading sx={{"color": "indigo"}}>
-  {`Login`}
-</Heading>
   <VStack>
-  <Box_203eea19fd3d2dd6fb9ad705bbd0aa68/>
+  <Heading sx={{"margin-top": "20px"}}>
+  {`Create `}
+  <Text as={`span`} sx={{"color": "Indigo"}}>
+  {` Event`}
+</Text>
+</Heading>
+  <Box as={`form`} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+  <VStack>
+  <Input name={`event_title`} placeholder={`Enter your Event Title`} sx={{"margin-bottom": "1em", "width": "100%"}} type={`text`}/>
+  <Input name={`event_title`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
+  <Input name={`email`} placeholder={`Enter Your phone number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
+  <Input name={`email`} placeholder={`Enter Your Password`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
+  <Input name={`email`} placeholder={`Confirm your password`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
+  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
+  {`Login`}
+</Button>
+</VStack>
+</Box>
 </VStack>
 </Container>
   <NextHead>

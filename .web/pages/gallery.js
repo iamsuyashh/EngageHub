@@ -58,36 +58,36 @@ export default function Component() {
   <Card sx={{"templateColumns": "repeat(1, 1fr)", "h": "em", "width": "80%", "gap": 1}}>
   <CardHeader>
   <Heading size={`lg`}>
-  {`Header`}
+  {`Card 1`}
 </Heading>
 </CardHeader>
   <CardBody>
   <Text>
-  {`Body of the Card Component`}
+  {`Body of Card 1`}
 </Text>
 </CardBody>
 </Card>
   <Card sx={{"templateColumns": "repeat(2, 1fr)", "h": "10em", "width": "80%", "gap": 2}}>
   <CardHeader>
   <Heading size={`lg`}>
-  {`Header`}
+  {`Card 2`}
 </Heading>
 </CardHeader>
   <CardBody>
   <Text>
-  {`Body of the Card Component`}
+  {`Body of Card 2`}
 </Text>
 </CardBody>
 </Card>
   <Card sx={{"templateColumns": "repeat(3, 1fr)", "h": "10em", "width": "80%", "gap": 3}}>
   <CardHeader>
   <Heading size={`lg`}>
-  {`Header`}
+  {`Card 3`}
 </Heading>
 </CardHeader>
   <CardBody>
   <Text>
-  {`Body of the Card Component`}
+  {`Body of Card 3`}
 </Text>
 </CardBody>
 </Card>
