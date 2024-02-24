@@ -1,10 +1,9 @@
 import reflex as rx
 from ..components import navbar
-from ..components import gallery_cards
+from ..components.gallery import gallery_cards
 
-def gallery():
+def galleryPage():
     return rx.container(
         navbar(),
-        gallery_cards(),
         style={"max-width": "100vw"} 
     )

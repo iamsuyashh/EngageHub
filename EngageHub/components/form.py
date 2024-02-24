@@ -10,7 +10,7 @@ def handle_Form_Submit(form_data):
 
     try:
         user = auth.sign_in_with_email_and_password(email, password)
-        ClientStorageState.currentUser = user
+        ClientStorageState.set_my_local_storage = "Vaibhav"
         add_user_to_firestore("user","user.email")
         print("User signed in:", user)
         rx.redirect('/')
