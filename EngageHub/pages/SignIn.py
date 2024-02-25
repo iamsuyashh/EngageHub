@@ -6,5 +6,5 @@ def signIn():
       navbar(),
       rx.heading("Login" , color = "indigo"),
       form_example(),
-      style={"max-width": "100vw","text-align": "center"}
+      style={"max-width": "100vw","text-align": "center","background-color":"#F8F8FA"}
     )

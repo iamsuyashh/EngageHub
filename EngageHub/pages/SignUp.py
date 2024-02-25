@@ -8,5 +8,5 @@ def signUp():
       navbar(),
       rx.heading("Sign up" , color = "indigo"),
       signup_form(),
-      style={"max-width": "100vw","text-align": "center"}
+      style={"max-width": "100vw","text-align": "center","background-color":"#F8F8FA"}
     )

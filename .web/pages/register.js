@@ -16,7 +16,7 @@ export default function Component() {
   return (
     <Fragment>
   <Fragment_fd0e7cb8f9fb4669a6805377d925fba0/>
-  <Container sx={{"max-width": "100vw", "text-align": "center"}}>
+  <Container sx={{"max-width": "100vw", "text-align": "center", "background-color": "#F8F8FA"}}>
   <Box sx={{"backdropFilter": "auto", "backdropBlur": "lg", "p": "4", "position": "sticky", "top": "0", "zIndex": "100"}}>
   <HStack justify={`space-between`}>
   <HStack>

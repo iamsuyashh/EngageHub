@@ -5,3 +5,5 @@ from .form1 import signup_form
 from .registerform import register_form
 from .gallery import gallery_cards
 from .eventform import event_form
+from .FeaturedVideo import featuredVideo
+from .upcomingEvents import upcomingEvents
