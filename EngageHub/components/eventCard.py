@@ -2,6 +2,7 @@ import reflex as rx
 
 def qa(event_data : dict) -> rx.Component:
     return rx.flex(
+        rx.link(
         rx.card(
             # rx.hstack(
             rx.box(
@@ -24,14 +25,16 @@ def qa(event_data : dict) -> rx.Component:
         style={
             "height":"100%",
             "width":"100%",
-              "drop-shadow":"1"
+              "drop-shadow":"1",
+              "text-decoration": "none",
         }
         ),
        
         # spacing="2",
         margin_y="1em",
         margin_x="1em",
-
+        href= event_data["link"]
+        ),
     )
 
 

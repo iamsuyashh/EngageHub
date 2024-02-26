@@ -9,7 +9,6 @@ print()
 # Now you can use the current_user variable in your code
 def home():
     """The home page."""
-    read_event_details()
     return rx.container( 
        navbar(),
       #  gallery_cards(),

@@ -62,16 +62,12 @@ export default function Component() {
   <Heading sx={{"align": "left"}}>
   {`Upcoming Events`}
 </Heading>
-  <Link as={NextLink} href={`/gallery`} sx={{"align": "center", "justify": "center", "margin-left": "30"}}>
-  <Button sx={{"bg": "indigo", "color": "white"}}>
-  {`Learn More`}
-</Button>
-</Link>
 </Flex>
   <Box>
   <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}>
-  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "asChild": true}}>
+  <Flex>
+  <Link as={NextLink} href={`/register`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
   <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
@@ -79,116 +75,29 @@ export default function Component() {
   {`TantraUtsav`}
 </Heading>
   <Text>
-  {`Location 1`}
+  {`Bandra`}
 </Text>
-  <Link as={NextLink} href={`/`}>
-  <Button>
-  {`Submit`}
-</Button>
-</Link>
 </Box>
 </CardBody>
 </Card>
+</Link>
 </Flex>
-  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "asChild": true}}>
+  <Flex>
+  <Link as={NextLink} href={`/gallery`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
   <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
   <Heading>
-  {`Event 1`}
+  {`Hackstomp`}
 </Heading>
   <Text>
-  {`Location 1`}
+  {`Andheri`}
 </Text>
-  <Link as={NextLink} href={`/register`}>
-  <Button>
-  {`Submit`}
-</Button>
-</Link>
 </Box>
 </CardBody>
 </Card>
-</Flex>
-  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
-  {`Event 1`}
-</Heading>
-  <Text>
-  {`Location 1`}
-</Text>
-  <Link as={NextLink} href={`/`}>
-  <Button>
-  {`Submit`}
-</Button>
 </Link>
-</Box>
-</CardBody>
-</Card>
-</Flex>
-  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
-  {`Event 1`}
-</Heading>
-  <Text>
-  {`Location 1`}
-</Text>
-  <Link as={NextLink} href={`/register`}>
-  <Button>
-  {`Submit`}
-</Button>
-</Link>
-</Box>
-</CardBody>
-</Card>
-</Flex>
-  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
-  {`Event 1`}
-</Heading>
-  <Text>
-  {`Location 1`}
-</Text>
-  <Link as={NextLink} href={`/register`}>
-  <Button>
-  {`Submit`}
-</Button>
-</Link>
-</Box>
-</CardBody>
-</Card>
-</Flex>
-  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
-  {`Event 1`}
-</Heading>
-  <Text>
-  {`Location 1`}
-</Text>
-  <Link as={NextLink} href={`/register`}>
-  <Button>
-  {`Submit`}
-</Button>
-</Link>
-</Box>
-</CardBody>
-</Card>
 </Flex>
 </SimpleGrid>
 </Box>

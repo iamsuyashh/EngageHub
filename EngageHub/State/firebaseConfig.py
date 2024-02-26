@@ -22,10 +22,10 @@ data={
     'Event_Name': "Techno",
     'Details':"adsifknaksdfn"
 }
-docRef = firestoreDb.collection("Events").document('Event1')
-docRef.set(data)
+# docRef = firestoreDb.collection("Events").document('Event1')
+# docRef.set(data)
 auth = firebase.auth()
-db = firebase.database()
+db = firestore.client()
 def add_user_to_firestore(user_id, user_data):
     try:
         # Add the user to the 'users' collection
@@ -38,9 +38,22 @@ def add_user_to_firestore(user_id, user_data):
 
 def read_event_details():
     try:
-        # Add the user to the 'users' collection
-        event_data =  db.child('events').get().val()
-        if event_data:
-            print("Event Data:",event_data)
+        # Initialize an empty list to store event details
+        events_list = []
+
+        # Retrieve all documents from the 'Events' collection
+        events_ref = db.collection('Event').stream()
+        for event in events_ref:
+            # Convert each event document to a dictionary
+            event_dict = event.to_dict()
+
+            # Append the event dictionary to the events list
+            events_list.append(event_dict)
+
+        # Return the list of event dictionaries
+        return events_list if events_list else []  # Return an empty list if events_list is None
+
     except Exception as e:
         print("Error:", e)
+        return []
+
