@@ -36,7 +36,7 @@ export default function Component() {
   {`Event Gallery`}
 </Button>
 </Link>
-  <Link as={NextLink} href={`https://reflex.dev`} sx={{"button": true}}>
+  <Link as={NextLink} href={`/about`} sx={{"button": true}}>
   <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
   {`About Us`}
 </Button>

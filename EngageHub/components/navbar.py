@@ -25,7 +25,7 @@ def navbar():
                 ),
                 rx.link(
                     rx.button("About Us",color_scheme="none", color="indigo",size="lg"),
-                    href="https://reflex.dev",
+                    href="/about",
                     button=True,
                 ),
             ),
