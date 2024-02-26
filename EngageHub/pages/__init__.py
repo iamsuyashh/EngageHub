@@ -4,3 +4,4 @@ from .SignIn import signIn
 from .Register import register
 from .galleryPage import galleryPage
 from .event import event
+from .about import about

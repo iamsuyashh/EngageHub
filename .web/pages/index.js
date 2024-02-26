@@ -37,7 +37,7 @@ export default function Component() {
   {`Event Gallery`}
 </Button>
 </Link>
-  <Link as={NextLink} href={`https://reflex.dev`} sx={{"button": true}}>
+  <Link as={NextLink} href={`/about`} sx={{"button": true}}>
   <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
   {`About Us`}
 </Button>
@@ -81,11 +81,6 @@ export default function Component() {
   <Text>
   {`Location 1`}
 </Text>
-  <Link as={NextLink} href={`/`}>
-  <Button>
-  {`Submit`}
-</Button>
-</Link>
 </Box>
 </CardBody>
 </Card>
@@ -101,11 +96,6 @@ export default function Component() {
   <Text>
   {`Location 1`}
 </Text>
-  <Link as={NextLink} href={`/register`}>
-  <Button>
-  {`Submit`}
-</Button>
-</Link>
 </Box>
 </CardBody>
 </Card>
@@ -121,11 +111,6 @@ export default function Component() {
   <Text>
   {`Location 1`}
 </Text>
-  <Link as={NextLink} href={`/`}>
-  <Button>
-  {`Submit`}
-</Button>
-</Link>
 </Box>
 </CardBody>
 </Card>
@@ -141,11 +126,6 @@ export default function Component() {
   <Text>
   {`Location 1`}
 </Text>
-  <Link as={NextLink} href={`/register`}>
-  <Button>
-  {`Submit`}
-</Button>
-</Link>
 </Box>
 </CardBody>
 </Card>
@@ -161,11 +141,6 @@ export default function Component() {
   <Text>
   {`Location 1`}
 </Text>
-  <Link as={NextLink} href={`/register`}>
-  <Button>
-  {`Submit`}
-</Button>
-</Link>
 </Box>
 </CardBody>
 </Card>
@@ -181,11 +156,6 @@ export default function Component() {
   <Text>
   {`Location 1`}
 </Text>
-  <Link as={NextLink} href={`/register`}>
-  <Button>
-  {`Submit`}
-</Button>
-</Link>
 </Box>
 </CardBody>
 </Card>

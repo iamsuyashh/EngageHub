@@ -7,3 +7,4 @@ from .gallery import gallery_cards
 from .eventform import event_form
 from .FeaturedVideo import featuredVideo
 from .upcomingEvents import upcomingEvents
+from .about import about_page
