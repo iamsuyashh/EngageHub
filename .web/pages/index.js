@@ -83,7 +83,7 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
-  <Link as={NextLink} href={`/gallery`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`/eventgallery`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
@@ -92,7 +92,24 @@ export default function Component() {
   {`Hackstomp`}
 </Heading>
   <Text>
-  {`Andheri`}
+  {`Mira Road`}
+</Text>
+</Box>
+</CardBody>
+</Card>
+</Link>
+</Flex>
+  <Flex>
+  <Link as={NextLink} href={`/eventgallery`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
+  <Heading>
+  {`ITSA`}
+</Heading>
+  <Text>
+  {`Borivali`}
 </Text>
 </Box>
 </CardBody>

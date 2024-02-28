@@ -1,7 +1,7 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 from rxconfig import config
 from EngageHub.components import navbar , gallery_cards
-from EngageHub.pages import galleryPage, home, signUp, signIn,register,event,about
+from EngageHub.pages import galleryPage, home, signUp, signIn,register,event,about,eventinfo
 import reflex as rx
 
 docs_url = "https://reflex.dev/docs/getting-started/introduction"
@@ -37,6 +37,7 @@ app.add_page(register, route="/register")
 app.add_page(gallery_cards,route="/gallery")
 app.add_page(event,route="/event")
 app.add_page(about,route="/about")
+app.add_page(eventinfo,route="/eventdetails")
 
 
 app.compile()

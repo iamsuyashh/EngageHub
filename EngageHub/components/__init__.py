@@ -8,3 +8,4 @@ from .eventform import event_form
 from .FeaturedVideo import featuredVideo
 from .upcomingEvents import upcomingEvents
 from .about import about_page
+from .eventdetails import event_details
