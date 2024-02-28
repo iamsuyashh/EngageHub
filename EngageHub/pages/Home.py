@@ -6,6 +6,12 @@ from ..State.firebaseConfig import auth, firebase, read_event_details
 # Create an instance of the ClientStorageState cl
 ClientStorageState.set_my_cookie = "Vaibhav"
 print()
+
+def get_data(self):
+        # Fetch data
+   data = read_event_details()
+   print("data",data)
+@rx.page(on_load=get_data)
 # Now you can use the current_user variable in your code
 def home():
     """The home page."""

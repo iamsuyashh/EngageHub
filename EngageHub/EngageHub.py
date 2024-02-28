@@ -25,6 +25,7 @@ def index() -> rx.Component:
         home(),
        
         min_h="100vh",
+        bg="#F8F8FA",
         spacing="0",
     )
 
@@ -34,7 +35,7 @@ app.add_page(home, route="/")
 app.add_page(signUp, route="/signUp")
 app.add_page(signIn, route="/signIn")
 app.add_page(register, route="/register")
-app.add_page(gallery_cards,route="/gallery")
+app.add_page(galleryPage,route="/eventgallery")
 app.add_page(event,route="/event")
 app.add_page(about,route="/about")
 
