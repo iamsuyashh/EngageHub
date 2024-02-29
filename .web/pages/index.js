@@ -66,7 +66,7 @@ export default function Component() {
   <Box>
   <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}>
   <Flex>
-  <Link as={NextLink} href={`/register`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`/eventdetails`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
@@ -75,7 +75,7 @@ export default function Component() {
   {`TantraUtsav`}
 </Heading>
   <Text>
-  {`Bandra`}
+  {`Bhayander`}
 </Text>
 </Box>
 </CardBody>
@@ -83,7 +83,7 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
-  <Link as={NextLink} href={`/eventgallery`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`/eventdetails`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
@@ -100,7 +100,7 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
-  <Link as={NextLink} href={`/eventgallery`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`/eventdetails`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
