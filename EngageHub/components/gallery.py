@@ -8,9 +8,9 @@ event_list = [
 
 ]
 def qa(event_data : dict) -> rx.Component:
-    return rx.responsive_grid(
+    return rx.flex(
         rx.card(
-            rx.hstack(
+            # rx.hstack(
             rx.box(
                 rx.image(src=event_data["url"]),
                 rx.heading(event_data["header"]),
@@ -19,23 +19,28 @@ def qa(event_data : dict) -> rx.Component:
                 ),
                 rx.link(
                 rx.button(
-                    "Submit",
+                    "Register",
                 ),
                 href=event_data["link"]
                 )
             ),
          as_child=True,
-        ),
+        # ),
         size="lg",
-        spacing="2",
+        style={
+            "height":"100%",
+            "width":"100%",
+            "drop-shadow":"1",
+            "text-decoration": "none",
+        },
         ),
-       
-        spacing="2",
+        margin_y="1em",
+        margin_x="1em",
         # margin_y="1em",
     )
 
 
-def gallery_cards() -> rx.Component:
+def gallery_cards(event_list) -> rx.Component:
     return rx.box(
         rx.responsive_grid(
         *[
@@ -43,6 +48,11 @@ def gallery_cards() -> rx.Component:
         ],
         rows=[3],
         columns=[4],
+         style={
+            "height":"40vh",
+            "width":"80vw",
+            # "background-color":"blue",
+        }
         )
     )
 

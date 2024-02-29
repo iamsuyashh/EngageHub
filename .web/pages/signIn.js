@@ -3,7 +3,7 @@
 
 import { Fragment, useCallback, useContext } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Input, Link, VStack } from "@chakra-ui/react"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Input, Link, Spacer, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import { EventLoopContext } from "/utils/context"
@@ -47,7 +47,7 @@ export default function Component() {
   return (
     <Fragment>
   <Fragment_fd0e7cb8f9fb4669a6805377d925fba0/>
-  <Container sx={{"max-width": "100vw", "text-align": "center", "background-color": "#F8F8FA"}}>
+  <Container sx={{"max-width": "100vw", "height": "100vh", "text-align": "center", "background-color": "#F8F8FA"}}>
   <Box sx={{"backdropFilter": "auto", "backdropBlur": "lg", "p": "4", "position": "sticky", "top": "0", "zIndex": "100"}}>
   <HStack justify={`space-between`}>
   <HStack>
@@ -62,7 +62,7 @@ export default function Component() {
 </Breadcrumb>
 </HStack>
   <HStack>
-  <Link as={NextLink} href={`/gallery`} sx={{"button": true}}>
+  <Link as={NextLink} href={`/eventgallery`} sx={{"button": true}}>
   <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
   {`Event Gallery`}
 </Button>
@@ -85,6 +85,7 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
+  <Spacer/>
   <Heading sx={{"color": "indigo"}}>
   {`Login`}
 </Heading>

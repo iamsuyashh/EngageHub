@@ -20,7 +20,7 @@ def navbar():
             rx.hstack(
                 rx.link(
                     rx.button("Event Gallery",color_scheme="none", color="indigo",size="lg" ),
-                    href="/gallery",
+                    href="/eventgallery",
                     button=True,
                 ),
                 rx.link(

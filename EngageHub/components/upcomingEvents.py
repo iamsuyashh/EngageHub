@@ -11,9 +11,9 @@ from ..State.firebaseConfig import read_event_details
 #      {"url": "https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg", "header": "Event 1", "location": "Location 1", "link": "/register"},
 # ]\
 
-event_list =  read_event_details()
+# event_list =  read_event_details()
 
-def upcomingEvents():
+def upcomingEvents(event_list):
     return rx.vstack(
         rx.flex(
             rx.flex(
@@ -28,7 +28,7 @@ def upcomingEvents():
         # "justify":"center",
         # "margin-left":"30"
         # },
-        # href="/gallery",
+        # href="/gallery",p
         # ),
         ),
         eventCard(event_list),

@@ -30,7 +30,7 @@ export default function Component() {
 </Breadcrumb>
 </HStack>
   <HStack>
-  <Link as={NextLink} href={`/gallery`} sx={{"button": true}}>
+  <Link as={NextLink} href={`/eventgallery`} sx={{"button": true}}>
   <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
   {`Event Gallery`}
 </Button>
