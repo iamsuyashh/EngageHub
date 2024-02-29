@@ -54,19 +54,19 @@ export default function Component() {
 </HStack>
 </Box>
   <Box sx={{"max-width": "800px", "margin": "auto", "padding": "2em", "font-family": "Arial, sans-serif", "line-height": "1.6", "color": "black"}}>
-  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "10px"}}>
+  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "15px"}}>
   {`About Engage Hub`}
 </Heading>
   <Text>
   {`Welcome to Engage Hub - Your Ultimate Event Update and Information Hub for College and IT Departments! Engage Hub is a dedicated platform designed to streamline and enhance your college experience by providing up-to-date information on events, activities, and crucial information related to the Information Technology department.`}
 </Text>
-  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "10px"}}>
+  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "15px"}}>
   {`Our Mission`}
 </Heading>
   <Text>
   {`At Engage Hub, our mission is to empower students, faculty, and staff with the latest and most relevant information to foster a connected and informed community. We believe that staying informed is the key to a successful and engaging college experience.`}
 </Text>
-  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "10px"}}>
+  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "15px"}}>
   {`Features`}
 </Heading>
   <Box sx={{"margin-bottom": "1em"}}>
@@ -83,7 +83,7 @@ export default function Component() {
   {`Personalized Experience: Customize your preferences to receive notifications and updates tailored to your specific interests and academic needs.`}
 </Text>
 </Box>
-  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "10px"}}>
+  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "15px"}}>
   {`Why Choose Engage Hub?`}
 </Heading>
   <Box sx={{"margin-bottom": "1em"}}>

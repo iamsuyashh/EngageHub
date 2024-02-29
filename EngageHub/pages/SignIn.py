@@ -4,7 +4,8 @@ from ..components import form_example
 def signIn():
     return rx.container(
       navbar(),
+      rx.spacer(),
       rx.heading("Login" , color = "indigo"),
       form_example(),
-      style={"max-width": "100vw","text-align": "center","background-color":"#F8F8FA"}
+      style={"max-width": "100vw","height":"100vh","text-align": "center","background-color":"#F8F8FA"}
     )

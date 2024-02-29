@@ -1,19 +1,27 @@
 import reflex as rx
 from ..State.firebaseConfig import auth, add_user_to_firestore
-from ..State.CustomState import ClientStorageState
+from ..State.CustomState import UserCredentials ,user_state
 currentUser : str = rx.LocalStorage("")
+
+credentials = UserCredentials()
 def handle_Form_Submit(form_data):
     email = form_data.get("email")  # Access form_data correctly
     password = form_data.get("password")
     print("Email:",email)
     print("Password:",password)
-
+    
     try:
         user = auth.sign_in_with_email_and_password(email, password)
-        ClientStorageState.set_my_local_storage = "Vaibhav"
-        add_user_to_firestore("user","user.email")
+        UserCredentials.set_my_local_storage = "Vaibhav"
+        # add_user_to_firestore("user","user.email")
         print("User signed in:", user)
+        credentials.username = "Vaibhav"
+        user_state.authenticated = True
         rx.redirect('/')
+        print("Username: ",credentials.username)
+        # rx.script("")
+        # userCred = auth.current_user()
+        # print("Current User:", userCred)
         return rx.window_alert("LogIn SuccessFull")
         # Here you can perform any additional actions after successful sign-in
     except Exception as e:
@@ -27,6 +35,7 @@ class FormData(rx.State):
     def handle_submit(self, form_data: dict):
         """Handle the form submit."""
         self.form_data = form_data
+       
         print(form_data)
         rx.window_alert("Hello")
         handle_Form_Submit(form_data)
