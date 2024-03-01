@@ -19,20 +19,20 @@ def register_form():
                     margin_bottom="1em",
                     width = "100%"
                 ),
-                # rx.input(
-                #     placeholder="Event Number",
-                #     name="event_number",
-                #     style={"margin-bottom" : "1em"},
-                #     margin_bottom="1em",
-                #     width = "100%"
-                # ),
-                # rx.input(
-                #     placeholder="Start time",
-                #     name="start_time",
-                #     style={"margin-bottom" : "1em"},
-                #     margin_bottom="1em",
-                #     width = "100%"
-                # ),
+                rx.input(
+                    placeholder="Event Number",
+                    name="event_number",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"
+                ),
+                rx.input(
+                    placeholder="Enter PID",
+                    name="pid_number",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"
+                ),
                 # rx.input(
                 #     placeholder="Start date",
                 #     name="start_date",

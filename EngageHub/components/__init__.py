@@ -9,3 +9,4 @@ from .FeaturedVideo import featuredVideo
 from .upcomingEvents import upcomingEvents
 from .about import about_page
 from .eventdetails import event_details
+# from .eventregister import event_register

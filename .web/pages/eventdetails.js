@@ -69,7 +69,7 @@ export default function Component() {
   {`EngageHub organized a 3D Modeling Workshop using Blender on 16th February at 5 PM. The workshop taught participants the magic of creating stunning 3D models and animations using Blender. It was suitable for both beginners and experienced users. The event was followed by a blender-render competition, which added to the excitement.`}
 </Text>
 </Container>
-  <Container sx={{"margin-top": "1rem"}}>
+  <Container sx={{"margin-top": "0.5rem"}}>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
   {`Date: February 16, 2023`}
 </Text>

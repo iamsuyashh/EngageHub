@@ -98,7 +98,7 @@ export default function Component() {
 </Text>
 </Box>
   <Box sx={{"text-align": "center"}}>
-  <Button sx={{"href": "/signUp", "color": "indigo", "dark": true}}>
+  <Button sx={{"href": "/register", "color": "indigo", "dark": true}}>
   {`Get Started Today!`}
 </Button>
 </Box>

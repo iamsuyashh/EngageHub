@@ -27,7 +27,7 @@ def about_page():
             style={"margin-bottom": "1em"}
         ),
         rx.box(
-            rx.button("Get Started Today!", href="/signUp", color="indigo", dark=True),
+            rx.button("Get Started Today!", href="/register", color="indigo", dark=True),
             style={"text-align": "center"}
         ),
         style={

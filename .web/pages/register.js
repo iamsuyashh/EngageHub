@@ -62,6 +62,8 @@ export default function Component() {
   <VStack>
   <Input name={`event_name`} placeholder={`Event Name`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
   <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
+  <Input name={`event_number`} placeholder={`Event Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
+  <Input name={`pid_number`} placeholder={`Enter PID`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
   <Input name={`number`} placeholder={`Enter your Phone Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
   <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
   {`Register`}
