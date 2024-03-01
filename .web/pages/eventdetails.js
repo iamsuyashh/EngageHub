@@ -30,7 +30,7 @@ export default function Component() {
 </Breadcrumb>
 </HStack>
   <HStack>
-  <Link as={NextLink} href={`/gallery`} sx={{"button": true}}>
+  <Link as={NextLink} href={`/eventgallery`} sx={{"button": true}}>
   <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
   {`Event Gallery`}
 </Button>
@@ -53,17 +53,16 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <Container sx={{"max-width": "100vw"}}>
   <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
   <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
-  <Link as={NextLink} href={`register`} sx={{"textDecoration": "none"}}>
+  <Link as={NextLink} href={`/eventdetails`} sx={{"textDecoration": "none"}}>
   <Button sx={{"background-color": "Indigo", "color": "white", "dark": "true", "padding": "15px 30px", "border": "none", "border-radius": "8px", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%, -50%)", "opacity": "0.8", "font-size": "1.5rem"}}>
   {`Register`}
 </Button>
 </Link>
   <Container sx={{"display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem"}}>
   <Heading sx={{"color": "black", "font-size": "2rem", "margin-bottom": "0.5rem"}}>
-  {`Event Name`}
+  {`TantraUtsav`}
 </Heading>
   <Container sx={{"flex": "1", "margin-right": "2rem"}}>
   <Text sx={{"margin-bottom": "0.2rem", "color": "black"}}>
@@ -78,9 +77,8 @@ export default function Component() {
   {`Time: 5 PM`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Location: Mira road`}
+  {`Location: Mira , Bhayander`}
 </Text>
-</Container>
 </Container>
 </Container>
 </Container>

@@ -56,4 +56,23 @@ def read_event_details():
     except Exception as e:
         print("Error:", e)
         return []
+    
+def read_event_info(eventName):
+    try:
+        # Retrieve the document from the 'Events' collection
+        event_list=[]
+        event_ref = db.collection('Event').document(eventName).get()
+        if event_ref.exists:
+            # Convert the document to a dictionary
+            event_dict = event_ref.to_dict()
+            event_list.append(event_dict)
+            return event_dict  # Return a list containing the event dictionary
+        else:
+            print(f"Event '{eventName}' does not exist")
+            return []  # Return an empty list if the document does not exist
+
+    except Exception as e:
+        print("Error:", e)
+        return []
+
 

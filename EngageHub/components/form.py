@@ -17,17 +17,21 @@ def handle_Form_Submit(form_data):
         print("User signed in:", user)
         credentials.username = "Vaibhav"
         user_state.authenticated = True
-        rx.redirect('/')
+        rx.chakra.alert(
+        rx.chakra.alert_icon(),
+        rx.chakra.alert_title(
+            "Error Reflex version is out of date."
+        ),
+        status="error",
+        ),
         print("Username: ",credentials.username)
         # rx.script("")
         # userCred = auth.current_user()
-        # print("Current User:", userCred)
-        return rx.window_alert("LogIn SuccessFull")
+        return rx.redirect("/signUp")
         # Here you can perform any additional actions after successful sign-in
     except Exception as e:
         print("Error:", e)
         # Handle sign-in error, e.g., display error message to the user
-
     return rx.text("Sign-in successful!")  # Example response after sign-in
 class FormData(rx.State):
     form_data: dict = {}

@@ -5,8 +5,9 @@ from ..State.CustomState import UserCredentials , user_state
 from ..State.firebaseConfig import auth, firebase, read_event_details
 # Create an instance of the ClientStorageState cl
 cred = UserCredentials()
-user = auth.current_user()
-print(user)
+rx.script("console.log('inline javascript')")
+# user = auth.current_user() 
+# print(user)
 print("UserState: ",user_state.authenticated)
 rx.script("console.log('inline javascript')")
 event_details = read_event_details() 
