@@ -55,7 +55,7 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <ReactPlayer controls={false} height={`60vh`} url={`https://www.youtube.com/embed/9bZkp7q19f0?si=MyRuo-IT0SyvRpSF&amp;controls=0`} width={`100%`}/>
+  <ReactPlayer controls={false} height={`60vh`} url={`https://www.youtube.com/embed/eu1QGisT8jg?si=8YU8rzGD6P7Sno0-&amp;controls=0`} width={`100%`}/>
   <VStack sx={{"margin": "10", "height": "100vh"}}>
   <Flex direction={`column`}>
   <Flex>
