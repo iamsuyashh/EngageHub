@@ -1,11 +1,25 @@
 import reflex as rx
-from ..State.firebaseConfig import auth
+from ..State.firebaseConfig import auth, add_user_to_firestore
 class RegisterData(rx.State):
     form_data: dict = {}
 
     def handle_submit(self, form_data: dict):
             """Handle the form submit."""
             self.form_data = form_data
+            username = form_data.get("email")
+            password = form_data.get("password")
+
+            try:
+                user = auth.create_user_with_email_and_password(username,password)
+                add_user_to_firestore(form_data)
+                auth.current_user = user
+                auth.send_email_verification(user['idToken'])
+                print("User Cred: ", user)
+                print(auth.current_user)
+
+            except Exception as e:
+                print("Error:", e)
+
             print(form_data)
             # auth.create_user_with_email_and_password()
     # def getData():
@@ -24,7 +38,7 @@ def signup_form():
                 ),
                 rx.input(
                     placeholder="Enter your email",
-                    name="event_title",
+                    name="email",
                      type_="email",
                     style={"margin-bottom" : "1em"},
                     margin_bottom="1em",
@@ -33,7 +47,7 @@ def signup_form():
                 rx.input(
                     placeholder="Enter Your phone number",
                     name="number",
-                    type_="number",
+                    type_="tel",
                     style={"margin-bottom" : "1em"},
                     margin_bottom="1em",
                     width = "100%"),

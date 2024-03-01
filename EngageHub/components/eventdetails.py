@@ -8,7 +8,7 @@ def event_details(event_data) -> rx.Component:
         rx.image(src=event_data["url"], width="100%", height="30vw", style={"object-fit": "cover", "border-radius": "10px", "position": "relative"}),
         rx.link(
             rx.button("Register", style={"background-color": "Indigo", "color": "white", "dark":"true", "padding": "15px 30px", "border": "none", "border-radius": "8px", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%, -50%)", "opacity": "0.8", "font-size": "1.5rem" }),
-            href=event_data["link"],
+            href=event_data["redirect"],
             style={"textDecoration": "none"},
         ),
         rx.container(
