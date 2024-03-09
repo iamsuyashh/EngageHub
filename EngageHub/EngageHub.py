@@ -23,37 +23,26 @@ class State(rx.State):
         self.is_authenticated = False
         self.is_admin = False
 
-state = State()
+class UserStorage:
+    user_email: str = rx.LocalStorage("")
 
-def login(username, password):
-    state.do_login(username, password)
+    @staticmethod
+    def set_user_email(email: str):
+        UserStorage.user_email = email
 
-def logout():
-    state.do_logout()
-
-def check_login():
-    try:
-        user = auth.current_user
-        print(user)
-        return True if user else False
-    except:
-        return False
-
-def check_admin():
-    return state.is_admin
+    @staticmethod
+    def get_user_email() -> str:
+        return UserStorage.user_email
 
 
 def index() -> rx.Component:
-    if check_login():
         return rx.vstack(
             home(),
 
             min_h="100vh",
             bg="#F8F8FA",
             spacing="0",
-        )    
-    else:
-        rx.redirect("/signIn")                     
+        )                   
 
 # Create app instance and add index page.
 app = rx.App()

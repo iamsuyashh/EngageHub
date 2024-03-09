@@ -1,9 +1,11 @@
 import reflex as rx
 from ..State.firebaseConfig import auth, add_user_to_firestore
 from ..State.CustomState import UserCredentials ,user_state
-currentUser : str = rx.LocalStorage("")
-
+class ClStorage(rx.State):
+    currentUser = rx.LocalStorage("")
+# from ..EngageHub import UserStorage
 credentials = UserCredentials()
+# ClStorage.currentUser = "VaibhavSutar"
 def handle_Form_Submit(form_data):
     email = form_data.get("email")  # Access form_data correctly
     password = form_data.get("password")
@@ -11,23 +13,29 @@ def handle_Form_Submit(form_data):
     print("Password:",password)
     
     try:
-        user = auth.sign_in_with_email_and_password(email, password)
-        UserCredentials.set_my_local_storage = "Vaibhav"
-        # add_user_to_firestore("user","user.email")
-        print("User signed in:", user)
-        credentials.username = "Vaibhav"
-        user_state.authenticated = True
-        rx.chakra.alert(
-        rx.chakra.alert_icon(),
-        rx.chakra.alert_title(
-            "Error Reflex version is out of date."
-        ),
-        status="error",
-        ),
-        print("Username: ",credentials.username)
-        # rx.script("")
-        # userCred = auth.current_user()
-        return rx.redirect("/signUp")
+            user = auth.sign_in_with_email_and_password(email, password)
+            UserCredentials.set_my_local_storage = "Vaibhav"
+            # add_user_to_firestore("user","user.email")
+            # print("User signed in:", user["email"])
+            credentials.username = "Vaibhav"
+            user_state.authenticated = True
+            userEmail = user["email"]
+            ClStorage.currentUser = userEmail
+            # ClStorage.set_currentUser
+            # currentUser("Vaibhav")
+            # UserCredentials.add_var()
+            # UserStorage.set_user_email("Vaibhav@gmail.com")
+            rx.chakra.alert(
+            rx.chakra.alert_icon(),
+            rx.chakra.alert_title(
+                "Error Reflex version is out of date."
+            ),
+            status="error",
+            ),
+            print("Username: ",credentials.username)
+            # rx.script("")
+            # userCred = auth.current_user()
+            return rx.redirect("/")
         # Here you can perform any additional actions after successful sign-in
     except Exception as e:
         print("Error:", e)

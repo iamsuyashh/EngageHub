@@ -2,7 +2,7 @@
 
 
 import { Fragment } from "react"
-import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
+import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Text_c5b8c6f2a19aa0b9fcae9feb006f6e2c } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Image as ChakraImage, Link, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
@@ -53,6 +53,7 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
+  <Text_c5b8c6f2a19aa0b9fcae9feb006f6e2c/>
   <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
   <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
   <Link as={NextLink} href={`/register`} sx={{"textDecoration": "none"}}>
