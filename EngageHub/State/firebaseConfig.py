@@ -26,12 +26,11 @@ data={
 # docRef.set(data)
 auth = firebase.auth()
 db = firestore.client()
-def add_user_to_firestore(user_id, user_data):
+def add_user_to_firestore(user_data):
     try:
+        email = user_data.get("email")
         # Add the user to the 'users' collection
-        db.child('events').child("event1").set(user_data)
-        users = db.child("users").get()
-        print(users.val())
+        db.collection('users').document(email).set(user_data)
         print("User added to Firestore successfully!")
     except Exception as e:
         print("Error:", e)

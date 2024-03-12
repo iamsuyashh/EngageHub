@@ -27,6 +27,30 @@ def event_form():
                     margin_bottom="1em",
                     width = "100%"),
                 rx.input(
+                    placeholder="Start date",
+                    name="start_date",
+                    type_="date",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"
+                ),
+               
+                rx.input(
+                    placeholder="End time",
+                    name="end_time",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"
+                ),
+                rx.input(
+                    placeholder="End date",
+                    name="end_date",
+                    type_="date",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"
+                ),
+                rx.input(
                     placeholder="Enter Your Password",
                     name="email",
                     type_="email",
