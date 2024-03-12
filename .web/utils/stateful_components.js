@@ -2,7 +2,7 @@
 
 
 import { Fragment, useContext } from "react"
-import { EventLoopContext } from "/utils/context"
+import { EventLoopContext, StateContexts } from "/utils/context"
 import { Event, isTrue } from "/utils/state"
 import { Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text } from "@chakra-ui/react"
 import "focus-visible/dist/focus-visible"
@@ -41,5 +41,16 @@ export function Fragment_fd0e7cb8f9fb4669a6805377d925fba0 () {
   <Fragment/>
 )}
 </Fragment>
+  )
+}
+
+export function Text_c5b8c6f2a19aa0b9fcae9feb006f6e2c () {
+  const state = useContext(StateContexts.state)
+
+
+  return (
+    <Text>
+  {state.router.page.full_raw_path}
+</Text>
   )
 }

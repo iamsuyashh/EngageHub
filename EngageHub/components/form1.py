@@ -39,9 +39,9 @@ def signup_form():
                 rx.input(
                     placeholder="Enter your email",
                     name="email",
-                     type_="email",
+                    type_="email",
                     style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
+                    margin_bottom="1em",                                    
                     width = "100%"
                 ),
                 rx.input(

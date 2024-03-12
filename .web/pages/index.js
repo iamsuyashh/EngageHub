@@ -1,16 +1,28 @@
 /** @jsxImportSource @emotion/react */
 
 
-import { Fragment } from "react"
-import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
+import { Fragment, useContext } from "react"
+import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Text_c5b8c6f2a19aa0b9fcae9feb006f6e2c } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Card, CardBody, Container, Flex, Heading, HStack, Image as ChakraImage, Link, SimpleGrid, Spacer, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import dynamic from "next/dynamic"
+import { StateContexts } from "/utils/context"
 import NextHead from "next/head"
 
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
+
+export function Text_38658ec7233cb02bff9c3ad493636077 () {
+  const state__cl_storage = useContext(StateContexts.state__cl_storage)
+
+
+  return (
+    <Text>
+  {state__cl_storage.currentUser}
+</Text>
+  )
+}
 
 export default function Component() {
 
@@ -56,6 +68,7 @@ export default function Component() {
 </HStack>
 </Box>
   <ReactPlayer controls={false} height={`60vh`} url={`https://www.youtube.com/embed/eu1QGisT8jg?si=8YU8rzGD6P7Sno0-&amp;controls=0`} width={`100%`}/>
+  <Text_38658ec7233cb02bff9c3ad493636077/>
   <VStack sx={{"margin": "10", "height": "100vh"}}>
   <Flex direction={`column`}>
   <Flex>
@@ -76,6 +89,7 @@ export default function Component() {
 </Heading>
   <Text>
   {`Bhayander`}
+  <Text_c5b8c6f2a19aa0b9fcae9feb006f6e2c/>
 </Text>
 </Box>
 </CardBody>
@@ -93,6 +107,7 @@ export default function Component() {
 </Heading>
   <Text>
   {`Mira Road`}
+  <Text_c5b8c6f2a19aa0b9fcae9feb006f6e2c/>
 </Text>
 </Box>
 </CardBody>
@@ -110,6 +125,7 @@ export default function Component() {
 </Heading>
   <Text>
   {`Borivali`}
+  <Text_c5b8c6f2a19aa0b9fcae9feb006f6e2c/>
 </Text>
 </Box>
 </CardBody>

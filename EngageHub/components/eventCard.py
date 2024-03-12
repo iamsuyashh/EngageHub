@@ -1,6 +1,10 @@
 import reflex as rx
 import urllib.parse
 
+class RouterState(rx.State):
+    pass
+path = RouterState.router.page.full_raw_path
+print(path),
 def qa(event_data : dict) -> rx.Component:
     query_string = urllib.parse.urlencode({"header": event_data["header"]})
     return rx.flex(
@@ -8,10 +12,12 @@ def qa(event_data : dict) -> rx.Component:
         rx.card(
             # rx.hstack(
             rx.box(
+                
                 rx.image(src=event_data["url"]),
                 rx.heading(event_data["header"]),
                 rx.text(
-                    event_data["location"]
+                    event_data["location"],
+                    rx.text(RouterState.router.page.full_raw_path),
                 ),
                 # rx.link(
                 # rx.button(

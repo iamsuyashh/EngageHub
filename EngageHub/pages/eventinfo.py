@@ -26,9 +26,14 @@ async def main(rand_int: int, request: Request):
     return {"domain": domain, "path": path, "query_params": query_params}
 event = read_event_info("Event1")
 print(event)
+class RouterStat(rx.State):
+    pass
+path: str = RouterStat.router.headers.to_string()
+print(path)
 def eventinfo():
     return rx.container(
         navbar(),
+        rx.text(RouterStat.router.page.full_raw_path),
         event_details(event),
         footer(),
         style={"max-width":"100vw"}
