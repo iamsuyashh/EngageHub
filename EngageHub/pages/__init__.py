@@ -6,3 +6,4 @@ from .galleryPage import galleryPage
 from .event import event
 from .about import about
 from .eventinfo import eventinfo
+from .admin import admin_page
