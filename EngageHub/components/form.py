@@ -2,9 +2,10 @@ import reflex as rx
 from ..State.firebaseConfig import auth, add_user_to_firestore
 from ..State.CustomState import UserCredentials ,user_state
 class ClStorage(rx.State):
-    currentUser = rx.LocalStorage("")
+    currentUser: str = rx.LocalStorage()
 # from ..EngageHub import UserStorage
 credentials = UserCredentials()
+print("Form Page",ClStorage.currentUser)
 # ClStorage.currentUser = "VaibhavSutar"
 def handle_Form_Submit(form_data):
     email = form_data.get("email")  # Access form_data correctly
@@ -20,7 +21,9 @@ def handle_Form_Submit(form_data):
             credentials.username = "Vaibhav"
             user_state.authenticated = True
             userEmail = user["email"]
-            ClStorage.currentUser = userEmail
+            print("User Email: ", userEmail)
+            ClStorage.currentUser = "Vaibhav"
+            print("User State: ", ClStorage.currentUser)
             # ClStorage.set_currentUser
             # currentUser("Vaibhav")
             # UserCredentials.add_var()

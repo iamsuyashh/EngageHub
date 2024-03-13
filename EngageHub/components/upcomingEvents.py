@@ -5,7 +5,7 @@ from ..State.firebaseConfig import read_event_details
 # event_list = [
 #      {"url": "https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg", "header": "TantraUtsav", "location": "Location 1", "link": "/"},
 #      {"url": "https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg", "header": "Event 1", "location": "Location 1", "link": "/register"},
-#      {"url": "https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg", "header": "Event 1", "location": "Location 1", "link": "/"},
+#      {"url": "https://i.ibb.co/sSBgYbZt/audience-1853662-640.jpg", "header": "Event 1", "location": "Location 1", "link": "/"},
 #      {"url": "https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg", "header": "Event 1", "location": "Location 1", "link": "/register"},
 #      {"url": "https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg", "header": "Event 1", "location": "Location 1", "link": "/register"},
 #      {"url": "https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg", "header": "Event 1", "location": "Location 1", "link": "/register"},

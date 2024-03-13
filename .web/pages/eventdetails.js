@@ -1,14 +1,26 @@
 /** @jsxImportSource @emotion/react */
 
 
-import { Fragment } from "react"
-import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Text_c5b8c6f2a19aa0b9fcae9feb006f6e2c } from "/utils/stateful_components"
+import { Fragment, useContext } from "react"
+import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Text_302c867ca52040a1c72d3bbe8cb6f26b } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Image as ChakraImage, Link, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
+import { StateContexts } from "/utils/context"
 import NextHead from "next/head"
 
 
+
+export function Text_c34043d854027aa5c8ed2240cb02a66f () {
+  const state__my_param = useContext(StateContexts.state__my_param)
+
+
+  return (
+    <Text>
+  {`The parameter is: ${state__my_param.event_param}`}
+</Text>
+  )
+}
 
 export default function Component() {
 
@@ -53,7 +65,9 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <Text_c5b8c6f2a19aa0b9fcae9feb006f6e2c/>
+  <Text_c34043d854027aa5c8ed2240cb02a66f/>
+  <Text_302c867ca52040a1c72d3bbe8cb6f26b/>
+  <Text_302c867ca52040a1c72d3bbe8cb6f26b/>
   <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
   <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
   <Link as={NextLink} href={`/register`} sx={{"textDecoration": "none"}}>

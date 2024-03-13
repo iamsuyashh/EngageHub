@@ -55,7 +55,7 @@ def read_event_details():
     except Exception as e:
         print("Error:", e)
         return []
-    
+eventName : str = ""
 def read_event_info(eventName):
     try:
         # Retrieve the document from the 'Events' collection

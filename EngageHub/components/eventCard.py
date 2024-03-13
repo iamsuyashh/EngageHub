@@ -1,10 +1,13 @@
 import reflex as rx
 import urllib.parse
-
+from reflex import route
+from .form import ClStorage
+from ..State.firebaseConfig import eventName
 class RouterState(rx.State):
     pass
-path = RouterState.router.page.full_raw_path
+path = RouterState.router.page.raw_path
 print(path),
+print(route.get_route_args)
 def qa(event_data : dict) -> rx.Component:
     query_string = urllib.parse.urlencode({"header": event_data["header"]})
     return rx.flex(
@@ -17,7 +20,8 @@ def qa(event_data : dict) -> rx.Component:
                 rx.heading(event_data["header"]),
                 rx.text(
                     event_data["location"],
-                    rx.text(RouterState.router.page.full_raw_path),
+                    rx.text(RouterState.router.page.raw_path),
+                    rx.text(ClStorage.currentUser),
                 ),
                 # rx.link(
                 # rx.button(
@@ -41,7 +45,7 @@ def qa(event_data : dict) -> rx.Component:
         # spacing="2",
         margin_y="1em",
         margin_x="1em",
-        href=f"{event_data['link']}?{query_string}",
+        href=f"{event_data['link']}?param={event_data['header']}",
         ),
     )
 

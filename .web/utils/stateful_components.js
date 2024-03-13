@@ -44,13 +44,24 @@ export function Fragment_fd0e7cb8f9fb4669a6805377d925fba0 () {
   )
 }
 
-export function Text_c5b8c6f2a19aa0b9fcae9feb006f6e2c () {
+export function Text_302c867ca52040a1c72d3bbe8cb6f26b () {
   const state = useContext(StateContexts.state)
 
 
   return (
     <Text>
-  {state.router.page.full_raw_path}
+  {state.router.page.raw_path}
+</Text>
+  )
+}
+
+export function Text_38658ec7233cb02bff9c3ad493636077 () {
+  const state__cl_storage = useContext(StateContexts.state__cl_storage)
+
+
+  return (
+    <Text>
+  {state__cl_storage.currentUser}
 </Text>
   )
 }
