@@ -12,7 +12,7 @@ import NextHead from "next/head"
 
 
 
-export function Box_c29f1f98ef374767b45b66158abc0a22 () {
+export function Box_4d8240454cbbfd623a031ccd6daf7088 () {
   const [addEvents, connectError] = useContext(EventLoopContext);
   
     const handleSubmit_1481f77324dceaf7e603b81f7184595c = useCallback((ev) => {
@@ -36,9 +36,11 @@ export function Box_c29f1f98ef374767b45b66158abc0a22 () {
   <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
   <Input name={`number`} placeholder={`Enter Your phone number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`tel`}/>
   <Input name={`password`} placeholder={`Enter Your Password`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`password`}/>
+  <Container>
   <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
   {`Login`}
 </Button>
+</Container>
 </VStack>
 </Box>
   )
@@ -84,6 +86,11 @@ export default function Component() {
   {`SignUp`}
 </Button>
 </Link>
+  <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
+  <Button sx={{"bg": "indigo", "color": "white"}}>
+  {`Admin`}
+</Button>
+</Link>
 </HStack>
 </HStack>
 </Box>
@@ -91,7 +98,7 @@ export default function Component() {
   {`Sign up`}
 </Heading>
   <VStack>
-  <Box_c29f1f98ef374767b45b66158abc0a22/>
+  <Box_4d8240454cbbfd623a031ccd6daf7088/>
 </VStack>
 </Container>
   <NextHead>

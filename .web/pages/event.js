@@ -51,6 +51,11 @@ export default function Component() {
   {`SignUp`}
 </Button>
 </Link>
+  <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
+  <Button sx={{"bg": "indigo", "color": "white"}}>
+  {`Admin`}
+</Button>
+</Link>
 </HStack>
 </HStack>
 </Box>

@@ -13,7 +13,6 @@ import NextHead from "next/head"
 
 
 export function Box_203eea19fd3d2dd6fb9ad705bbd0aa68 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
   
     const handleSubmit_72fd6f722e4659be8309b08bdaabae8e = useCallback((ev) => {
         const $form = ev.target
@@ -27,6 +26,7 @@ export function Box_203eea19fd3d2dd6fb9ad705bbd0aa68 () {
         }
     })
     
+  const [addEvents, connectError] = useContext(EventLoopContext);
 
 
   return (
@@ -80,6 +80,11 @@ export default function Component() {
   <Link as={NextLink} href={`/signUp`} sx={{"button": true}}>
   <Button sx={{"bg": "indigo", "color": "white"}}>
   {`SignUp`}
+</Button>
+</Link>
+  <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
+  <Button sx={{"bg": "indigo", "color": "white"}}>
+  {`Admin`}
 </Button>
 </Link>
 </HStack>
