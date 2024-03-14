@@ -73,9 +73,15 @@ def read_event_info(eventName):
     except Exception as e:
         print("Error:", e)
         return []
-def registerUserToEvent():
+def createEvent(header,date,description,location,venue,redirect,link,time,url):
     try:
         event_list=[]
+        db.collection('Event').document(header).set({
+            "header":header,
+            "date": date,"description":description,"location":location,"venue":venue,"redirect":redirect,"link":link,"time":time,"url":url
+        })
+        print("Event added to Firestore successfully!")
     except Exception as ex:
         print("Error",ex)
+
 

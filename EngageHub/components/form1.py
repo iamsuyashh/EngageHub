@@ -58,7 +58,9 @@ def signup_form():
                     style={"margin-bottom" : "1em"},
                     margin_bottom="1em",
                     width = "100%"),
-                rx.button("Login", type_="submit" , bg = "indigo" , color = "white",variant="outline" , margin_top = "5em" , style={"margin-top" : "3em"}),
+                rx.container(rx.button("Login", type_="submit" , bg = "indigo" , color = "white",variant="outline" , margin_top = "5em" , style={"margin-top" : "3em"}),  
+                )
+                
             ),
             on_submit=RegisterData.handle_submit,
             reset_on_submit=True,

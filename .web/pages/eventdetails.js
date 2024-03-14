@@ -50,6 +50,11 @@ export default function Component() {
   {`SignUp`}
 </Button>
 </Link>
+  <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
+  <Button sx={{"bg": "indigo", "color": "white"}}>
+  {`Admin`}
+</Button>
+</Link>
 </HStack>
 </HStack>
 </Box>
@@ -74,7 +79,7 @@ export default function Component() {
   {`Date: February 16, 2023`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Time: 5 PM`}
+  {`Time: 9 PM`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
   {`Location: Mira , Bhayander`}

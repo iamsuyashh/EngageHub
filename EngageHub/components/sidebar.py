@@ -3,13 +3,10 @@ import reflex as rx
 def sidebar():
     return rx.container(
         rx.vstack(
-            rx.heading("Engage HUB", margin_bottom="1em", color="indigo", font_weight="bold", font_size="1.5em"),
-            rx.link("Home", href="/home", color="indigo", margin_bottom="0.5em"),
-            rx.link("Services", href="/services", color="indigo", margin_bottom="0.5em"),
-            rx.link("About Us", href="/about", color="indigo", margin_bottom="0.5em"),
-            rx.link("Contact", href="/contact", color="indigo", margin_bottom="0.5em"),
-            rx.button("Sign Up", color="indigo", background_color="white", border_color="indigo", margin_top="1em"),
-            rx.button("Create Event", color="white", background_color="indigo", margin_top="0.5em"),
+            rx.link("Engage HUB", href = "/" , margin_bottom="1em", color="indigo", font_weight="bold", font_size="1.5em"),
+            rx.link("Home", href="/admin", color="indigo", margin_bottom="0.5em"),
+            rx.link("Create event", href="admin/event", color="indigo", margin_bottom="0.5em"),
+            # rx.button("Create Event",href="/event", color="white", background_color="indigo", margin_top="0.5em"),
             position="fixed",
             height="100%",
             left="0px",

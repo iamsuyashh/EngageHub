@@ -52,6 +52,11 @@ export default function Component() {
   {`SignUp`}
 </Button>
 </Link>
+  <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
+  <Button sx={{"bg": "indigo", "color": "white"}}>
+  {`Admin`}
+</Button>
+</Link>
 </HStack>
 </HStack>
 </Box>
@@ -118,6 +123,44 @@ export default function Component() {
 </Heading>
   <Text>
   {`Borivali`}
+  <Text_302c867ca52040a1c72d3bbe8cb6f26b/>
+  <Text_38658ec7233cb02bff9c3ad493636077/>
+</Text>
+</Box>
+</CardBody>
+</Card>
+</Link>
+</Flex>
+  <Flex>
+  <Link as={NextLink} href={`/eventdetails?param=TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
+  <Heading>
+  {`TantraUtsav`}
+</Heading>
+  <Text>
+  {`Bhayander`}
+  <Text_302c867ca52040a1c72d3bbe8cb6f26b/>
+  <Text_38658ec7233cb02bff9c3ad493636077/>
+</Text>
+</Box>
+</CardBody>
+</Card>
+</Link>
+</Flex>
+  <Flex>
+  <Link as={NextLink} href={`/eventdetails?param=Vaibhav`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg`}/>
+  <Heading>
+  {`Vaibhav`}
+</Heading>
+  <Text>
+  {`Kandivali`}
   <Text_302c867ca52040a1c72d3bbe8cb6f26b/>
   <Text_38658ec7233cb02bff9c3ad493636077/>
 </Text>

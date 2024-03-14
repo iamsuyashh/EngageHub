@@ -3,9 +3,9 @@
 
 import { Fragment } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Button, Container, Heading, Link, VStack } from "@chakra-ui/react"
-import "focus-visible/dist/focus-visible"
+import { Container, Link, Table, TableContainer, Tbody, Td, Th, Thead, Tr, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
+import "focus-visible/dist/focus-visible"
 import NextHead from "next/head"
 
 
@@ -18,30 +18,71 @@ export default function Component() {
   <Container>
   <Container sx={{"borderRadius": "10px", "boxShadow": "0 0 10px rgba(0, 0, 0, 0.1)"}}>
   <VStack alignItems={`left`} sx={{"position": "fixed", "height": "100%", "left": "0px", "top": "0px", "zIndex": "5", "paddingX": "2em", "paddingY": "1em", "backgroundColor": "rgba(255, 255, 255, 0.9)", "width": "250px", "borderRadius": "10px", "boxShadow": "0 0 10px rgba(0, 0, 0, 0.1)"}}>
-  <Heading sx={{"marginBottom": "1em", "color": "indigo", "fontWeight": "bold", "fontSize": "1.5em"}}>
+  <Link as={NextLink} href={`/`} sx={{"marginBottom": "1em", "color": "indigo", "fontWeight": "bold", "fontSize": "1.5em"}}>
   {`Engage HUB`}
-</Heading>
-  <Link as={NextLink} href={`/home`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
+</Link>
+  <Link as={NextLink} href={`/admin`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
   {`Home`}
 </Link>
-  <Link as={NextLink} href={`/services`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
-  {`Services`}
+  <Link as={NextLink} href={`admin/event`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
+  {`Create event`}
 </Link>
-  <Link as={NextLink} href={`/about`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
-  {`About Us`}
-</Link>
-  <Link as={NextLink} href={`/contact`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
-  {`Contact`}
-</Link>
-  <Button sx={{"color": "indigo", "backgroundColor": "white", "borderColor": "indigo", "marginTop": "1em"}}>
-  {`Sign Up`}
-</Button>
-  <Button sx={{"color": "white", "backgroundColor": "indigo", "marginTop": "0.5em"}}>
-  {`Create Event`}
-</Button>
 </VStack>
 </Container>
-  <Container/>
+  <Container>
+  <TableContainer sx={{"margin": "2rem auto", "text-align": "center", "margin-top": "50vh", "margin-left": "6vh", "transform": "translateY(-50%)", "max-width": "90%"}}>
+  <Table sx={{"margin": "2rem auto", "padding": "1rem", "text-align": "center"}}>
+  <Thead>
+  <Tr>
+  <Th>
+  {`Name`}
+</Th>
+  <Th>
+  {`Age`}
+</Th>
+  <Th>
+  {`Location`}
+</Th>
+</Tr>
+</Thead>
+  <Tbody>
+  <Tr>
+  <Td>
+  {`John`}
+</Td>
+  <Td>
+  {`30`}
+</Td>
+  <Td>
+  {`New York`}
+</Td>
+</Tr>
+  <Tr>
+  <Td>
+  {`Jane`}
+</Td>
+  <Td>
+  {`31`}
+</Td>
+  <Td>
+  {`San Francisco`}
+</Td>
+</Tr>
+  <Tr>
+  <Td>
+  {`Joe`}
+</Td>
+  <Td>
+  {`32`}
+</Td>
+  <Td>
+  {`Los Angeles`}
+</Td>
+</Tr>
+</Tbody>
+</Table>
+</TableContainer>
+</Container>
 </Container>
   <NextHead>
   <title>

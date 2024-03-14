@@ -42,6 +42,12 @@ def navbar():
                     # color="rgb(107,99,246)",
                     button=True,
                 ),
+                rx.link(
+                    rx.button("Admin", bg="indigo", color="white"),
+                    href="/admin",
+                    # color="rgb(107,99,246)",
+                    button=True,
+                ),
                 spacing="8",
             ),
             justify="space-between",

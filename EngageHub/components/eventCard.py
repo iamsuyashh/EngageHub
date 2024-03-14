@@ -10,7 +10,7 @@ path = RouterState.router.page.raw_path
 print(path),
 print(route.get_route_args)
 def qa(event_data : dict) -> rx.Component:
-    query_string = urllib.parse.urlencode({"header": event_data["header"]})
+    # query_string = urllib.parse.urlencode({"header": event_data["header"]})
     return rx.flex(
         rx.link(
         rx.card(

@@ -50,6 +50,11 @@ export default function Component() {
   {`SignUp`}
 </Button>
 </Link>
+  <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
+  <Button sx={{"bg": "indigo", "color": "white"}}>
+  {`Admin`}
+</Button>
+</Link>
 </HStack>
 </HStack>
 </Box>
@@ -126,6 +131,46 @@ export default function Component() {
 </Heading>
   <Text>
   {`Borivali`}
+</Text>
+  <Link as={NextLink} href={`/eventdetails`}>
+  <Button>
+  {`Register`}
+</Button>
+</Link>
+</Box>
+</CardBody>
+</Card>
+</Flex>
+  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
+  <Heading>
+  {`TantraUtsav`}
+</Heading>
+  <Text>
+  {`Bhayander`}
+</Text>
+  <Link as={NextLink} href={`/eventdetails`}>
+  <Button>
+  {`Register`}
+</Button>
+</Link>
+</Box>
+</CardBody>
+</Card>
+</Flex>
+  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg`}/>
+  <Heading>
+  {`Vaibhav`}
+</Heading>
+  <Text>
+  {`Kandivali`}
 </Text>
   <Link as={NextLink} href={`/eventdetails`}>
   <Button>
