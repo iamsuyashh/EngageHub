@@ -21,7 +21,7 @@ def event_details(event_data) -> rx.Component:
                 rx.text("Date: " + event_data["date"], style={"font-weight": "bold", "color": "black"}),
                 rx.text("Time: " + event_data["time"], style={"font-weight": "bold", "color": "black"}),
                 rx.text("Location: " + event_data["venue"] + ", " + event_data["location"], style={"font-weight": "bold", "color": "black"}),  # Include location
-                style={"margin-top": "1rem"},
+                style={"margin-top": "0.5rem"},
             ),
             style={"display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem"},
         ),

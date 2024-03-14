@@ -32,6 +32,7 @@ def upcomingEvents(event_list):
         # ),
         ),
         eventCard(event_list),
+        
         rx.spacer(),
         # rx.heading("Learn MOre"),
         direction="column"

@@ -10,3 +10,5 @@ from .upcomingEvents import upcomingEvents
 from .about import about_page
 from .eventdetails import event_details
 from .imageCarsouel import carousel
+from .users import users_info
+from .sidebar import sidebar

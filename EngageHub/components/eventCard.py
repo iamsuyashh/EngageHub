@@ -3,6 +3,7 @@ import urllib.parse
 from reflex import route
 from .form import ClStorage
 from ..State.firebaseConfig import eventName
+from .eventdetails import event_details
 class RouterState(rx.State):
     pass
 path = RouterState.router.page.raw_path
@@ -33,7 +34,7 @@ def qa(event_data : dict) -> rx.Component:
          as_child=True,
         # ),
         size="lg",
-        # spacing="2",
+    # spacing="2",
         style={
             "height":"100%",
             "width":"100%",
@@ -49,7 +50,7 @@ def qa(event_data : dict) -> rx.Component:
         ),
     )
 
-
+# event_details()
 def eventCard(event_list) -> rx.Component:
     return rx.box(
         rx.responsive_grid(

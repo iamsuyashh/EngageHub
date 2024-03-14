@@ -73,5 +73,9 @@ def read_event_info(eventName):
     except Exception as e:
         print("Error:", e)
         return []
-
+def registerUserToEvent():
+    try:
+        event_list=[]
+    except Exception as ex:
+        print("Error",ex)
 

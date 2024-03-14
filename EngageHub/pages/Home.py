@@ -9,20 +9,24 @@ cred = UserCredentials()
 # user = auth.current_user() 
 # print(user)
 # print("CurrentUser from LocalStorage: ",OtherPageState.retrieve_user_email)
-username = ClStorage.currentUser
-print("UserState: ",username)
 
-event_details = read_event_details() 
+
+# class Home(rx.State):
+class StateTwo(rx.State):
+    same_shared_value: str = rx.LocalStorage(name="shared")
+# username = same_shared_value
+print("Shared Value",StateTwo.same_shared_value)
 def display_username(self):
     # Access the username from LocalStorageState
     return rx.text(f"Hello, {self.ClStorage.currentUser}")
 
 # Now you can use the current_user variable in your code
 def home(): 
+    event_details = read_event_details() 
     """The home Page ."""
     return rx.container( 
        navbar(),
-       rx.code(ClStorage.currentUser),
+       rx.code("Shared:",rx.LocalStorage(name="shared")),
       #  gallery_cards(),
       #Featured Video
       featuredVideo(),

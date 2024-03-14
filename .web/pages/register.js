@@ -1,15 +1,48 @@
 /** @jsxImportSource @emotion/react */
 
 
-import { Fragment, useCallback } from "react"
+import { Fragment, useCallback, useContext } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Input, Link, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
-import { getRefValue, getRefValues, set_val } from "/utils/state"
+import { EventLoopContext } from "/utils/context"
+import { Event, getRefValue, getRefValues, set_val } from "/utils/state"
 import NextHead from "next/head"
 
 
+
+export function Box_9b650b604a20bf2571aacead4b8c294f () {
+  
+    const handleSubmit_5ef4779e0a01eec676d4ec1363112a79 = useCallback((ev) => {
+        const $form = ev.target
+        ev.preventDefault()
+        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
+
+        addEvents([Event("state.register_form_data.handle_submit", {form_data:form_data})])
+
+        if (true) {
+            $form.reset()
+        }
+    })
+    
+  const [addEvents, connectError] = useContext(EventLoopContext);
+
+
+  return (
+    <Box as={`form`} onSubmit={handleSubmit_5ef4779e0a01eec676d4ec1363112a79} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+  <VStack>
+  <Input name={`name`} placeholder={`Name`} sx={{"width": "100%"}} type={`text`}/>
+  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
+  <Input name={`pid_number`} placeholder={`Enter PID`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Input name={`ph_number`} placeholder={`Enter your Phone Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
+  {`Register`}
+</Button>
+</VStack>
+</Box>
+  )
+}
 
 export default function Component() {
 
@@ -58,16 +91,7 @@ export default function Component() {
   {`Register`}
 </Heading>
   <VStack>
-  <Box as={`form`} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
-  <VStack>
-  <Input name={`event_name`} placeholder={`Event Name`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
-  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
-  <Input name={`number`} placeholder={`Enter your Phone Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
-  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
-  {`Register`}
-</Button>
-</VStack>
-</Box>
+  <Box_9b650b604a20bf2571aacead4b8c294f/>
 </VStack>
 </Container>
   <NextHead>
