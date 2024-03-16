@@ -6,6 +6,10 @@ class CreateEventData(rx.State):
     def handle_submit(self, form_data: dict):
         """Handle the form submit."""
         self.form_data = form_data
+         # Check if any field is empty
+        if not all(form_data.values()):
+                print("Please fill in all fields.")
+                return
        
         print(form_data)
         rx.window_alert("Hello")

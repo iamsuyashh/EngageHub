@@ -7,3 +7,4 @@ from .event import event
 from .about import about
 from .eventinfo import  eventinfo
 from .admin import admin_page
+from .livesteam import livestream

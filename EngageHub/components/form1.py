@@ -8,6 +8,8 @@ class RegisterData(rx.State):
             self.form_data = form_data
             username = form_data.get("email")
             password = form_data.get("password")
+            
+    
 
             try:
                 user = auth.create_user_with_email_and_password(username,password)
