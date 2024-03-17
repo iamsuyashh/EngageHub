@@ -1,9 +1,11 @@
 import reflex as rx
 
-
+# event_data = None
 
 def event_details(event_data) -> rx.Component:
-
+    if event_data is None:
+        return rx.text("Loading...")
+    
     return rx.container(
         rx.image(src=event_data["url"], width="100%", height="30vw", style={"object-fit": "cover", "border-radius": "10px", "position": "relative"}),
         rx.link(

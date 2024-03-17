@@ -19,6 +19,7 @@ class UserCredentials(rx.State):
 class UserState(rx.State):
     authenticated: bool = False
     role: str = "user"  # Default role is user
-
+class GlobalState(rx.State):
+    eventName: str = None
 # Create an instance of the UserState
 user_state = UserState()

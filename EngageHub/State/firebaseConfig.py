@@ -2,7 +2,9 @@ import pyrebase
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
-
+import reflex as rx
+from .CustomState import GlobalState
+from ..components.eventCard import EventState
 config = {
  "apiKey": "AIzaSyDvGnYNlMBLq5cDR8w06abvj-PQ-MN7kbc",
   "authDomain": "engagehub-7a1ab.firebaseapp.com",
@@ -55,12 +57,17 @@ def read_event_details():
     except Exception as e:
         print("Error:", e)
         return []
-eventName : str = ""
-def read_event_info(eventName):
+    
+
+eventName = ""
+def read_event_info():
+    print("Event State in Firebase: ",EventState.eventName)
+    eventN = EventState.eventName
     try:
         # Retrieve the document from the 'Events' collection
         event_list=[]
-        event_ref = db.collection('Event').document(eventName).get()
+        # eventName = GlobalState.eventName
+        event_ref = db.collection('Event').document(eventN).get()
         if event_ref.exists:
             # Convert the document to a dictionary
             event_dict = event_ref.to_dict()
@@ -68,11 +75,11 @@ def read_event_info(eventName):
             return event_dict  # Return a list containing the event dictionary
         else:
             print(f"Event '{eventName}' does not exist")
-            return []  # Return an empty list if the document does not exist
+            return None  # Return an empty list if the document does not exist
 
     except Exception as e:
         print("Error:", e)
-        return []
+        return None
 def createEvent(header,date,description,location,venue,redirect,link,time,url):
     try:
         event_list=[]

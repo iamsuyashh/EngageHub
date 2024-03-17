@@ -1,14 +1,21 @@
 import reflex as rx
 import urllib.parse
 from reflex import route
-from .form import ClStorage
-from ..State.firebaseConfig import eventName
+from ..State.CustomState import GlobalState
 from .eventdetails import event_details
+
 class RouterState(rx.State):
     pass
 path = RouterState.router.page.raw_path
 print(path),
 print(route.get_route_args)
+
+class EventState(rx.State):
+    eventName: str = ""
+    # @rx.var
+    def set_event_name(self):
+        self.eventName = "Vaibhav"
+
 def qa(event_data : dict) -> rx.Component:
     # query_string = urllib.parse.urlencode({"header": event_data["header"]})
     return rx.flex(
@@ -22,14 +29,8 @@ def qa(event_data : dict) -> rx.Component:
                 rx.text(
                     event_data["location"],
                     rx.text(RouterState.router.page.raw_path),
-                    rx.text(ClStorage.currentUser),
+                    rx.text(EventState.eventName),
                 ),
-                # rx.link(
-                # rx.button(
-                #     "Submit",
-                # ),
-                # href=event_data["link"],
-                # )
             ),
          as_child=True,
         # ),
@@ -46,12 +47,17 @@ def qa(event_data : dict) -> rx.Component:
         # spacing="2",
         margin_y="1em",
         margin_x="1em",
+        on_click=EventState.set_event_name,
         href=f"{event_data['link']}?param={event_data['header']}",
         ),
     )
 
 # event_details()
 def eventCard(event_list) -> rx.Component:
+    # event_list is None:
+    if event_list is None:
+        return rx.text("Loading...")
+    
     return rx.box(
         rx.responsive_grid(
         *[

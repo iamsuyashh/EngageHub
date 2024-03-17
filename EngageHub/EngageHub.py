@@ -1,12 +1,14 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 from rxconfig import config
 from EngageHub.components import navbar , gallery_cards
-from EngageHub.pages import galleryPage, home, signUp, signIn,register,event,about,admin_page,eventinfo
+from EngageHub.pages import galleryPage, home, signUp, signIn,register,event,about,admin_page,eventInfo
+from EngageHub.pages.eventinfo import MyParam
 from EngageHub.State.firebaseConfig import auth
 import reflex as rx
 
 docs_url = "https://reflex.dev/docs/getting-started/introduction"
 filename = f"{config.app_name}/{config.app_name}.py"
+
 
 class State(rx.State):
     user_name : str = rx.LocalStorage(name="userName")
@@ -53,7 +55,8 @@ app.add_page(signIn, route="/signIn")
 app.add_page(register, route="/register")
 app.add_page(galleryPage,route="/eventgallery")
 app.add_page(about,route="/about")
-app.add_page(eventinfo,route="/eventdetails")
 app.add_page(event,route="admin/event")
 app.add_page(admin_page,route="/admin")
+app.add_page(eventInfo,route="/eventdetails")
+# app.add_page(EventInfoPage,route="/eventdetails")
 app.compile()
