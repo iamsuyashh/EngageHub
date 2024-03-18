@@ -3,9 +3,9 @@ import reflex as rx
 class CarouselState(rx.State):
     current_image_index: int = 0
     images: list[str] = [
-        '../../assets/event.jpeg',
-        '../../assets/event.jpeg',
-        '../../assets/event.jpeg',
+        'https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg',
+        'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        'https://www.youtube.com/embed/eu1QGisT8jg?si=8YU8rzGD6P7Sno0-&amp;controls=0',
         '../../assets/event.jpeg',
         # ... add more images as required
     ]
@@ -23,10 +23,13 @@ class CarouselState(rx.State):
             self.current_image_index = len(self.images) - 1
 
 def carousel():
-    return rx.box(
-        rx.button("Previous", on_click=CarouselState.previous_image),
-        rx.image(src=CarouselState.images, width="100%", height="100%"),
-        rx.button("Next", on_click=CarouselState.next_image),
-        align_items="center",
-        justify_content="space-between"
+    return rx.container(
+        rx.image(src=CarouselState.images[CarouselState.current_image_index], width="100vw", height="30vw", style={"position": "relative"}),
+        rx.container(
+            rx.button("<--", on_click=CarouselState.previous_image, style={"position": "absolute", "left": "10px", "top": "50%", "transform": "translateY(-50%)"}),
+            rx.button("-->", on_click=CarouselState.next_image, style={"position": "absolute", "right": "10px", "top": "50%", "transform": "translateY(-50%)"}),
+            style={"position": "absolute", "top": "10", "left": "444", "width": "100vw", "height": "50vw" , "opacity" : "0.5"}
+        ),
+        style={"max-width": "100vw", "position": "relative", "overflow": "hidden", "margin-bottom": "10px"}
     )
+   

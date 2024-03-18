@@ -59,7 +59,7 @@ export default function Component() {
 </HStack>
 </Box>
   <Spacer/>
-  <Flex sx={{"width": "100vw", "heigth": "80vh", "justify-content": "space-between", "align-content": "center"}}>
+  <Flex sx={{"width": "100vw", "heigth": "60vh", "justify-content": "space-between", "align-content": "center"}}>
   <Flex sx={{"margin": "10", "justify-content": "center"}}>
   <Text as={`span`} sx={{"fontSize": "30px", "color": "indigo", "fontWeight": "bold", "size": 20}}>
   {`Engage Hub `}
@@ -68,7 +68,7 @@ export default function Component() {
   {`: Where Events Come to Life!`}
 </Text>
 </Flex>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`} sx={{"width": "30vw", "heigth": "30vh", "align-content": "center", "justify-content": "center"}}/>
+  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`} sx={{"width": "50vw", "heigth": "30vh", "align-content": "center", "justify-content": "center"}}/>
 </Flex>
   <Flex sx={{"margin": "5"}}>
   <Text as={`span`} sx={{"fontSize": "25px", "margin-right": "10px", "color": "indigo", "fontWeight": "bold"}}>

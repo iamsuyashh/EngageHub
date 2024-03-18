@@ -12,3 +12,4 @@ from .eventdetails import event_details
 from .imageCarsouel import carousel
 from .users import users_info
 from .sidebar import sidebar
+from .live import live

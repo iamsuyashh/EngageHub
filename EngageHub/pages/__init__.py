@@ -7,5 +7,4 @@ from .event import event
 from .about import about
 from .eventinfo import eventInfo
 from .admin import admin_page
-from .eventInfoPage import EventInfoPage
-# from .eventInfoPage import EventInfoPages
+from .livesteam import livestream

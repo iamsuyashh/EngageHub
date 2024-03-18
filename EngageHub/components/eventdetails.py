@@ -3,6 +3,7 @@ import reflex as rx
 # event_data = None
 
 def event_details(event_data) -> rx.Component:
+    print("Event Details: ",event_data)
     if event_data is None:
         return rx.text("Loading...")
     

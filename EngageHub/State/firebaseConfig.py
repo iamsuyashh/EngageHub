@@ -3,7 +3,6 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 import reflex as rx
-from .CustomState import GlobalState
 from ..components.eventCard import EventState
 config = {
  "apiKey": "AIzaSyDvGnYNlMBLq5cDR8w06abvj-PQ-MN7kbc",
@@ -58,11 +57,10 @@ def read_event_details():
         print("Error:", e)
         return []
     
-
-eventName = ""
-def read_event_info():
-    print("Event State in Firebase: ",EventState.eventName)
-    eventN = EventState.eventName
+def read_event_info(eventName):
+    print("Event State in Firebase: ",eventName)
+    # eventN = State.current_event
+    eventN:str = eventName
     try:
         # Retrieve the document from the 'Events' collection
         event_list=[]
@@ -80,6 +78,42 @@ def read_event_info():
     except Exception as e:
         print("Error:", e)
         return None
+def read_all_data():
+    try:
+    # Initialize an empty dictionary to store event details
+        events_dict = {}
+
+        # Retrieve all documents from the 'Events' collection
+        events_ref = db.collection('Event').stream()
+        for event_doc in events_ref:
+            # Convert each event document to a dictionary
+            event_dict = event_doc.to_dict()
+
+            # Initialize an empty list to store documents of the 'Subcollection'
+            subcollection_docs = []
+
+            # Get the reference to the 'Subcollection' of the current event document
+            subcollection_ref = event_doc.reference.collection('Subcollection')
+
+            # Retrieve all documents from the 'Subcollection'
+            docs_ref = subcollection_ref.stream()
+            for doc in docs_ref:
+                # Convert each document to a dictionary and append it to the list
+                subcollection_docs.append(doc.to_dict())
+
+            # Add the list of documents to the event dictionary
+            event_dict['Subcollection'] = subcollection_docs
+
+            # Add the event dictionary to the events dictionary
+            events_dict[event_doc.id] = event_dict
+
+        # Return the dictionary of event details
+        return events_dict
+
+    except Exception as e:
+        print("Error:", e)
+        return {}
+    
 def createEvent(header,date,description,location,venue,redirect,link,time,url):
     try:
         event_list=[]

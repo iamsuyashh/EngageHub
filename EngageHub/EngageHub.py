@@ -1,8 +1,7 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 from rxconfig import config
 from EngageHub.components import navbar , gallery_cards
-from EngageHub.pages import galleryPage, home, signUp, signIn,register,event,about,admin_page,eventInfo
-from EngageHub.pages.eventinfo import MyParam
+from EngageHub.pages import galleryPage, home, signUp, signIn,register,event,about,admin_page,eventInfo,livestream
 from EngageHub.State.firebaseConfig import auth
 import reflex as rx
 
@@ -10,21 +9,6 @@ docs_url = "https://reflex.dev/docs/getting-started/introduction"
 filename = f"{config.app_name}/{config.app_name}.py"
 
 
-class State(rx.State):
-    user_name : str = rx.LocalStorage(name="userName")
-    is_authenticated: bool = False
-    is_admin: bool = False
-
-    def do_login(self, username, password):
-        # Perform authentication logic here
-        # Set is_authenticated and is_admin based on the authentication result
-        self.is_authenticated = False
-        self.is_admin = False  # Set to True if the user is an admin
-
-    def do_logout(self):
-        # Perform logout logic here
-        self.is_authenticated = False
-        self.is_admin = False
 
 class UserStorage:
     user_email: str = rx.LocalStorage()
@@ -57,6 +41,5 @@ app.add_page(galleryPage,route="/eventgallery")
 app.add_page(about,route="/about")
 app.add_page(event,route="admin/event")
 app.add_page(admin_page,route="/admin")
-app.add_page(eventInfo,route="/eventdetails")
-# app.add_page(EventInfoPage,route="/eventdetails")
+app.add_page(eventInfo,route="/eventInfo")
 app.compile()

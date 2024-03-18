@@ -13,7 +13,6 @@ import NextHead from "next/head"
 
 
 export function Box_939806b833422e9eb89d6d7580059422 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
   
     const handleSubmit_46ff3d752207f946241948cb11da8bba = useCallback((ev) => {
         const $form = ev.target
@@ -27,6 +26,7 @@ export function Box_939806b833422e9eb89d6d7580059422 () {
         }
     })
     
+  const [addEvents, connectError] = useContext(EventLoopContext);
 
 
   return (

@@ -15,9 +15,11 @@ class EventState(rx.State):
     # @rx.var
     def set_event_name(self):
         self.eventName = "Vaibhav"
+    def get_event_name(self):
+        return self.eventName
 
 def qa(event_data : dict) -> rx.Component:
-    # query_string = urllib.parse.urlencode({"header": event_data["header"]})
+    query_string = urllib.parse.urlencode({"header": event_data["header"]})
     return rx.flex(
         rx.link(
         rx.card(
@@ -47,8 +49,8 @@ def qa(event_data : dict) -> rx.Component:
         # spacing="2",
         margin_y="1em",
         margin_x="1em",
-        on_click=EventState.set_event_name,
-        href=f"{event_data['link']}?param={event_data['header']}",
+        # on_click=EventState.set_event_name,
+        href=f"{event_data['link']}?{query_string}",
         ),
     )
 

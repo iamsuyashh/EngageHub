@@ -20,14 +20,14 @@ def galleryPage():
         }
         ),
         rx.image(src="https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg",style={
-            "width":"30vw",
+            "width":"50vw",
             "heigth":"30vh",
             "align-content":"center",
             "justify-content":"center",
         }),
         style={
             "width":"100vw",
-            "heigth":"80vh",
+            "heigth":"60vh",
             "justify-content":"space-between",
              "align-content":"center",
             # "background-color":"blue",
