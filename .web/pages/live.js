@@ -1,51 +1,16 @@
 /** @jsxImportSource @emotion/react */
 
 
-import { Fragment, useCallback, useContext } from "react"
-import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Image as ChakraImage, Link, Text } from "@chakra-ui/react"
+import { Fragment } from "react"
+import { Button_5d4e77008a1b016ea27a78202f92ed58, Button_e65140ba91c51800240365f1c3f069dd, Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Image_e6408ca805ae974e6eb3e94065ff972f } from "/utils/stateful_components"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Link, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
-import { EventLoopContext, StateContexts } from "/utils/context"
-import { Event } from "/utils/state"
 import dynamic from "next/dynamic"
 import NextHead from "next/head"
 
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
 
-
-export function Button_5d4e77008a1b016ea27a78202f92ed58 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_click_75e88266e59bd7fcf0de0ebf394b1812 = useCallback((_e) => addEvents([Event("state.carousel_state.next_image", {})], (_e), {}), [addEvents, Event])
-
-  return (
-    <Button onClick={on_click_75e88266e59bd7fcf0de0ebf394b1812} sx={{"position": "absolute", "right": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
-  {`-->`}
-</Button>
-  )
-}
-
-export function Button_e65140ba91c51800240365f1c3f069dd () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_click_ded72e95921a40fca507841609cd7a38 = useCallback((_e) => addEvents([Event("state.carousel_state.previous_image", {})], (_e), {}), [addEvents, Event])
-
-  return (
-    <Button onClick={on_click_ded72e95921a40fca507841609cd7a38} sx={{"position": "absolute", "left": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
-  {`<--`}
-</Button>
-  )
-}
-
-export function Image_e6408ca805ae974e6eb3e94065ff972f () {
-  const state__carousel_state = useContext(StateContexts.state__carousel_state)
-
-
-  return (
-    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"position": "relative", "width": "100vw", "height": "30vw"}}/>
-  )
-}
 
 export default function Component() {
 

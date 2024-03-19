@@ -2,7 +2,7 @@
 
 
 import { Fragment } from "react"
-import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
+import { Button_5d4e77008a1b016ea27a78202f92ed58, Button_e65140ba91c51800240365f1c3f069dd, Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Image_e6408ca805ae974e6eb3e94065ff972f } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Card, CardBody, Container, Flex, Heading, HStack, Image as ChakraImage, Link, SimpleGrid, Spacer, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
@@ -15,7 +15,7 @@ export default function Component() {
   return (
     <Fragment>
   <Fragment_fd0e7cb8f9fb4669a6805377d925fba0/>
-  <Container sx={{"max-width": "100%", "background-color": "#F8F8FA", "max-height": "100%", "width": "100%", "height": "100%"}}>
+  <Container sx={{"max-width": "100%", "max-height": "100%", "width": "100%", "height": "100%"}}>
   <Box sx={{"backdropFilter": "auto", "backdropBlur": "lg", "p": "4", "position": "sticky", "top": "0", "zIndex": "100"}}>
   <HStack justify={`space-between`}>
   <HStack>
@@ -59,18 +59,24 @@ export default function Component() {
 </HStack>
 </Box>
   <Spacer/>
-  <Flex sx={{"width": "100vw", "heigth": "60vh", "justify-content": "space-between", "align-content": "center"}}>
-  <Flex sx={{"margin": "10", "justify-content": "center"}}>
-  <Text as={`span`} sx={{"fontSize": "30px", "color": "indigo", "fontWeight": "bold", "size": 20}}>
-  {`Engage Hub `}
-</Text>
-  <Text as={`span`} sx={{"color": "black", "fontSize": "30px"}}>
-  {`: Where Events Come to Life!`}
-</Text>
-</Flex>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`} sx={{"width": "50vw", "heigth": "30vh", "align-content": "center", "justify-content": "center"}}/>
-</Flex>
+  <Flex sx={{"display": "flex", "flex-direction": "column", "justify-content": "center", "align-items": "center", "margin-top": "10px"}}>
   <Flex sx={{"margin": "5"}}>
+  <Text as={`span`} sx={{"fontSize": "30px", "color": "indigo", "fontWeight": "bold", "size": 20}}>
+  {`EngageHub `}
+</Text>
+  <Container sx={{"color": "black", "fontSize": "30px"}}>
+  {`: Where Events Come to Life!`}
+</Container>
+</Flex>
+  <Container sx={{"max-width": "100vw", "position": "relative", "overflow": "hidden", "margin-bottom": "10px"}}>
+  <Image_e6408ca805ae974e6eb3e94065ff972f/>
+  <Container sx={{"position": "absolute", "top": "10", "left": "444", "width": "100vw", "height": "50vw", "opacity": "0.5"}}>
+  <Button_e65140ba91c51800240365f1c3f069dd/>
+  <Button_5d4e77008a1b016ea27a78202f92ed58/>
+</Container>
+</Container>
+</Flex>
+  <Flex sx={{"justify-content": "center", "align-content": "center", "margin-top": "10px"}}>
   <Text as={`span`} sx={{"fontSize": "25px", "margin-right": "10px", "color": "indigo", "fontWeight": "bold"}}>
   {`Event  `}
 </Text>
@@ -78,7 +84,7 @@ export default function Component() {
   {`Gallery`}
 </Text>
 </Flex>
-  <Flex sx={{"width": "70vw", "height": "auto", "justify-content": "center", "align-content": "center", "margin-left": "20%"}}>
+  <Flex sx={{"width": "70vw", "height": "auto", "justify-content": "center", "align-content": "center", "margin-left": "15%"}}>
   <Box>
   <SimpleGrid columns={[4]} sx={{"height": "40vh", "width": "80vw", "rows": [3]}}>
   <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
