@@ -3,8 +3,8 @@
 
 import { Fragment, useContext } from "react"
 import { EventLoopContext, StateContexts } from "/utils/context"
-import { Event, isTrue } from "/utils/state"
-import { Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text } from "@chakra-ui/react"
+import { Event, isTrue, set_val } from "/utils/state"
+import { Button, Input, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text } from "@chakra-ui/react"
 import "focus-visible/dist/focus-visible"
 import { getEventURL } from "/utils/state.js"
 
@@ -39,6 +39,38 @@ export function Fragment_fd0e7cb8f9fb4669a6805377d925fba0 () {
 </Fragment>
 ) : (
   <Fragment/>
+)}
+</Fragment>
+  )
+}
+
+export function Input_dcdc4ad4dcaea7427a2964b3366f2748 () {
+  const state__auth_state = useContext(StateContexts.state__auth_state)
+
+
+  return (
+    <Input type={`text`} value={state__auth_state.is_logged_in}/>
+  )
+}
+
+export function Fragment_e0824044528a5eb3af991544f9cc0799 () {
+  const state__auth_state = useContext(StateContexts.state__auth_state)
+
+
+  return (
+    <Fragment>
+  {isTrue((state__auth_state.is_logged_in === "true")) ? (
+  <Fragment>
+  <Button>
+  {`Log out`}
+</Button>
+</Fragment>
+) : (
+  <Fragment>
+  <Button>
+  {`Log In`}
+</Button>
+</Fragment>
 )}
 </Fragment>
   )

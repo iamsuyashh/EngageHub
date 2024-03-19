@@ -2,8 +2,16 @@ import reflex as rx
 
 # from webui import styles
 # from webui.state import State
+from ..State.auth_state import AuthState,AUTH_TOKEN_LOCAL_STORAGE_KEY
+from ..State.auth_session import AuthSession
 
-
+def printLocal():
+    userState = rx.LocalStorage(AUTH_TOKEN_LOCAL_STORAGE_KEY)
+    print("User State: ",userState)
+    return printLocal
+def handleLogout():
+    print("Logout")
+@rx.page(on_load=printLocal)
 def navbar():
     return rx.box(
         rx.hstack(
@@ -15,9 +23,11 @@ def navbar():
                        href="/"
                        )
                     ),
+                    # rx.text(AuthState.is),
                 ),
             ),
             rx.hstack(
+                
                 rx.link(
                     rx.button("Event Gallery",color_scheme="none", color="indigo",size="lg" ),
                     href="/eventgallery",
@@ -30,17 +40,14 @@ def navbar():
                 ),
             ),
             rx.hstack(
-                 rx.link(
-                        "Login",
-                        color="indigo",
-                        mr="2",
-                        href="/signIn",
+                # if ,
+                rx.chakra.input(
+                    value=AuthState.is_logged_in
                 ),
-                rx.link(
-                    rx.button("SignUp", bg="indigo", color="white"),
-                    href="/signUp",
-                    # color="rgb(107,99,246)",
-                    button=True,
+                rx.cond(
+                    AuthState.is_logged_in == "true",
+                    rx.button("Log out"),
+                    rx.button("Log In")
                 ),
                 rx.link(
                     rx.button("Admin", bg="indigo", color="white"),

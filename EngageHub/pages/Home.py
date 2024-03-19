@@ -6,11 +6,6 @@ from ..State.firebaseConfig import auth, firebase, read_event_details, read_all_
 from ..components.form import ClStorage
 # Create an instance of the ClientStorageState cl
 cred = UserCredentials()
-# user = auth.current_user() 
-# print(user)
-# print("CurrentUser from LocalStorage: ",OtherPageState.retrieve_user_email)
-
-
 # class Home(rx.State):
 class StateTwo(rx.State):
     same_shared_value: str = rx.LocalStorage(name="shared")

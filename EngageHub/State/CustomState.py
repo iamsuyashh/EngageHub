@@ -1,11 +1,9 @@
 import reflex as rx
 
+
+AUTH_TOKEN_LOCAL_STORAGE_KEY = "_auth_tokens"
 class ClientStorageState(rx.State):
-    my_cookie: str = rx.Cookie(name="userCred")
-    my_local_storage: str = rx.LocalStorage("")
-    custom_cookie: str = rx.Cookie(
-        name="CustomNamedCookie", max_age=3600
-    )
+    login_status: str = rx.LocalStorage("")
 class LocalStorageState(rx.State):
     # local storage with default settings
     l1: str = rx.LocalStorage()
@@ -30,6 +28,7 @@ class State(rx.State):
     """The app state."""
 
     # A dict from the chat name to the list of questions and answers.
+    auth_token: str = rx.LocalStorage(name=AUTH_TOKEN_LOCAL_STORAGE_KEY)
 
     # The current chat name.
     current_event = "TantraUtsav"

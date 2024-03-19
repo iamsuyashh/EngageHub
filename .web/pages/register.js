@@ -2,7 +2,7 @@
 
 
 import { Fragment, useCallback, useContext } from "react"
-import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
+import { Fragment_e0824044528a5eb3af991544f9cc0799, Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Input_dcdc4ad4dcaea7427a2964b3366f2748 } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Input, Link, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
@@ -12,9 +12,9 @@ import NextHead from "next/head"
 
 
 
-export function Box_ae3e8f306b0e80de6dc7d0702bc5f4e6 () {
+export function Box_9b650b604a20bf2571aacead4b8c294f () {
   
-    const handleSubmit_ab11fc5fea4edf2f271cab0295cf38b6 = useCallback((ev) => {
+    const handleSubmit_5ef4779e0a01eec676d4ec1363112a79 = useCallback((ev) => {
         const $form = ev.target
         ev.preventDefault()
         const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
@@ -30,7 +30,7 @@ export function Box_ae3e8f306b0e80de6dc7d0702bc5f4e6 () {
 
 
   return (
-    <Box as={`form`} onSubmit={handleSubmit_ab11fc5fea4edf2f271cab0295cf38b6} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+    <Box as={`form`} onSubmit={handleSubmit_5ef4779e0a01eec676d4ec1363112a79} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
   <VStack>
   <Input name={`name`} placeholder={`Name`} sx={{"width": "100%"}} type={`text`}/>
   <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
@@ -76,14 +76,8 @@ export default function Component() {
 </Link>
 </HStack>
   <HStack spacing={`8`}>
-  <Link as={NextLink} href={`/signIn`} sx={{"color": "indigo", "mr": "2"}}>
-  {`Login`}
-</Link>
-  <Link as={NextLink} href={`/signUp`} sx={{"button": true}}>
-  <Button sx={{"bg": "indigo", "color": "white"}}>
-  {`SignUp`}
-</Button>
-</Link>
+  <Input_dcdc4ad4dcaea7427a2964b3366f2748/>
+  <Fragment_e0824044528a5eb3af991544f9cc0799/>
   <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
   <Button sx={{"bg": "indigo", "color": "white"}}>
   {`Admin`}
@@ -96,7 +90,7 @@ export default function Component() {
   {`Register`}
 </Heading>
   <VStack>
-  <Box_ae3e8f306b0e80de6dc7d0702bc5f4e6/>
+  <Box_9b650b604a20bf2571aacead4b8c294f/>
 </VStack>
 </Container>
   <NextHead>

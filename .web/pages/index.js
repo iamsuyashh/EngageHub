@@ -2,7 +2,7 @@
 
 
 import { Fragment } from "react"
-import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Text_302c867ca52040a1c72d3bbe8cb6f26b, Text_e6b8ad8c047c78d9f8539beb6922e735 } from "/utils/stateful_components"
+import { Fragment_e0824044528a5eb3af991544f9cc0799, Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Input_dcdc4ad4dcaea7427a2964b3366f2748, Text_302c867ca52040a1c72d3bbe8cb6f26b, Text_e6b8ad8c047c78d9f8539beb6922e735 } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Card, CardBody, Container, Flex, Heading, HStack, Image as ChakraImage, Link, SimpleGrid, Spacer, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
@@ -44,14 +44,8 @@ export default function Component() {
 </Link>
 </HStack>
   <HStack spacing={`8`}>
-  <Link as={NextLink} href={`/signIn`} sx={{"color": "indigo", "mr": "2"}}>
-  {`Login`}
-</Link>
-  <Link as={NextLink} href={`/signUp`} sx={{"button": true}}>
-  <Button sx={{"bg": "indigo", "color": "white"}}>
-  {`SignUp`}
-</Button>
-</Link>
+  <Input_dcdc4ad4dcaea7427a2964b3366f2748/>
+  <Fragment_e0824044528a5eb3af991544f9cc0799/>
   <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
   <Button sx={{"bg": "indigo", "color": "white"}}>
   {`Admin`}
