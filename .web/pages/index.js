@@ -2,7 +2,7 @@
 
 
 import { Fragment } from "react"
-import { Fragment_e0824044528a5eb3af991544f9cc0799, Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Input_dcdc4ad4dcaea7427a2964b3366f2748, Text_302c867ca52040a1c72d3bbe8cb6f26b, Text_e6b8ad8c047c78d9f8539beb6922e735 } from "/utils/stateful_components"
+import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Card, CardBody, Container, Flex, Heading, HStack, Image as ChakraImage, Link, SimpleGrid, Spacer, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
@@ -44,8 +44,14 @@ export default function Component() {
 </Link>
 </HStack>
   <HStack spacing={`8`}>
-  <Input_dcdc4ad4dcaea7427a2964b3366f2748/>
-  <Fragment_e0824044528a5eb3af991544f9cc0799/>
+  <Link as={NextLink} href={`/signIn`} sx={{"color": "indigo", "mr": "2"}}>
+  {`Login`}
+</Link>
+  <Link as={NextLink} href={`/signUp`} sx={{"button": true}}>
+  <Button sx={{"bg": "indigo", "color": "white"}}>
+  {`SignUp`}
+</Button>
+</Link>
   <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
   <Button sx={{"bg": "indigo", "color": "white"}}>
   {`Admin`}
@@ -54,7 +60,7 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <ReactPlayer controls={false} height={`60vh`} url={`https://www.youtube.com/embed/eu1QGisT8jg?si=8YU8rzGD6P7Sno0-&amp;controls=0`} width={`100%`}/>
+  <ReactPlayer controls={false} height={`60vh`} url={`https://www.youtube.com/embed/eu1QGisT8jg?si=xG3uJmqZfGbgF-EA&amp;controls=0`} width={`100%`}/>
   <VStack sx={{"margin": "10", "height": "100vh"}}>
   <Flex direction={`column`}>
   <Flex>
@@ -65,26 +71,7 @@ export default function Component() {
   <Box>
   <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}>
   <Flex>
-  <Link as={NextLink} href={`/eventdetails?header=TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
-  {`TantraUtsav`}
-</Heading>
-  <Text>
-  {`Bhayander`}
-  <Text_302c867ca52040a1c72d3bbe8cb6f26b/>
-  <Text_e6b8ad8c047c78d9f8539beb6922e735/>
-</Text>
-</Box>
-</CardBody>
-</Card>
-</Link>
-</Flex>
-  <Flex>
-  <Link as={NextLink} href={`/eventdetails?header=Hackstomp`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`/eventdetails/Hackstomp`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
@@ -94,8 +81,6 @@ export default function Component() {
 </Heading>
   <Text>
   {`Mira Road`}
-  <Text_302c867ca52040a1c72d3bbe8cb6f26b/>
-  <Text_e6b8ad8c047c78d9f8539beb6922e735/>
 </Text>
 </Box>
 </CardBody>
@@ -103,7 +88,7 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
-  <Link as={NextLink} href={`/eventdetails?header=ITSA`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`/eventdetails/ITSA`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
@@ -113,8 +98,6 @@ export default function Component() {
 </Heading>
   <Text>
   {`Borivali`}
-  <Text_302c867ca52040a1c72d3bbe8cb6f26b/>
-  <Text_e6b8ad8c047c78d9f8539beb6922e735/>
 </Text>
 </Box>
 </CardBody>
@@ -122,7 +105,7 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
-  <Link as={NextLink} href={`/eventdetails?header=TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`eventInfo//TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
@@ -132,8 +115,6 @@ export default function Component() {
 </Heading>
   <Text>
   {`Bhayander`}
-  <Text_302c867ca52040a1c72d3bbe8cb6f26b/>
-  <Text_e6b8ad8c047c78d9f8539beb6922e735/>
 </Text>
 </Box>
 </CardBody>
@@ -141,7 +122,7 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
-  <Link as={NextLink} href={`/eventdetails?header=Vaibhav`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`/eventdetails/TantraUtsav/Vaibhav`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
@@ -151,8 +132,6 @@ export default function Component() {
 </Heading>
   <Text>
   {`Kandivali`}
-  <Text_302c867ca52040a1c72d3bbe8cb6f26b/>
-  <Text_e6b8ad8c047c78d9f8539beb6922e735/>
 </Text>
 </Box>
 </CardBody>

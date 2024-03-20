@@ -2,7 +2,7 @@
 
 
 import { Fragment, useCallback, useContext } from "react"
-import { Fragment_e0824044528a5eb3af991544f9cc0799, Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Input_dcdc4ad4dcaea7427a2964b3366f2748 } from "/utils/stateful_components"
+import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Input, Link, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
@@ -12,9 +12,10 @@ import NextHead from "next/head"
 
 
 
-export function Box_939806b833422e9eb89d6d7580059422 () {
+export function Box_4d8240454cbbfd623a031ccd6daf7088 () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
   
-    const handleSubmit_46ff3d752207f946241948cb11da8bba = useCallback((ev) => {
+    const handleSubmit_1481f77324dceaf7e603b81f7184595c = useCallback((ev) => {
         const $form = ev.target
         ev.preventDefault()
         const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
@@ -26,11 +27,10 @@ export function Box_939806b833422e9eb89d6d7580059422 () {
         }
     })
     
-  const [addEvents, connectError] = useContext(EventLoopContext);
 
 
   return (
-    <Box as={`form`} onSubmit={handleSubmit_46ff3d752207f946241948cb11da8bba} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+    <Box as={`form`} onSubmit={handleSubmit_1481f77324dceaf7e603b81f7184595c} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
   <VStack>
   <Input name={`event_title`} placeholder={`Enter your Name`} sx={{"margin-bottom": "1em", "width": "100%"}} type={`text`}/>
   <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
@@ -78,8 +78,14 @@ export default function Component() {
 </Link>
 </HStack>
   <HStack spacing={`8`}>
-  <Input_dcdc4ad4dcaea7427a2964b3366f2748/>
-  <Fragment_e0824044528a5eb3af991544f9cc0799/>
+  <Link as={NextLink} href={`/signIn`} sx={{"color": "indigo", "mr": "2"}}>
+  {`Login`}
+</Link>
+  <Link as={NextLink} href={`/signUp`} sx={{"button": true}}>
+  <Button sx={{"bg": "indigo", "color": "white"}}>
+  {`SignUp`}
+</Button>
+</Link>
   <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
   <Button sx={{"bg": "indigo", "color": "white"}}>
   {`Admin`}
@@ -92,7 +98,7 @@ export default function Component() {
   {`Sign up`}
 </Heading>
   <VStack>
-  <Box_939806b833422e9eb89d6d7580059422/>
+  <Box_4d8240454cbbfd623a031ccd6daf7088/>
 </VStack>
 </Container>
   <NextHead>

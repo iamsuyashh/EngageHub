@@ -2,7 +2,7 @@
 import reflex as rx
 from ..components import navbar, footer , featuredVideo , upcomingEvents , carousel
 from ..State.CustomState import UserCredentials , user_state
-from ..State.firebaseConfig import auth, firebase, read_event_details, read_all_data
+from ..State.firebaseConfig import auth, firebase, read_event_details, read_all_data, read_featured_video
 from ..components.form import ClStorage
 # Create an instance of the ClientStorageState cl
 cred = UserCredentials()
@@ -19,13 +19,15 @@ def display_username(self):
 # Now you can use the current_user variable in your code
 def home(): 
     event_details = read_event_details() 
+    url = read_featured_video()
+    link = url["link"]
     """The home Page ."""
     return rx.container( 
        navbar(),
     #    carousel(),
       #  gallery_cards(),
       #Featured Video
-      featuredVideo(),
+      featuredVideo(link),
     #   carousel(),
       #Upcoming Events
        upcomingEvents(event_details),

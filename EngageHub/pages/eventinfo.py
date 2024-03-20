@@ -40,7 +40,7 @@ class MyParam(rx.State):
 eventName = "Vaibhav"
 # rx.asyncawait handle_event_details()
 @rx.page()
-@rx.page(route='/eventdetails/',on_load=MyParam.on_load)
+@rx.page(route='/eventInfo/',on_load=MyParam.on_load)
 def eventInfo()-> rx.Component: 
                     event_data = read_event_info(eventName)
                     return rx.container(

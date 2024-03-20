@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 
 
-import { Fragment, useContext } from "react"
-import { EventLoopContext, StateContexts } from "/utils/context"
-import { Event, isTrue, set_val } from "/utils/state"
-import { Button, Input, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text } from "@chakra-ui/react"
+import { Fragment, useCallback, useContext } from "react"
+import { EventLoopContext } from "/utils/context"
+import { Event, getRefValue, getRefValues, isTrue, set_val } from "/utils/state"
+import { Box, Button, Input, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text, VStack } from "@chakra-ui/react"
 import "focus-visible/dist/focus-visible"
 import { getEventURL } from "/utils/state.js"
 
@@ -44,56 +44,68 @@ export function Fragment_fd0e7cb8f9fb4669a6805377d925fba0 () {
   )
 }
 
-export function Input_dcdc4ad4dcaea7427a2964b3366f2748 () {
-  const state__auth_state = useContext(StateContexts.state__auth_state)
+export function Box_88514b44199af0ae3a9fb2a871b8aac1 () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+  
+    const handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd = useCallback((ev) => {
+        const $form = ev.target
+        ev.preventDefault()
+        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
+
+        addEvents([Event("state.register_event_data.handle_submit", {form_data:form_data})])
+
+        if (true) {
+            $form.reset()
+        }
+    })
+    
 
 
   return (
-    <Input type={`text`} value={state__auth_state.is_logged_in}/>
-  )
-}
-
-export function Fragment_e0824044528a5eb3af991544f9cc0799 () {
-  const state__auth_state = useContext(StateContexts.state__auth_state)
-
-
-  return (
-    <Fragment>
-  {isTrue((state__auth_state.is_logged_in === "true")) ? (
-  <Fragment>
-  <Button>
-  {`Log out`}
+    <Box as={`form`} onSubmit={handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+  <VStack>
+  <Input name={`name`} placeholder={`Name`} sx={{"width": "100%"}} type={`text`}/>
+  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
+  <Input name={`header`} type={`hidden`} value={`Vaibhav`}/>
+  <Input name={`pid_number`} placeholder={`Enter PID`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Input name={`ph_number`} placeholder={`Enter your Phone Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
+  {`Register`}
 </Button>
-</Fragment>
-) : (
-  <Fragment>
-  <Button>
-  {`Log In`}
+</VStack>
+</Box>
+  )
+}
+
+export function Box_1d2e65bd1d5e52f5559121b3b1621f3b () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+  
+    const handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd = useCallback((ev) => {
+        const $form = ev.target
+        ev.preventDefault()
+        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
+
+        addEvents([Event("state.register_event_data.handle_submit", {form_data:form_data})])
+
+        if (true) {
+            $form.reset()
+        }
+    })
+    
+
+
+  return (
+    <Box as={`form`} onSubmit={handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+  <VStack>
+  <Input name={`name`} placeholder={`Name`} sx={{"width": "100%"}} type={`text`}/>
+  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
+  <Input name={`header`} type={`hidden`} value={`TantraUtsav`}/>
+  <Input name={`pid_number`} placeholder={`Enter PID`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Input name={`ph_number`} placeholder={`Enter your Phone Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
+  {`Register`}
 </Button>
-</Fragment>
-)}
-</Fragment>
-  )
-}
-
-export function Text_302c867ca52040a1c72d3bbe8cb6f26b () {
-  const state = useContext(StateContexts.state)
-
-
-  return (
-    <Text>
-  {state.router.page.raw_path}
-</Text>
-  )
-}
-
-export function Text_e6b8ad8c047c78d9f8539beb6922e735 () {
-  const state__event_state = useContext(StateContexts.state__event_state)
-
-
-  return (
-    <Text>
-  {state__event_state.eventName}
-</Text>
+</VStack>
+</Box>
   )
 }

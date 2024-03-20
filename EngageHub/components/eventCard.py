@@ -19,7 +19,7 @@ class EventState(rx.State):
         return self.eventName
 
 def qa(event_data : dict) -> rx.Component:
-    query_string = urllib.parse.urlencode({"header": event_data["header"]})
+    # query_string = urllib.parse.urlencode({event_data["header"]})
     return rx.flex(
         rx.link(
         rx.card(
@@ -30,8 +30,8 @@ def qa(event_data : dict) -> rx.Component:
                 rx.heading(event_data["header"]),
                 rx.text(
                     event_data["location"],
-                    rx.text(RouterState.router.page.raw_path),
-                    rx.text(EventState.eventName),
+                    # rx.text(RouterState.router.page.raw_path),
+                    # rx.text(EventState.eventName),
                 ),
             ),
          as_child=True,
@@ -45,12 +45,12 @@ def qa(event_data : dict) -> rx.Component:
               "text-decoration": "none",
         }
         ),
-       
         # spacing="2",
         margin_y="1em",
         margin_x="1em",
         # on_click=EventState.set_event_name,
-        href=f"{event_data['link']}?{query_string}",
+        href=f"{event_data['link']}/{event_data['header']}"
+        # href=f"{event_data["link"]}",
         ),
     )
 

@@ -40,14 +40,17 @@ def navbar():
                 ),
             ),
             rx.hstack(
-                # if ,
-                rx.chakra.input(
-                    value=AuthState.is_logged_in
+                 rx.link(
+                        "Login",
+                        color="indigo",
+                        mr="2",
+                        href="/signIn",
                 ),
-                rx.cond(
-                    AuthState.is_logged_in == "true",
-                    rx.button("Log out"),
-                    rx.button("Log In")
+                rx.link(
+                    rx.button("SignUp", bg="indigo", color="white"),
+                    href="/signUp",
+                    # color="rgb(107,99,246)",
+                    button=True,
                 ),
                 rx.link(
                     rx.button("Admin", bg="indigo", color="white"),

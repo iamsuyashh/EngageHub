@@ -2,8 +2,8 @@
 
 
 import { Fragment } from "react"
-import { Fragment_e0824044528a5eb3af991544f9cc0799, Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Input_dcdc4ad4dcaea7427a2964b3366f2748 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Image as ChakraImage, Link, Text } from "@chakra-ui/react"
+import { Box_88514b44199af0ae3a9fb2a871b8aac1, Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Image as ChakraImage, Link, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import NextHead from "next/head"
@@ -42,8 +42,14 @@ export default function Component() {
 </Link>
 </HStack>
   <HStack spacing={`8`}>
-  <Input_dcdc4ad4dcaea7427a2964b3366f2748/>
-  <Fragment_e0824044528a5eb3af991544f9cc0799/>
+  <Link as={NextLink} href={`/signIn`} sx={{"color": "indigo", "mr": "2"}}>
+  {`Login`}
+</Link>
+  <Link as={NextLink} href={`/signUp`} sx={{"button": true}}>
+  <Button sx={{"bg": "indigo", "color": "white"}}>
+  {`SignUp`}
+</Button>
+</Link>
   <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
   <Button sx={{"bg": "indigo", "color": "white"}}>
   {`Admin`}
@@ -54,11 +60,6 @@ export default function Component() {
 </Box>
   <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
   <ChakraImage src={`https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
-  <Link as={NextLink} href={`/register`} sx={{"textDecoration": "none"}}>
-  <Button sx={{"background-color": "Indigo", "color": "white", "dark": "true", "padding": "15px 30px", "border": "none", "border-radius": "8px", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%, -50%)", "opacity": "0.8", "font-size": "1.5rem"}}>
-  {`Register`}
-</Button>
-</Link>
   <Container sx={{"display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem"}}>
   <Heading sx={{"color": "black", "font-size": "2rem", "margin-bottom": "0.5rem"}}>
   {`Vaibhav`}
@@ -79,6 +80,9 @@ export default function Component() {
   {`Location: Dmart, Kandivali`}
 </Text>
 </Container>
+  <VStack>
+  <Box_88514b44199af0ae3a9fb2a871b8aac1/>
+</VStack>
 </Container>
 </Container>
   <Box sx={{"background-color": "indigo", "text-align": "center", "p": "10"}}>
