@@ -1,24 +1,24 @@
 /** @jsxImportSource @emotion/react */
 
 
-import { Fragment, useCallback, useContext } from "react"
+import { Fragment, useCallback, useContext, useRef } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
 import { Box, Button, Container, Heading, Input, Link, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
-import { EventLoopContext } from "/utils/context"
-import { Event, getRefValue, getRefValues, set_val } from "/utils/state"
+import { EventLoopContext, UploadFilesContext } from "/utils/context"
+import { Event, getRefValue, getRefValues, refs, set_val } from "/utils/state"
+import ReactDropzone from "react-dropzone"
 import NextHead from "next/head"
 
 
 
-export function Box_f93ad882f1e00d39cbf98d3e70d3dbb4 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
+export function Box_162ddde339db2208acf4b425a8a743c3 () {
   
-    const handleSubmit_1a22818765961d4ab16b647c43fc5157 = useCallback((ev) => {
+    const handleSubmit_c6654c18b3d4a82d0c7f6f485bbbfb4a = useCallback((ev) => {
         const $form = ev.target
         ev.preventDefault()
-        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
+        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{"my_upload": getRefValue(refs['ref_my_upload'])}}
 
         addEvents([Event("state.create_event_data.handle_submit", {form_data:form_data})])
 
@@ -27,10 +27,11 @@ export function Box_f93ad882f1e00d39cbf98d3e70d3dbb4 () {
         }
     })
     
+  const [addEvents, connectError] = useContext(EventLoopContext);
 
 
   return (
-    <Box as={`form`} onSubmit={handleSubmit_1a22818765961d4ab16b647c43fc5157} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+    <Box as={`form`} onSubmit={handleSubmit_c6654c18b3d4a82d0c7f6f485bbbfb4a} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
   <VStack>
   <Input name={`header`} placeholder={`Enter your Event Title`} sx={{"margin-bottom": "1em", "width": "100%"}} type={`text`}/>
   <Input name={`description`} placeholder={`Event Description`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
@@ -39,6 +40,7 @@ export function Box_f93ad882f1e00d39cbf98d3e70d3dbb4 () {
   <Input name={`date`} placeholder={`Date`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`date`}/>
   <Input name={`time`} placeholder={`Time`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`time`}/>
   <Input name={`url`} placeholder={`Image link`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
+  <Reactdropzone_77b1060283630e030a91ebb1e250cef2/>
   <Input name={`redirect`} placeholder={`Redirect URl`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
   <Input name={`link`} placeholder={`Link`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
   <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
@@ -46,6 +48,27 @@ export function Box_f93ad882f1e00d39cbf98d3e70d3dbb4 () {
 </Button>
 </VStack>
 </Box>
+  )
+}
+
+export function Reactdropzone_77b1060283630e030a91ebb1e250cef2 () {
+  const [filesById, setFilesById] = useContext(UploadFilesContext);
+  const ref_my_upload = useRef(null); refs['ref_my_upload'] = ref_my_upload;
+  const [addEvents, connectError] = useContext(EventLoopContext);
+
+  const on_drop_e71202bdb20000b5fb62349962db79aa = useCallback(e => setFilesById(filesById => ({...filesById, my_upload: e})), [addEvents, Event, filesById, setFilesById])
+
+  return (
+    <ReactDropzone id={`my_upload`} multiple={true} onDrop={on_drop_e71202bdb20000b5fb62349962db79aa} ref={ref_my_upload}>
+  {({ getRootProps, getInputProps }) => (
+    <Box id={`my_upload`} ref={ref_my_upload} sx={{"border": "1px dotted rgb(107,99,246)", "padding": "5em"}} {...getRootProps()}>
+    <Input type={`file`} {...getInputProps()}/>
+    <Text>
+    {`Drag and drop files here or click to select files`}
+  </Text>
+  </Box>
+  )}
+</ReactDropzone>
   )
 }
 
@@ -78,7 +101,7 @@ export default function Component() {
   {` Event`}
 </Text>
 </Heading>
-  <Box_f93ad882f1e00d39cbf98d3e70d3dbb4/>
+  <Box_162ddde339db2208acf4b425a8a743c3/>
 </VStack>
 </Container>
   <NextHead>

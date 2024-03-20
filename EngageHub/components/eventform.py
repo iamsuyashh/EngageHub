@@ -67,13 +67,14 @@ def handle_Form_Submit(form_data):
     link = form_data.get("link")
     time = form_data.get("time")
     url = form_data.get("url")
+    file = form_data.get("my_upload")
 
     
    
     try:
             if CreateEventData.checked_checked == True:
                 upcoming = createUpcomingEvent(header,date,description,location,venue,redirect,link,time,url)
-            status = createEvent(header,date,description,location,venue,redirect,link,time,url)
+            status = createEvent(header,date,description,location,venue,redirect,link,time,url,file)
             if status  == True:
                  rx.alert("success")
             # ClStorage.set_currentUser
@@ -145,6 +146,14 @@ def event_form():
                     margin_bottom="1em",
                     width = "100%"
                 ),
+                rx.upload(
+                    rx.text(
+                        "Drag and drop files here or click to select files"
+                    ),
+                    id="my_upload",
+                    border="1px dotted rgb(107,99,246)",
+                    padding="5em",
+                    ),
                  rx.input(
                     placeholder="Redirect URl",
                     name="redirect",

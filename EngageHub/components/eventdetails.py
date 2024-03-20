@@ -28,25 +28,6 @@ def handle_Form_Submit(form_data):
             register = register_for_event(header,name,email,pid,ph_Number)
             if register:
                 return rx.window_alert("Event Registered")
-            # user = auth.sign_in_with_email_and_password(email, password)
-            # UserCredentials.set_my_local_storage = "Vaibhav"
-            # add_user_to_firestore("user","user.email")
-            # print("User signed in:", user["email"])
-            # credentials.username = "Vaibhav"
-            # user_state.authenticated = True
-            # userEmail = user["email"]
-            # print("User Email: ", userEmail)
-            # ClStorage.currentUser = "Vaibhav"
-            # print("User State: ", ClStorage.currentUser)
-            # ClStorage.set_currentUser
-            # currentUser("Vaibhav")
-            # UserCredentials.add_var()
-            # UserStorage.set_user_email("Vaibhav@gmail.com")
-            
-            # print("Username: ",credentials.username)
-            # rx.script("")
-            # userCred = auth.current_user()
-            # return rx.redirect("/")
         # Here you can perform any additional actions after successful sign-in
     except Exception as e:
         print("Error:", e)

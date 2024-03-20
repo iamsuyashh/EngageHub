@@ -4,11 +4,12 @@ from ...State.firebaseConfig import read_event_info , db
 from ...State.CustomState import State
 from fastapi import FastAPI, Query
 
-eventName = "TantraUtsav"
+    
+eventName = "Coloqium"
 # rx.asyncawait handle_event_details()
 event_data = read_event_info(eventName)
 @rx.page()
-def TantraUtsav()-> rx.Component: 
+def coloqium()-> rx.Component: 
                     return rx.container(
                         navbar(),
                         event_details(event_data),

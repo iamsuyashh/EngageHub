@@ -6,7 +6,7 @@ def upcomingEvents():
     return rx.container(
         sidebar(),
        rx.vstack(
-       rx.heading("Create ",rx.span("Upcoming Event", color="Indigo"),style={"margin-top":"20px"}),
+       rx.heading("Create ",rx.span(" Event", color="Indigo"),style={"margin-top":"20px"}),
         rx.form(
             rx.vstack(
                 rx.input(

@@ -7,6 +7,7 @@
     "prod": "next start"
   },
   "dependencies": {
+    "@chakra-ui/icons": "2.0.19",
     "@chakra-ui/react": "2.6.1",
     "@chakra-ui/system": "2.5.7",
     "@emotion/react": "^11.11.0",
@@ -22,6 +23,7 @@
     "react": "18.2.0",
     "react-debounce-input": "3.3.0",
     "react-dom": "18.2.0",
+    "react-dropzone": "14.2.3",
     "react-player": "2.12.0",
     "silly": "^0.2.0",
     "socket.io-client": "4.6.1",

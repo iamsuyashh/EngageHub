@@ -19,9 +19,9 @@ def on_load():
     event_details = read_event_details() 
     return event_details
 # Now you can use the current_user variable in your code
-@rx.page(on_load=on_load)
+
 def home(): 
-    event_details = on_load()
+    event_details = read_event_details()
     url = read_featured_video()
     link = url["link"]
     """The home Page ."""
