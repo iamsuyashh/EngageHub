@@ -12,9 +12,9 @@ import NextHead from "next/head"
 
 
 
-export function Box_89d59a07231c56c736ee240d54ecf6c1 () {
+export function Box_1aa6dd543ed1deed75bad797c2fa40a7 () {
   
-    const handleSubmit_2c1ffe7fe744879158c0ee953ed0f7e5 = useCallback((ev) => {
+    const handleSubmit_3c4d02892d94a5599acf07c7c1a3c11d = useCallback((ev) => {
         const $form = ev.target
         ev.preventDefault()
         const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
@@ -30,7 +30,7 @@ export function Box_89d59a07231c56c736ee240d54ecf6c1 () {
 
 
   return (
-    <Box as={`form`} onSubmit={handleSubmit_2c1ffe7fe744879158c0ee953ed0f7e5} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+    <Box as={`form`} onSubmit={handleSubmit_3c4d02892d94a5599acf07c7c1a3c11d} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
   <VStack>
   <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
   <Input name={`password`} placeholder={`Enter Password`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`password`}/>
@@ -95,7 +95,7 @@ export default function Component() {
   {`Login`}
 </Heading>
   <VStack>
-  <Box_89d59a07231c56c736ee240d54ecf6c1/>
+  <Box_1aa6dd543ed1deed75bad797c2fa40a7/>
 </VStack>
 </Container>
   <NextHead>
