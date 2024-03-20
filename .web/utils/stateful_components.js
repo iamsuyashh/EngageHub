@@ -2,9 +2,9 @@
 
 
 import { Fragment, useCallback, useContext } from "react"
-import { EventLoopContext, StateContexts } from "/utils/context"
-import { Event, isTrue } from "/utils/state"
-import { Button, Image as ChakraImage, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text } from "@chakra-ui/react"
+import { EventLoopContext } from "/utils/context"
+import { Event, getRefValue, getRefValues, isTrue, set_val } from "/utils/state"
+import { Box, Button, Input, Modal, ModalBody, ModalContent, ModalHeader, ModalOverlay, Text, VStack } from "@chakra-ui/react"
 import "focus-visible/dist/focus-visible"
 import { getEventURL } from "/utils/state.js"
 
@@ -44,57 +44,68 @@ export function Fragment_fd0e7cb8f9fb4669a6805377d925fba0 () {
   )
 }
 
-export function Text_302c867ca52040a1c72d3bbe8cb6f26b () {
-  const state = useContext(StateContexts.state)
-
-
-  return (
-    <Text>
-  {state.router.page.raw_path}
-</Text>
-  )
-}
-
-export function Text_38658ec7233cb02bff9c3ad493636077 () {
-  const state__cl_storage = useContext(StateContexts.state__cl_storage)
-
-
-  return (
-    <Text>
-  {state__cl_storage.currentUser}
-</Text>
-  )
-}
-
-export function Image_e6408ca805ae974e6eb3e94065ff972f () {
-  const state__carousel_state = useContext(StateContexts.state__carousel_state)
-
-
-  return (
-    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"position": "relative", "width": "100vw", "height": "30vw"}}/>
-  )
-}
-
-export function Button_e65140ba91c51800240365f1c3f069dd () {
+export function Box_88514b44199af0ae3a9fb2a871b8aac1 () {
   const [addEvents, connectError] = useContext(EventLoopContext);
+  
+    const handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd = useCallback((ev) => {
+        const $form = ev.target
+        ev.preventDefault()
+        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
 
-  const on_click_ded72e95921a40fca507841609cd7a38 = useCallback((_e) => addEvents([Event("state.carousel_state.previous_image", {})], (_e), {}), [addEvents, Event])
+        addEvents([Event("state.register_event_data.handle_submit", {form_data:form_data})])
+
+        if (true) {
+            $form.reset()
+        }
+    })
+    
+
 
   return (
-    <Button onClick={on_click_ded72e95921a40fca507841609cd7a38} sx={{"position": "absolute", "left": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
-  {`<--`}
+    <Box as={`form`} onSubmit={handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+  <VStack>
+  <Input name={`name`} placeholder={`Name`} sx={{"width": "100%"}} type={`text`}/>
+  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
+  <Input name={`header`} type={`hidden`} value={`Vaibhav`}/>
+  <Input name={`pid_number`} placeholder={`Enter PID`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Input name={`ph_number`} placeholder={`Enter your Phone Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
+  {`Register`}
 </Button>
+</VStack>
+</Box>
   )
 }
 
-export function Button_5d4e77008a1b016ea27a78202f92ed58 () {
+export function Box_1d2e65bd1d5e52f5559121b3b1621f3b () {
   const [addEvents, connectError] = useContext(EventLoopContext);
+  
+    const handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd = useCallback((ev) => {
+        const $form = ev.target
+        ev.preventDefault()
+        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
 
-  const on_click_75e88266e59bd7fcf0de0ebf394b1812 = useCallback((_e) => addEvents([Event("state.carousel_state.next_image", {})], (_e), {}), [addEvents, Event])
+        addEvents([Event("state.register_event_data.handle_submit", {form_data:form_data})])
+
+        if (true) {
+            $form.reset()
+        }
+    })
+    
+
 
   return (
-    <Button onClick={on_click_75e88266e59bd7fcf0de0ebf394b1812} sx={{"position": "absolute", "right": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
-  {`-->`}
+    <Box as={`form`} onSubmit={handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+  <VStack>
+  <Input name={`name`} placeholder={`Name`} sx={{"width": "100%"}} type={`text`}/>
+  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
+  <Input name={`header`} type={`hidden`} value={`TantraUtsav`}/>
+  <Input name={`pid_number`} placeholder={`Enter PID`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Input name={`ph_number`} placeholder={`Enter your Phone Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
+  {`Register`}
 </Button>
+</VStack>
+</Box>
   )
 }

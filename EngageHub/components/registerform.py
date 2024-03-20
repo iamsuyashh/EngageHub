@@ -10,6 +10,7 @@ class RegisterFormData(rx.State):
         rx.window_alert("Hello")
         handle_Form_Submit(form_data)
 def handle_Form_Submit(form_data):
+    from ..State.firebaseConfig import register_for_event
     name = form_data.get("name")  # Access form_data correctly
     email = form_data.get("email")
     pid = form_data.get("pid_number")
@@ -20,6 +21,7 @@ def handle_Form_Submit(form_data):
     print("Phone Number:",ph_Number)
 
     try:
+            register_for_event(name,email,pid,ph_Number)
             # user = auth.sign_in_with_email_and_password(email, password)
             # UserCredentials.set_my_local_storage = "Vaibhav"
             # add_user_to_firestore("user","user.email")
@@ -51,7 +53,7 @@ def handle_Form_Submit(form_data):
         # Handle sign-in error, e.g., display error message to the user
     return rx.text("Sign-in successful!") 
 
-def register_form():
+def register_form() -> rx.Component:
     return rx.vstack(
         rx.form(
             rx.vstack(

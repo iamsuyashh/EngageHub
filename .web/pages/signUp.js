@@ -12,7 +12,11 @@ import NextHead from "next/head"
 
 
 
+<<<<<<< HEAD
 export function Box_939806b833422e9eb89d6d7580059422 () {
+=======
+export function Box_4d8240454cbbfd623a031ccd6daf7088 () {
+>>>>>>> 077cafea0c75993a46a8f23ea7be5afd1deb8014
   const [addEvents, connectError] = useContext(EventLoopContext);
   
     const handleSubmit_46ff3d752207f946241948cb11da8bba = useCallback((ev) => {

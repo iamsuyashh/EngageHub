@@ -13,6 +13,10 @@ import NextHead from "next/head"
 
 
 export function Box_ae3e8f306b0e80de6dc7d0702bc5f4e6 () {
+<<<<<<< HEAD
+=======
+  const [addEvents, connectError] = useContext(EventLoopContext);
+>>>>>>> 077cafea0c75993a46a8f23ea7be5afd1deb8014
   
     const handleSubmit_ab11fc5fea4edf2f271cab0295cf38b6 = useCallback((ev) => {
         const $form = ev.target

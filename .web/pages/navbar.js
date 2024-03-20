@@ -2,11 +2,19 @@
 
 
 import { Fragment } from "react"
-import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Image as ChakraImage, Link, Text } from "@chakra-ui/react"
+<<<<<<< HEAD:.web/pages/live.js
+import { Button_5d4e77008a1b016ea27a78202f92ed58, Button_e65140ba91c51800240365f1c3f069dd, Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Image_e6408ca805ae974e6eb3e94065ff972f } from "/utils/stateful_components"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Link, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
+import dynamic from "next/dynamic"
 import { AddIcon } from "@chakra-ui/icons"
+=======
+import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Heading, HStack, Link } from "@chakra-ui/react"
+import NextLink from "next/link"
+import "focus-visible/dist/focus-visible"
+>>>>>>> 077cafea0c75993a46a8f23ea7be5afd1deb8014:.web/pages/navbar.js
 import NextHead from "next/head"
 
 
@@ -16,7 +24,6 @@ export default function Component() {
   return (
     <Fragment>
   <Fragment_fd0e7cb8f9fb4669a6805377d925fba0/>
-  <Container sx={{"max-width": "100vw"}}>
   <Box sx={{"backdropFilter": "auto", "backdropBlur": "lg", "p": "4", "position": "sticky", "top": "0", "zIndex": "100"}}>
   <HStack justify={`space-between`}>
   <HStack>
@@ -59,35 +66,15 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
-  <Link as={NextLink} href={`/register`} sx={{"textDecoration": "none"}}>
-  <Button sx={{"background-color": "Indigo", "color": "white", "dark": "true", "padding": "15px 30px", "border": "none", "border-radius": "8px", "position": "absolute", "top": "50%", "left": "50%", "transform": "translate(-50%, -50%)", "opacity": "0.8", "font-size": "1.5rem"}}>
-  {`Register`}
-</Button>
-</Link>
-  <Container sx={{"display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem"}}>
-  <Heading sx={{"color": "black", "font-size": "2rem", "margin-bottom": "0.5rem"}}>
-  {`TantraUtsav`}
-</Heading>
-  <Container sx={{"flex": "1", "margin-right": "2rem"}}>
-  <Text sx={{"margin-bottom": "0.2rem", "color": "black"}}>
-  {`EngageHub organized a 3D Modeling Workshop using Blender on 16th February at 5 PM. The workshop taught participants the magic of creating stunning 3D models and animations using Blender. It was suitable for both beginners and experienced users. The event was followed by a blender-render competition, which added to the excitement.`}
-</Text>
-</Container>
-  <Container sx={{"margin-top": "0.5rem"}}>
-  <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Date: February 16, 2023`}
-</Text>
-  <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Time: 9 PM`}
-</Text>
-  <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Location: Mira , Bhayander`}
-</Text>
+<<<<<<< HEAD:.web/pages/live.js
+  <Container sx={{"max-width": "100vw", "position": "relative", "overflow": "hidden", "margin-bottom": "10px"}}>
+  <Image_e6408ca805ae974e6eb3e94065ff972f/>
+  <Container sx={{"position": "absolute", "top": "10", "left": "444", "width": "100vw", "height": "50vw", "opacity": "0.5"}}>
+  <Button_e65140ba91c51800240365f1c3f069dd/>
+  <Button_5d4e77008a1b016ea27a78202f92ed58/>
 </Container>
 </Container>
-</Container>
+  <ReactPlayer controls={false} height={`90vh`} url={`https://www.youtube.com/live/CY8m6Xrzsk0?feature=shared`} width={`100%`}/>
   <Box sx={{"background-color": "indigo", "text-align": "center", "padding": "1rem"}}>
   <Flex sx={{"margin-bottom": "1rem"}}>
   <AddIcon sx={{"name": "fab fa-twitter", "color": "white", "size": "lg", "mr": "2"}}/>
@@ -106,6 +93,8 @@ export default function Component() {
 </Text>
 </Box>
 </Container>
+=======
+>>>>>>> 077cafea0c75993a46a8f23ea7be5afd1deb8014:.web/pages/navbar.js
   <NextHead>
   <title>
   {`Reflex App`}

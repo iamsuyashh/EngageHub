@@ -2,18 +2,14 @@
 import reflex as rx
 from ..components import navbar, footer , featuredVideo , upcomingEvents , carousel
 from ..State.CustomState import UserCredentials , user_state
-from ..State.firebaseConfig import auth, firebase, read_event_details
+from ..State.firebaseConfig import auth, firebase, read_event_details, read_all_data, read_featured_video
 from ..components.form import ClStorage
 # Create an instance of the ClientStorageState cl
 cred = UserCredentials()
-# user = auth.current_user() 
-# print(user)
-# print("CurrentUser from LocalStorage: ",OtherPageState.retrieve_user_email)
-
-
 # class Home(rx.State):
 class StateTwo(rx.State):
     same_shared_value: str = rx.LocalStorage(name="shared")
+    print("Event All data: ",read_all_data())
 # username = same_shared_value
 print("Shared Value",StateTwo.same_shared_value)
 def display_username(self):
@@ -23,13 +19,15 @@ def display_username(self):
 # Now you can use the current_user variable in your code
 def home(): 
     event_details = read_event_details() 
+    url = read_featured_video()
+    link = url["link"]
     """The home Page ."""
     return rx.container( 
        navbar(),
-       rx.code("Shared:",rx.LocalStorage(name="shared")),
+    #    carousel(),
       #  gallery_cards(),
       #Featured Video
-      featuredVideo(),
+      featuredVideo(link),
     #   carousel(),
       #Upcoming Events
        upcomingEvents(event_details),

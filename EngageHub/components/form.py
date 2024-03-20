@@ -44,7 +44,8 @@ class VerifyState(rx.State):
             # Redirect to login if the cookie is not valid
             if page != "/signIn":
                 return rx.redirect("/signIn")
-            
+state :bool = True
+# def login(sekfm)
 def handle_Form_Submit(form_data):
     email = form_data.get("email")  # Access form_data correctly
     password = form_data.get("password")
@@ -52,27 +53,22 @@ def handle_Form_Submit(form_data):
     print("Password:",password)
     
     try:
-            user = auth.sign_in_with_email_and_password(email, password)
+            # user = auth.sign_in_with_email_and_password(email, password)
+            rx.redirect("/signUp",external=True)
+            # if state == True:
             UserCredentials.set_my_local_storage = "Vaibhav"
             # add_user_to_firestore("user","user.email")
             # print("User signed in:", user["email"])
             credentials.username = "Vaibhav"
             user_state.authenticated = True
-            userEmail = user["email"]
-            print("User Email: ", userEmail)
+            # userEmail = user["email"]
+            # print("User Email: ", userEmail)
             ClStorage.currentUser = "Vaibhav"
             print("User State: ", ClStorage.currentUser)
             # ClStorage.set_currentUser
             # currentUser("Vaibhav")
             # UserCredentials.add_var()
             # UserStorage.set_user_email("Vaibhav@gmail.com")
-            rx.chakra.alert(
-            rx.chakra.alert_icon(),
-            rx.chakra.alert_title(
-                "Error Reflex version is out of date."
-            ),
-            status="error",
-            ),
             print("Username: ",credentials.username)
             # rx.script("")
             # userCred = auth.current_user()
