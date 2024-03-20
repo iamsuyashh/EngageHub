@@ -15,10 +15,13 @@ print("Shared Value",StateTwo.same_shared_value)
 def display_username(self):
     # Access the username from LocalStorageState
     return rx.text(f"Hello, {self.ClStorage.currentUser}")
-
-# Now you can use the current_user variable in your code
-def home(): 
+def on_load():
     event_details = read_event_details() 
+    return event_details
+# Now you can use the current_user variable in your code
+@rx.page(on_load=on_load)
+def home(): 
+    event_details = on_load()
     url = read_featured_video()
     link = url["link"]
     """The home Page ."""

@@ -40,6 +40,11 @@ export default function Component() {
   {`About Us`}
 </Button>
 </Link>
+  <Link as={NextLink} href={`/live`} sx={{"button": true}}>
+  <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
+  {`Live Event`}
+</Button>
+</Link>
 </HStack>
   <HStack spacing={`8`}>
   <Link as={NextLink} href={`/signIn`} sx={{"color": "indigo", "mr": "2"}}>

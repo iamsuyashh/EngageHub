@@ -3,7 +3,7 @@
 
 import { Fragment, useCallback, useContext } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Input, Link, Text, VStack } from "@chakra-ui/react"
+import { Box, Button, Container, Heading, Input, Link, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import { EventLoopContext } from "/utils/context"
@@ -12,10 +12,10 @@ import NextHead from "next/head"
 
 
 
-export function Box_bc6205ae14a9981ce89b0cef73315433 () {
+export function Box_f93ad882f1e00d39cbf98d3e70d3dbb4 () {
   const [addEvents, connectError] = useContext(EventLoopContext);
   
-    const handleSubmit_56e23081b20fc820687a747bba80deb8 = useCallback((ev) => {
+    const handleSubmit_1a22818765961d4ab16b647c43fc5157 = useCallback((ev) => {
         const $form = ev.target
         ev.preventDefault()
         const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
@@ -30,7 +30,7 @@ export function Box_bc6205ae14a9981ce89b0cef73315433 () {
 
 
   return (
-    <Box as={`form`} onSubmit={handleSubmit_56e23081b20fc820687a747bba80deb8} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+    <Box as={`form`} onSubmit={handleSubmit_1a22818765961d4ab16b647c43fc5157} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
   <VStack>
   <Input name={`header`} placeholder={`Enter your Event Title`} sx={{"margin-bottom": "1em", "width": "100%"}} type={`text`}/>
   <Input name={`description`} placeholder={`Event Description`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`text`}/>
@@ -55,48 +55,22 @@ export default function Component() {
     <Fragment>
   <Fragment_fd0e7cb8f9fb4669a6805377d925fba0/>
   <Container sx={{"max-width": "100vw"}}>
-  <Box sx={{"backdropFilter": "auto", "backdropBlur": "lg", "p": "4", "position": "sticky", "top": "0", "zIndex": "100"}}>
-  <HStack justify={`space-between`}>
-  <HStack>
-  <Breadcrumb>
-  <BreadcrumbItem>
-  <BreadcrumbLink as={NextLink} href={`/`}>
-  <Heading size={`xl`} sx={{"color": "indigo"}}>
-  {`EngageHub`}
-</Heading>
-</BreadcrumbLink>
-</BreadcrumbItem>
-</Breadcrumb>
-</HStack>
-  <HStack>
-  <Link as={NextLink} href={`/eventgallery`} sx={{"button": true}}>
-  <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
-  {`Event Gallery`}
-</Button>
+  <Container sx={{"borderRadius": "10px", "boxShadow": "0 0 10px rgba(0, 0, 0, 0.1)"}}>
+  <VStack alignItems={`left`} sx={{"position": "fixed", "height": "100%", "left": "0px", "top": "0px", "zIndex": "5", "paddingX": "2em", "paddingY": "1em", "backgroundColor": "rgba(255, 255, 255, 0.9)", "width": "250px", "borderRadius": "10px", "boxShadow": "0 0 10px rgba(0, 0, 0, 0.1)"}}>
+  <Link as={NextLink} href={`/`} sx={{"marginBottom": "1em", "color": "indigo", "fontWeight": "bold", "fontSize": "1.5em"}}>
+  {`Engage HUB`}
 </Link>
-  <Link as={NextLink} href={`/about`} sx={{"button": true}}>
-  <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
-  {`About Us`}
-</Button>
+  <Link as={NextLink} href={`/admin`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
+  {`Home`}
 </Link>
-</HStack>
-  <HStack spacing={`8`}>
-  <Link as={NextLink} href={`/signIn`} sx={{"color": "indigo", "mr": "2"}}>
-  {`Login`}
+  <Link as={NextLink} href={`/event`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
+  {`Create Event`}
 </Link>
-  <Link as={NextLink} href={`/signUp`} sx={{"button": true}}>
-  <Button sx={{"bg": "indigo", "color": "white"}}>
-  {`SignUp`}
-</Button>
+  <Link as={NextLink} href={`/upcomingEvents`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
+  {`Create upcoming Events`}
 </Link>
-  <Link as={NextLink} href={`/admin`} sx={{"button": true}}>
-  <Button sx={{"bg": "indigo", "color": "white"}}>
-  {`Admin`}
-</Button>
-</Link>
-</HStack>
-</HStack>
-</Box>
+</VStack>
+</Container>
   <VStack>
   <Heading sx={{"margin-top": "20px"}}>
   {`Create `}
@@ -104,7 +78,7 @@ export default function Component() {
   {` Event`}
 </Text>
 </Heading>
-  <Box_bc6205ae14a9981ce89b0cef73315433/>
+  <Box_f93ad882f1e00d39cbf98d3e70d3dbb4/>
 </VStack>
 </Container>
   <NextHead>

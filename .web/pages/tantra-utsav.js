@@ -2,7 +2,7 @@
 
 
 import { Fragment } from "react"
-import { Box_1d2e65bd1d5e52f5559121b3b1621f3b, Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
+import { Box_367958c0d2626cdf5b619f9bf794a5b3, Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Image as ChakraImage, Link, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
@@ -38,6 +38,11 @@ export default function Component() {
   <Link as={NextLink} href={`/about`} sx={{"button": true}}>
   <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
   {`About Us`}
+</Button>
+</Link>
+  <Link as={NextLink} href={`/live`} sx={{"button": true}}>
+  <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
+  {`Live Event`}
 </Button>
 </Link>
 </HStack>
@@ -77,11 +82,11 @@ export default function Component() {
   {`Time: 9 pm`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Location: Mira , Bhayander`}
+  {`Location: Mira , Vasai`}
 </Text>
 </Container>
   <VStack>
-  <Box_1d2e65bd1d5e52f5559121b3b1621f3b/>
+  <Box_367958c0d2626cdf5b619f9bf794a5b3/>
 </VStack>
 </Container>
 </Container>

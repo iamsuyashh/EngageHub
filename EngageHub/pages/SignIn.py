@@ -23,7 +23,7 @@ class LoginData(rx.State):
                 if user:
                     # setattr(LoginData, 'is_logged_in', "false" if LoginData.is_logged_in == "true" else "true")
                     AuthState.set_is_logged_in = "true"
-                    return rx.redirect("/about")
+                    return rx.redirect("/")
                 else:
                     return rx.window_alert("Invalid username or password.")
         except Exception as e:

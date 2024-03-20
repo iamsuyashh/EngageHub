@@ -159,7 +159,16 @@ def createEvent(header,date,description,location,venue,redirect,link,time,url):
         print("Event added to Firestore successfully!")
     except Exception as ex:
         print("Error",ex)
-
+def createUpcomingEvent(header,date,description,location,venue,redirect,link,time,url):
+    try:
+        event_list=[]
+        db.collection('UpcomingEvents').document(header).set({
+            "header":header,
+            "date": date,"description":description,"location":location,"venue":venue,"redirect":redirect,"link":link,"time":time,"url":url
+        })
+        print("Event added to Firestore successfully!")
+    except Exception as ex:
+        print("Error",ex)
 def register_for_event(header,name,email,pid,ph_Number):
     try:
         db.collection('Event').document(header).collection('registered_users').document(str(pid)).set({
@@ -172,4 +181,5 @@ def register_for_event(header,name,email,pid,ph_Number):
         return True
     except Exception as ex:
         print("Error",ex)
+        return False
 

@@ -5,7 +5,8 @@ def sidebar():
         rx.vstack(
             rx.link("Engage HUB", href = "/" , margin_bottom="1em", color="indigo", font_weight="bold", font_size="1.5em"),
             rx.link("Home", href="/admin", color="indigo", margin_bottom="0.5em"),
-            rx.link("Create event", href="admin/event", color="indigo", margin_bottom="0.5em"),
+            rx.link("Create Event", href="/event", color="indigo", margin_bottom="0.5em"),
+            rx.link("Create upcoming Events", href="/upcomingEvents", color="indigo", margin_bottom="0.5em"),
             # rx.button("Create Event",href="/event", color="white", background_color="indigo", margin_top="0.5em"),
             position="fixed",
             height="100%",

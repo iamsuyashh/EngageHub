@@ -27,13 +27,7 @@ def handle_Form_Submit(form_data):
     try:
             register = register_for_event(header,name,email,pid,ph_Number)
             if register:
-                 return rx.chakra.alert(
-                 rx.chakra.alert_icon(),
-                    rx.chakra.alert_title(
-                "Event Registered."
-            ),
-            status="success",
-            ),
+                return rx.window_alert("Event Registered")
             # user = auth.sign_in_with_email_and_password(email, password)
             # UserCredentials.set_my_local_storage = "Vaibhav"
             # add_user_to_firestore("user","user.email")
@@ -52,7 +46,7 @@ def handle_Form_Submit(form_data):
             # print("Username: ",credentials.username)
             # rx.script("")
             # userCred = auth.current_user()
-            return rx.redirect("/")
+            # return rx.redirect("/")
         # Here you can perform any additional actions after successful sign-in
     except Exception as e:
         print("Error:", e)
@@ -82,7 +76,9 @@ def event_details(event_data) -> rx.Component:
                 rx.text("Location: " + event_data["venue"] + ", " + event_data["location"], style={"font-weight": "bold", "color": "black"}),  # Include location
                 style={"margin-top": "0.5rem"},
             ),
-            
+            # rx.cond(
+                 
+            # ),
             rx.vstack(
         rx.form(
             rx.vstack(

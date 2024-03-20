@@ -2,8 +2,8 @@
 
 
 import { Fragment } from "react"
-import { Box_88514b44199af0ae3a9fb2a871b8aac1, Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Image as ChakraImage, Link, Text, VStack } from "@chakra-ui/react"
+import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Link, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import NextHead from "next/head"
@@ -40,6 +40,11 @@ export default function Component() {
   {`About Us`}
 </Button>
 </Link>
+  <Link as={NextLink} href={`/live`} sx={{"button": true}}>
+  <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
+  {`Live Event`}
+</Button>
+</Link>
 </HStack>
   <HStack spacing={`8`}>
   <Link as={NextLink} href={`/signIn`} sx={{"color": "indigo", "mr": "2"}}>
@@ -58,33 +63,9 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
-  <ChakraImage src={`https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
-  <Container sx={{"display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem"}}>
-  <Heading sx={{"color": "black", "font-size": "2rem", "margin-bottom": "0.5rem"}}>
-  {`Vaibhav`}
-</Heading>
-  <Container sx={{"flex": "1", "margin-right": "2rem"}}>
-  <Text sx={{"margin-bottom": "0.2rem", "color": "black"}}>
-  {`Sutar`}
+  <Text>
+  {`Loading...`}
 </Text>
-</Container>
-  <Container sx={{"margin-top": "0.5rem"}}>
-  <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Date: 2024-03-16`}
-</Text>
-  <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Time: 10:48`}
-</Text>
-  <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Location: Dmart, Kandivali`}
-</Text>
-</Container>
-  <VStack>
-  <Box_88514b44199af0ae3a9fb2a871b8aac1/>
-</VStack>
-</Container>
-</Container>
   <Box sx={{"background-color": "indigo", "text-align": "center", "p": "10"}}>
   <Text sx={{"color": "white"}}>
   {`© 2024 EngageHub`}
