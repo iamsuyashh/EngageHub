@@ -3,9 +3,10 @@
 
 import { Fragment } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Heading, HStack, Link, Text } from "@chakra-ui/react"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Link, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
+import { AddIcon } from "@chakra-ui/icons"
 import NextHead from "next/head"
 
 
@@ -108,8 +109,20 @@ export default function Component() {
 </Button>
 </Box>
 </Box>
-  <Box sx={{"background-color": "indigo", "text-align": "center", "p": "10"}}>
-  <Text sx={{"color": "white"}}>
+  <Box sx={{"background-color": "indigo", "text-align": "center", "padding": "1rem"}}>
+  <Flex sx={{"margin-bottom": "1rem"}}>
+  <AddIcon sx={{"name": "fab fa-twitter", "color": "white", "size": "lg", "mr": "2"}}/>
+  <AddIcon sx={{"name": "fab fa-facebook-f", "color": "white", "size": "lg", "mr": "2"}}/>
+  <AddIcon sx={{"name": "fab fa-instagram", "color": "white", "size": "lg", "mr": "2"}}/>
+  <AddIcon sx={{"name": "fab fa-linkedin-in", "color": "white", "size": "lg", "mr": "2"}}/>
+</Flex>
+  <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>
+  {`Connect with us on social media`}
+</Text>
+  <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>
+  {`For inquiries, contact us at info@engagehub.com`}
+</Text>
+  <Text sx={{"color": "white", "size": "sm"}}>
   {`© 2024 EngageHub`}
 </Text>
 </Box>

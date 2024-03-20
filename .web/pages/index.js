@@ -7,6 +7,7 @@ import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Card, CardBody
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import dynamic from "next/dynamic"
+import { AddIcon } from "@chakra-ui/icons"
 import NextHead from "next/head"
 
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
@@ -75,25 +76,6 @@ export default function Component() {
   <Box>
   <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}>
   <Flex>
-  <Link as={NextLink} href={`/eventdetails?param=TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
-  {`TantraUtsav`}
-</Heading>
-  <Text>
-  {`Bhayander`}
-  <Text_302c867ca52040a1c72d3bbe8cb6f26b/>
-  <Text_38658ec7233cb02bff9c3ad493636077/>
-</Text>
-</Box>
-</CardBody>
-</Card>
-</Link>
-</Flex>
-  <Flex>
   <Link as={NextLink} href={`/eventdetails?param=Hackstomp`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
@@ -132,7 +114,7 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
-  <Link as={NextLink} href={`/eventdetails?param=TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`eventInfo/?param=TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
@@ -151,7 +133,7 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
-  <Link as={NextLink} href={`/eventdetails?param=Vaibhav`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`/eventdetails/TantraUtsav?param=Vaibhav`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
@@ -175,8 +157,20 @@ export default function Component() {
 </Flex>
 </VStack>
   <Spacer/>
-  <Box sx={{"background-color": "indigo", "text-align": "center", "p": "10"}}>
-  <Text sx={{"color": "white"}}>
+  <Box sx={{"background-color": "indigo", "text-align": "center", "padding": "1rem"}}>
+  <Flex sx={{"margin-bottom": "1rem"}}>
+  <AddIcon sx={{"name": "fab fa-twitter", "color": "white", "size": "lg", "mr": "2"}}/>
+  <AddIcon sx={{"name": "fab fa-facebook-f", "color": "white", "size": "lg", "mr": "2"}}/>
+  <AddIcon sx={{"name": "fab fa-instagram", "color": "white", "size": "lg", "mr": "2"}}/>
+  <AddIcon sx={{"name": "fab fa-linkedin-in", "color": "white", "size": "lg", "mr": "2"}}/>
+</Flex>
+  <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>
+  {`Connect with us on social media`}
+</Text>
+  <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>
+  {`For inquiries, contact us at info@engagehub.com`}
+</Text>
+  <Text sx={{"color": "white", "size": "sm"}}>
   {`© 2024 EngageHub`}
 </Text>
 </Box>

@@ -93,26 +93,6 @@ export default function Component() {
   <Box>
   <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
   <Heading>
-  {`TantraUtsav`}
-</Heading>
-  <Text>
-  {`Bhayander`}
-</Text>
-  <Link as={NextLink} href={`/eventdetails`}>
-  <Button>
-  {`Register`}
-</Button>
-</Link>
-</Box>
-</CardBody>
-</Card>
-</Flex>
-  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
   {`Hackstomp`}
 </Heading>
   <Text>
@@ -158,7 +138,7 @@ export default function Component() {
   <Text>
   {`Bhayander`}
 </Text>
-  <Link as={NextLink} href={`/eventdetails`}>
+  <Link as={NextLink} href={`eventInfo/`}>
   <Button>
   {`Register`}
 </Button>
@@ -178,7 +158,7 @@ export default function Component() {
   <Text>
   {`Kandivali`}
 </Text>
-  <Link as={NextLink} href={`/eventdetails`}>
+  <Link as={NextLink} href={`/eventdetails/TantraUtsav`}>
   <Button>
   {`Register`}
 </Button>
