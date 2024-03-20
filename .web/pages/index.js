@@ -72,49 +72,7 @@ export default function Component() {
   <Box>
   <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}>
   <Flex>
-<<<<<<< HEAD
-  <Link as={NextLink} href={`/eventdetails?param=Hackstomp`} sx={{"marginY": "1em", "marginX": "1em"}}>
-=======
-  <Link as={NextLink} href={`/eventdetails/Hackstomp`} sx={{"marginY": "1em", "marginX": "1em"}}>
->>>>>>> 077cafea0c75993a46a8f23ea7be5afd1deb8014
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
-  {`Hackstomp`}
-</Heading>
-  <Text>
-  {`Mira Road`}
-</Text>
-</Box>
-</CardBody>
-</Card>
-</Link>
-</Flex>
-  <Flex>
-  <Link as={NextLink} href={`/eventdetails/ITSA`} sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
-  {`ITSA`}
-</Heading>
-  <Text>
-  {`Borivali`}
-</Text>
-</Box>
-</CardBody>
-</Card>
-</Link>
-</Flex>
-  <Flex>
-<<<<<<< HEAD
-  <Link as={NextLink} href={`eventInfo/?param=TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
-=======
   <Link as={NextLink} href={`eventInfo//TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
->>>>>>> 077cafea0c75993a46a8f23ea7be5afd1deb8014
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
@@ -123,7 +81,7 @@ export default function Component() {
   {`TantraUtsav`}
 </Heading>
   <Text>
-  {`Bhayander`}
+  {`Vasai`}
 </Text>
 </Box>
 </CardBody>
@@ -131,20 +89,16 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
-<<<<<<< HEAD
-  <Link as={NextLink} href={`/eventdetails/TantraUtsav?param=Vaibhav`} sx={{"marginY": "1em", "marginX": "1em"}}>
-=======
-  <Link as={NextLink} href={`/eventdetails/TantraUtsav/Vaibhav`} sx={{"marginY": "1em", "marginX": "1em"}}>
->>>>>>> 077cafea0c75993a46a8f23ea7be5afd1deb8014
+  <Link as={NextLink} href={`//coloqium`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
-  <ChakraImage src={`https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg`}/>
+  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
   <Heading>
-  {`Vaibhav`}
+  {`coloqium`}
 </Heading>
   <Text>
-  {`Kandivali`}
+  {`borivali`}
 </Text>
 </Box>
 </CardBody>

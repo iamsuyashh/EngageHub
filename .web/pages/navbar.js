@@ -2,19 +2,10 @@
 
 
 import { Fragment } from "react"
-<<<<<<< HEAD:.web/pages/live.js
-import { Button_5d4e77008a1b016ea27a78202f92ed58, Button_e65140ba91c51800240365f1c3f069dd, Fragment_fd0e7cb8f9fb4669a6805377d925fba0, Image_e6408ca805ae974e6eb3e94065ff972f } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Link, Text } from "@chakra-ui/react"
-import NextLink from "next/link"
-import "focus-visible/dist/focus-visible"
-import dynamic from "next/dynamic"
-import { AddIcon } from "@chakra-ui/icons"
-=======
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Heading, HStack, Link } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
->>>>>>> 077cafea0c75993a46a8f23ea7be5afd1deb8014:.web/pages/navbar.js
 import NextHead from "next/head"
 
 
@@ -66,35 +57,6 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-<<<<<<< HEAD:.web/pages/live.js
-  <Container sx={{"max-width": "100vw", "position": "relative", "overflow": "hidden", "margin-bottom": "10px"}}>
-  <Image_e6408ca805ae974e6eb3e94065ff972f/>
-  <Container sx={{"position": "absolute", "top": "10", "left": "444", "width": "100vw", "height": "50vw", "opacity": "0.5"}}>
-  <Button_e65140ba91c51800240365f1c3f069dd/>
-  <Button_5d4e77008a1b016ea27a78202f92ed58/>
-</Container>
-</Container>
-  <ReactPlayer controls={false} height={`90vh`} url={`https://www.youtube.com/live/CY8m6Xrzsk0?feature=shared`} width={`100%`}/>
-  <Box sx={{"background-color": "indigo", "text-align": "center", "padding": "1rem"}}>
-  <Flex sx={{"margin-bottom": "1rem"}}>
-  <AddIcon sx={{"name": "fab fa-twitter", "color": "white", "size": "lg", "mr": "2"}}/>
-  <AddIcon sx={{"name": "fab fa-facebook-f", "color": "white", "size": "lg", "mr": "2"}}/>
-  <AddIcon sx={{"name": "fab fa-instagram", "color": "white", "size": "lg", "mr": "2"}}/>
-  <AddIcon sx={{"name": "fab fa-linkedin-in", "color": "white", "size": "lg", "mr": "2"}}/>
-</Flex>
-  <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>
-  {`Connect with us on social media`}
-</Text>
-  <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>
-  {`For inquiries, contact us at info@engagehub.com`}
-</Text>
-  <Text sx={{"color": "white", "size": "sm"}}>
-  {`© 2024 EngageHub`}
-</Text>
-</Box>
-</Container>
-=======
->>>>>>> 077cafea0c75993a46a8f23ea7be5afd1deb8014:.web/pages/navbar.js
   <NextHead>
   <title>
   {`Reflex App`}

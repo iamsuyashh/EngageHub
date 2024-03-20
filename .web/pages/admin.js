@@ -13,17 +13,6 @@ import NextHead from "next/head"
 
 
 
-export function Debounceinput_01d728ea822013433f09b9baaf6b79c5 () {
-  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
-
-  return (
-    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} type={`text`} value={state__textfield_controlled.text}/>
-  )
-}
-
 export function Button_093dd66f76dc55c63e124d9de22a13db () {
   const [addEvents, connectError] = useContext(EventLoopContext);
 
@@ -33,6 +22,17 @@ export function Button_093dd66f76dc55c63e124d9de22a13db () {
     <Button onClick={on_click_9cb60e42aaa64d2892f2dba50cc9f35a}>
   {`submit`}
 </Button>
+  )
+}
+
+export function Debounceinput_01d728ea822013433f09b9baaf6b79c5 () {
+  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
+  const [addEvents, connectError] = useContext(EventLoopContext);
+
+  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
+
+  return (
+    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} type={`text`} value={state__textfield_controlled.text}/>
   )
 }
 

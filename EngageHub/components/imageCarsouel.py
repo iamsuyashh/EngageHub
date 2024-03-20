@@ -23,7 +23,12 @@ class CarouselState(rx.State):
 
 def carousel():
     return rx.container(
-        rx.image(src=CarouselState.images[CarouselState.current_image_index], width="100vw", height="30vw", style={"position": "relative"}),
+        rx.image(
+            src=CarouselState.images[CarouselState.current_image_index],
+            width="100vw",
+            height="35vw",
+            style={"object-fit": "cover"}
+        ),
         rx.container(
             rx.button("<--", on_click=CarouselState.previous_image, style={"position": "absolute", "left": "10px", "top": "50%", "transform": "translateY(-50%)"}),
             rx.button("-->", on_click=CarouselState.next_image, style={"position": "absolute", "right": "10px", "top": "50%", "transform": "translateY(-50%)"}),
@@ -31,4 +36,5 @@ def carousel():
         ),
         style={"max-width": "100vw", "position": "relative", "overflow": "hidden", "margin-bottom": "10px"}
     )
+
    

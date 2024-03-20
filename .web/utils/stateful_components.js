@@ -44,41 +44,7 @@ export function Fragment_fd0e7cb8f9fb4669a6805377d925fba0 () {
   )
 }
 
-export function Box_88514b44199af0ae3a9fb2a871b8aac1 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
-  
-    const handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd = useCallback((ev) => {
-        const $form = ev.target
-        ev.preventDefault()
-        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
-
-        addEvents([Event("state.register_event_data.handle_submit", {form_data:form_data})])
-
-        if (true) {
-            $form.reset()
-        }
-    })
-    
-
-
-  return (
-    <Box as={`form`} onSubmit={handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
-  <VStack>
-  <Input name={`name`} placeholder={`Name`} sx={{"width": "100%"}} type={`text`}/>
-  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
-  <Input name={`header`} type={`hidden`} value={`Vaibhav`}/>
-  <Input name={`pid_number`} placeholder={`Enter PID`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
-  <Input name={`ph_number`} placeholder={`Enter your Phone Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
-  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
-  {`Register`}
-</Button>
-</VStack>
-</Box>
-  )
-}
-
 export function Box_1d2e65bd1d5e52f5559121b3b1621f3b () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
   
     const handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd = useCallback((ev) => {
         const $form = ev.target
@@ -92,6 +58,7 @@ export function Box_1d2e65bd1d5e52f5559121b3b1621f3b () {
         }
     })
     
+  const [addEvents, connectError] = useContext(EventLoopContext);
 
 
   return (

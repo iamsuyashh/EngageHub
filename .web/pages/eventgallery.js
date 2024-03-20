@@ -12,6 +12,15 @@ import NextHead from "next/head"
 
 
 
+export function Image_10572dada479d5b718036c6ed1d3ba67 () {
+  const state__carousel_state = useContext(StateContexts.state__carousel_state)
+
+
+  return (
+    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"object-fit": "cover", "width": "100vw", "height": "35vw"}}/>
+  )
+}
+
 export function Button_e65140ba91c51800240365f1c3f069dd () {
   const [addEvents, connectError] = useContext(EventLoopContext);
 
@@ -21,15 +30,6 @@ export function Button_e65140ba91c51800240365f1c3f069dd () {
     <Button onClick={on_click_ded72e95921a40fca507841609cd7a38} sx={{"position": "absolute", "left": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
   {`<--`}
 </Button>
-  )
-}
-
-export function Image_e6408ca805ae974e6eb3e94065ff972f () {
-  const state__carousel_state = useContext(StateContexts.state__carousel_state)
-
-
-  return (
-    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"position": "relative", "width": "100vw", "height": "30vw"}}/>
   )
 }
 
@@ -104,7 +104,7 @@ export default function Component() {
 </Container>
 </Flex>
   <Container sx={{"max-width": "100vw", "position": "relative", "overflow": "hidden", "margin-bottom": "10px"}}>
-  <Image_e6408ca805ae974e6eb3e94065ff972f/>
+  <Image_10572dada479d5b718036c6ed1d3ba67/>
   <Container sx={{"position": "absolute", "top": "10", "left": "444", "width": "100vw", "height": "50vw", "opacity": "0.5", "resizeMode": "cover"}}>
   <Button_e65140ba91c51800240365f1c3f069dd/>
   <Button_5d4e77008a1b016ea27a78202f92ed58/>
@@ -128,50 +128,10 @@ export default function Component() {
   <Box>
   <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
   <Heading>
-  {`Hackstomp`}
-</Heading>
-  <Text>
-  {`Mira Road`}
-</Text>
-  <Link as={NextLink} href={`/eventdetails`}>
-  <Button>
-  {`Register`}
-</Button>
-</Link>
-</Box>
-</CardBody>
-</Card>
-</Flex>
-  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
-  {`ITSA`}
-</Heading>
-  <Text>
-  {`Borivali`}
-</Text>
-  <Link as={NextLink} href={`/eventdetails`}>
-  <Button>
-  {`Register`}
-</Button>
-</Link>
-</Box>
-</CardBody>
-</Card>
-</Flex>
-  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
   {`TantraUtsav`}
 </Heading>
   <Text>
-  {`Bhayander`}
+  {`Vasai`}
 </Text>
   <Link as={NextLink} href={`eventInfo/`}>
   <Button>
@@ -186,14 +146,14 @@ export default function Component() {
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
-  <ChakraImage src={`https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg`}/>
+  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
   <Heading>
-  {`Vaibhav`}
+  {`coloqium`}
 </Heading>
   <Text>
-  {`Kandivali`}
+  {`borivali`}
 </Text>
-  <Link as={NextLink} href={`/eventdetails/TantraUtsav`}>
+  <Link as={NextLink} href={`/`}>
   <Button>
   {`Register`}
 </Button>
