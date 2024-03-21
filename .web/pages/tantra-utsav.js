@@ -40,6 +40,11 @@ export default function Component() {
   {`About Us`}
 </Button>
 </Link>
+  <Link as={NextLink} href={`/live`} sx={{"button": true}}>
+  <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
+  {`Live Event`}
+</Button>
+</Link>
 </HStack>
   <HStack spacing={`8`}>
   <Link as={NextLink} href={`/signIn`} sx={{"color": "indigo", "mr": "2"}}>
@@ -91,9 +96,9 @@ export default function Component() {
   {`Connect with us on social media`}
 </Text>
   <Flex sx={{"margin-bottom": "1rem", "justify-content": "center", "color": "white"}}>
-  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://twitter.com'><img src='https://img.icons8.com/color/48/instagram-new--v1.png' alt='Twitter' style='margin-right:8px'></a>"}}/>
-  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://facebook.com'><img src='https://img.icons8.com/color/48/github--v1.png' alt='Facebook' style='margin-right:8px'></a>"}}/>
-  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://instagram.com'><img src='https://img.icons8.com/color/48/linkedin.png' style='margin-right:8px'></a>"}}/>
+  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://www.instagram.com/sfit_itsa/'><img src='https://img.icons8.com/color/48/instagram-new--v1.png' alt='Twitter' style='margin-right:8px'></a>"}}/>
+  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://github.com/VaibhavSutar/EngageHub'><img src='https://img.icons8.com/color/48/github--v1.png' alt='Facebook' style='margin-right:8px'></a>"}}/>
+  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://www.linkedin.com/school/sfit/?originalSubdomain=in'><img src='https://img.icons8.com/color/48/linkedin.png' style='margin-right:8px'></a>"}}/>
 </Flex>
   <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>
   {`For inquiries, contact us at info@engagehub.com`}

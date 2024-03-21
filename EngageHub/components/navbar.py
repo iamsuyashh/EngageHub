@@ -38,6 +38,11 @@ def navbar():
                     href="/about",
                     button=True,
                 ),
+                rx.link(
+                    rx.button("Live Event",color_scheme="none", color="indigo",size="lg"),
+                    href="/live",
+                    button=True,
+                ),
             ),
             rx.hstack(
                  rx.link(

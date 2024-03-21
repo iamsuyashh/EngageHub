@@ -12,15 +12,6 @@ import NextHead from "next/head"
 
 
 
-export function Image_10572dada479d5b718036c6ed1d3ba67 () {
-  const state__carousel_state = useContext(StateContexts.state__carousel_state)
-
-
-  return (
-    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"object-fit": "cover", "width": "100vw", "height": "35vw"}}/>
-  )
-}
-
 export function Button_e65140ba91c51800240365f1c3f069dd () {
   const [addEvents, connectError] = useContext(EventLoopContext);
 
@@ -30,6 +21,15 @@ export function Button_e65140ba91c51800240365f1c3f069dd () {
     <Button onClick={on_click_ded72e95921a40fca507841609cd7a38} sx={{"position": "absolute", "left": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
   {`<--`}
 </Button>
+  )
+}
+
+export function Image_10572dada479d5b718036c6ed1d3ba67 () {
+  const state__carousel_state = useContext(StateContexts.state__carousel_state)
+
+
+  return (
+    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"object-fit": "cover", "width": "100vw", "height": "35vw"}}/>
   )
 }
 
@@ -73,6 +73,11 @@ export default function Component() {
   <Link as={NextLink} href={`/about`} sx={{"button": true}}>
   <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
   {`About Us`}
+</Button>
+</Link>
+  <Link as={NextLink} href={`/live`} sx={{"button": true}}>
+  <Button colorScheme={`none`} size={`lg`} sx={{"color": "indigo"}}>
+  {`Live Event`}
 </Button>
 </Link>
 </HStack>
