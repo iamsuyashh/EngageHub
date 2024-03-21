@@ -20,7 +20,7 @@ def admin_page():
         rx.container(
             
         ),
-        rx.heading("Enter the Youtube Link for Home Page!"),
+        rx.heading("Enter the Youtube Link for Home Page!" ,style={"width" : "50vw"} ),
          rx.input(
              value=TextfieldControlled.text,
              on_change= TextfieldControlled.set_text,

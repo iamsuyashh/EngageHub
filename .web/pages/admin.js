@@ -13,17 +13,6 @@ import NextHead from "next/head"
 
 
 
-export function Debounceinput_edbd5e4a5def75766e71f6474da2290b () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
-  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
-
-  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
-
-  return (
-    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} sx={{"margin-top": "20px"}} type={`text`} value={state__textfield_controlled.text}/>
-  )
-}
-
 export function Button_693313095b8f5f5d87956603f0669ece () {
   const [addEvents, connectError] = useContext(EventLoopContext);
 
@@ -33,6 +22,17 @@ export function Button_693313095b8f5f5d87956603f0669ece () {
     <Button onClick={on_click_9cb60e42aaa64d2892f2dba50cc9f35a} sx={{"margin-top": "10px", "color": "white", "background-color": "indigo"}}>
   {`submit`}
 </Button>
+  )
+}
+
+export function Debounceinput_edbd5e4a5def75766e71f6474da2290b () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
+
+  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
+
+  return (
+    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} sx={{"margin-top": "20px"}} type={`text`} value={state__textfield_controlled.text}/>
   )
 }
 
@@ -105,7 +105,7 @@ export default function Component() {
 </TableContainer>
 </Container>
   <Container/>
-  <Heading>
+  <Heading sx={{"width": "50vw"}}>
   {`Enter the Youtube Link for Home Page!`}
 </Heading>
   <Debounceinput_edbd5e4a5def75766e71f6474da2290b/>

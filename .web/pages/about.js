@@ -3,7 +3,7 @@
 
 import { Fragment } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Link, Text } from "@chakra-ui/react"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Image as ChakraImage, Link, List, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import NextHead from "next/head"
@@ -63,53 +63,49 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <Container sx={{"max-width": "800px", "margin": "auto", "padding": "2em", "font-family": "Arial, sans-serif", "line-height": "1.6", "color": "black"}}>
+  <Container sx={{"max-width": "800px", "margin": "0 auto", "padding": "20px", "background-color": "#f8f9fa", "border-radius": "8px", "box-shadow": "0 0 10px rgba(0, 0, 0, 0.1)", "text-align": "center"}}>
   <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "15px", "level": 1}}>
-  {`About Engage Hub`}
+  {`About Us`}
+</Heading>
+  <ChakraImage alt={`ITSA Logo`} src={`https://i.ibb.co/tbxGhMn/itsa-logo.png`} sx={{"display": "block", "margin": "0 auto", "max-width": "20vw", "height": "auto", "margin-bottom": "20px", "border-radius": "8px"}}/>
+  <Text sx={{"margin-bottom": "20px", "text-align": "center"}}>
+  {`ITSA is a departmental organization for Information Technology. Founded in the year 2011-12, our committee organizes events to bridge the gap between classroom education and the technical skills required by students to be industry-ready.`}
+</Text>
+  <Text sx={{"margin-bottom": "20px", "text-align": "center"}}>
+  {`Our workshops foster students' exposure to leading domains in technology to offer a headstart. We focus on holistic growth, so our students become complete engineers.`}
+</Text>
+  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "15px", "level": 2}}>
+  {`Objectives of ITSA`}
+</Heading>
+  <List>
+  <List sx={{"margin-bottom": "5px", "text-align": "center"}}>
+  {`Inspire, Enable, Empower, and Energize our student members to enhance their technical interests`}
+</List>
+  <List sx={{"margin-bottom": "5px", "text-align": "center"}}>
+  {`To bridge the gap between academic and industry through organizing regular Events/Seminars/Workshops`}
+</List>
+  <List sx={{"margin-bottom": "5px", "text-align": "center"}}>
+  {`To organize technical awareness programs for young professionals specifically targeted for placement activities`}
+</List>
+  <List sx={{"margin-bottom": "5px", "text-align": "center"}}>
+  {`To kindle students' interest in research activities and projects`}
+</List>
+</List>
+  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "15px", "level": 2}}>
+  {`Vision`}
 </Heading>
   <Text sx={{"margin-bottom": "20px", "text-align": "center"}}>
-  {`Welcome to Engage Hub - Your Ultimate Event Update and Information Hub for College and IT Departments! Engage Hub is a dedicated platform designed to streamline and enhance your college experience by providing up-to-date information on events, activities, and crucial information related to the Information Technology department.`}
+  {`To be a chrysalis where bright youngsters are transformed into technological entrepreneurs and innovative leaders of tomorrow’s world, consistent with the Franciscan vision of integrity, peace, and love.`}
 </Text>
   <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "15px", "level": 2}}>
-  {`Our Mission`}
+  {`Mission`}
 </Heading>
   <Text sx={{"margin-bottom": "20px", "text-align": "center"}}>
-  {`At Engage Hub, our mission is to empower students, faculty, and staff with the latest and most relevant information to foster a connected and informed community. We believe that staying informed is the key to a successful and engaging college experience.`}
+  {`To churn highly competent engineering graduates with a commitment to result-oriented work, a perennial zest for learning, a quest for excellence, an open mind, and the universal values of honesty, dignity, and mutual care.`}
 </Text>
-  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "15px", "level": 2}}>
-  {`Features`}
-</Heading>
-  <Container sx={{"margin-bottom": "20px", "text-align": "center", "margin-left": "108px"}}>
-  <Text>
-  {`Event Updates: Stay in the loop with real-time updates on upcoming events, workshops, seminars, and social gatherings within your college and IT department.`}
+  <Text sx={{"margin-bottom": "20px", "text-align": "center"}}>
+  {`To continually improve and progress on the path of developing postgraduate scholars who will be competent in exploring, developing, and disseminating new knowledge in their areas of specialization so that the repository of new knowledge and innovation and its dissemination will be enhanced in scope and effectiveness.`}
 </Text>
-  <Text>
-  {`Department Information: Access essential information about the Information Technology department, including faculty details, departmental announcements, and academic resources.`}
-</Text>
-  <Text>
-  {`Seamless Communication: Connect with fellow students, faculty, and department staff through our integrated communication features, facilitating collaboration and community building.`}
-</Text>
-  <Text>
-  {`Personalized Experience: Customize your preferences to receive notifications and updates tailored to your specific interests and academic needs.`}
-</Text>
-</Container>
-  <Heading sx={{"color": "indigo", "text-align": "center", "margin-bottom": "15px", "level": 2}}>
-  {`Why Choose Engage Hub?`}
-</Heading>
-  <Container sx={{"margin-bottom": "20px", "text-align": "center", "margin-left": "108px"}}>
-  <Text>
-  {`Efficiency: Save time and effort by having all event updates and departmental information in one central hub.`}
-</Text>
-  <Text>
-  {`Community Building: Foster a sense of community within your college and IT department through enhanced communication and collaboration.`}
-</Text>
-  <Text>
-  {`Empowerment: Empower yourself with the knowledge needed to make the most of your college experience and academic journey.`}
-</Text>
-</Container>
-  <Button sx={{"margin": "0 auto", "display": "block", "width": "200px", "href": "/register", "color": "indigo", "dark": true}}>
-  {`Get Started Today!`}
-</Button>
 </Container>
   <Box sx={{"background-color": "indigo", "text-align": "center", "padding": "0rem"}}>
   <Container sx={{"padding": "1rem", "background-color": "indigo", "text-align": "center"}}>

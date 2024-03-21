@@ -3,42 +3,22 @@ import reflex as rx
 def about_page():
     """About page component."""
     return rx.container(
-        rx.heading("About Engage Hub", level=1, style={"color": "indigo", "text-align": "center", "margin-bottom": "15px"}),
-        rx.text(
-            "Welcome to Engage Hub - Your Ultimate Event Update and Information Hub for College and IT Departments! Engage Hub is a dedicated platform designed to streamline and enhance your college experience by providing up-to-date information on events, activities, and crucial information related to the Information Technology department.",
-            style={"margin-bottom": "20px", "text-align": "center"}
+        rx.heading("About Us", level=1, style={"color": "indigo", "text-align": "center", "margin-bottom": "15px"}),
+        rx.image(src="https://i.ibb.co/tbxGhMn/itsa-logo.png", alt="ITSA Logo", style={"display": "block", "margin": "0 auto", "max-width": "20vw", "height": "auto", "margin-bottom": "20px", "border-radius": "8px"}),
+        rx.text("ITSA is a departmental organization for Information Technology. Founded in the year 2011-12, our committee organizes events to bridge the gap between classroom education and the technical skills required by students to be industry-ready.", style={"margin-bottom": "20px", "text-align": "center"}),
+        rx.text("Our workshops foster students' exposure to leading domains in technology to offer a headstart. We focus on holistic growth, so our students become complete engineers.", style={"margin-bottom": "20px", "text-align": "center"}),
+        rx.heading("Objectives of ITSA", level=2, style={"color": "indigo", "text-align": "center", "margin-bottom": "15px"}),
+        rx.list(
+            rx.list("Inspire, Enable, Empower, and Energize our student members to enhance their technical interests", style={"margin-bottom": "5px", "text-align": "center"}),
+            rx.list("To bridge the gap between academic and industry through organizing regular Events/Seminars/Workshops", style={"margin-bottom": "5px", "text-align": "center"}),
+            rx.list("To organize technical awareness programs for young professionals specifically targeted for placement activities", style={"margin-bottom": "5px", "text-align": "center"}),
+            rx.list("To kindle students' interest in research activities and projects", style={"margin-bottom": "5px", "text-align": "center"})
         ),
-        rx.heading("Our Mission", level=2, style={"color": "indigo", "text-align": "center", "margin-bottom": "15px"}),
-        rx.text(
-            "At Engage Hub, our mission is to empower students, faculty, and staff with the latest and most relevant information to foster a connected and informed community. We believe that staying informed is the key to a successful and engaging college experience.",
-            style={"margin-bottom": "20px", "text-align": "center"}
-        ),
-        rx.heading("Features", level=2, style={"color": "indigo", "text-align": "center", "margin-bottom": "15px"}),
-        rx.container(
-            *[
-                rx.text("Event Updates: Stay in the loop with real-time updates on upcoming events, workshops, seminars, and social gatherings within your college and IT department."),
-                rx.text("Department Information: Access essential information about the Information Technology department, including faculty details, departmental announcements, and academic resources."),
-                rx.text("Seamless Communication: Connect with fellow students, faculty, and department staff through our integrated communication features, facilitating collaboration and community building."),
-                rx.text("Personalized Experience: Customize your preferences to receive notifications and updates tailored to your specific interests and academic needs.")
-            ],
-            style={"margin-bottom": "20px", "text-align": "center", "margin-left": "108px"}
-        ),
-        rx.heading("Why Choose Engage Hub?", level=2, style={"color": "indigo", "text-align": "center", "margin-bottom": "15px"}),
-        rx.container(
-            *[
-                rx.text("Efficiency: Save time and effort by having all event updates and departmental information in one central hub."),
-                rx.text("Community Building: Foster a sense of community within your college and IT department through enhanced communication and collaboration."),
-                rx.text("Empowerment: Empower yourself with the knowledge needed to make the most of your college experience and academic journey.")
-            ],
-            style={"margin-bottom": "20px", "text-align": "center", "margin-left": "108px"}
-        ),
-        rx.button("Get Started Today!", href="/register", color="indigo", dark=True, style={"margin": "0 auto", "display": "block", "width": "200px"}),
-        style={
-            "max-width": "800px",
-            "margin": "auto",
-            "padding": "2em",
-            "font-family": "Arial, sans-serif",
-            "line-height": "1.6",
-            "color": "black",
-        }
+        rx.heading("Vision", level=2, style={"color": "indigo", "text-align": "center", "margin-bottom": "15px"}),
+        rx.text("To be a chrysalis where bright youngsters are transformed into technological entrepreneurs and innovative leaders of tomorrow’s world, consistent with the Franciscan vision of integrity, peace, and love.", style={"margin-bottom": "20px", "text-align": "center"}),
+        rx.heading("Mission", level=2, style={"color": "indigo", "text-align": "center", "margin-bottom": "15px"}),
+        rx.text("To churn highly competent engineering graduates with a commitment to result-oriented work, a perennial zest for learning, a quest for excellence, an open mind, and the universal values of honesty, dignity, and mutual care.", style={"margin-bottom": "20px", "text-align": "center"}),
+        rx.text("To continually improve and progress on the path of developing postgraduate scholars who will be competent in exploring, developing, and disseminating new knowledge in their areas of specialization so that the repository of new knowledge and innovation and its dissemination will be enhanced in scope and effectiveness.", style={"margin-bottom": "20px", "text-align": "center"}),
+        style={"max-width":"800px", "margin": "0 auto", "padding": "20px", "background-color": "#f8f9fa", "border-radius": "8px", "box-shadow": "0 0 10px rgba(0, 0, 0, 0.1)", "text-align": "center"}
     )
+
