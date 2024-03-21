@@ -12,9 +12,10 @@ import NextHead from "next/head"
 
 
 
-export function Box_4027300ae789189063271e5009da3f0d () {
+export function Box_acf2c4e2e8fef16816545212e653d189 () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
   
-    const handleSubmit_158b22f76ba0dcc4d61b38dab63a8d26 = useCallback((ev) => {
+    const handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd = useCallback((ev) => {
         const $form = ev.target
         ev.preventDefault()
         const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
@@ -26,11 +27,10 @@ export function Box_4027300ae789189063271e5009da3f0d () {
         }
     })
     
-  const [addEvents, connectError] = useContext(EventLoopContext);
 
 
   return (
-    <Box as={`form`} onSubmit={handleSubmit_158b22f76ba0dcc4d61b38dab63a8d26} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+    <Box as={`form`} onSubmit={handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
   <VStack>
   <Input name={`name`} placeholder={`Name`} sx={{"width": "100%"}} type={`text`}/>
   <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
@@ -117,11 +117,11 @@ export default function Component() {
   {`Time: 10:51`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Location: borivali, borivali`}
+  {`Location: borivali, Malad`}
 </Text>
 </Container>
   <VStack>
-  <Box_4027300ae789189063271e5009da3f0d/>
+  <Box_acf2c4e2e8fef16816545212e653d189/>
 </VStack>
 </Container>
 </Container>

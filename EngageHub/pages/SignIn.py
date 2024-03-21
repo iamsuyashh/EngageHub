@@ -2,8 +2,8 @@ import reflex as rx
 from ..components import navbar
 from ..components import form_example
 from ..State.firebaseConfig import auth
-from ..State.auth_session import AuthSession
-from ..State.auth_state import AuthState
+# from ..State.firebaseConfig import State
+
 
 class LoginData(rx.State):
     form_data: dict = {}
@@ -22,7 +22,7 @@ class LoginData(rx.State):
                 user = auth.sign_in_with_email_and_password(email,password)
                 if user:
                     # setattr(LoginData, 'is_logged_in', "false" if LoginData.is_logged_in == "true" else "true")
-                    AuthState.set_is_logged_in = "true"
+                    # AuthState.set_is_logged_in = "true"
                     return rx.redirect("/")
                 else:
                     return rx.window_alert("Invalid username or password.")

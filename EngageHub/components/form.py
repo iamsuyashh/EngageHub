@@ -1,50 +1,6 @@
 import reflex as rx
 from ..State.firebaseConfig import auth, add_user_to_firestore
-from ..State.CustomState import UserCredentials ,user_state
-class ClStorage(rx.State):
-    currentUser: str = rx.LocalStorage(name="shared")
-# from ..EngageHub import UserStorage
-credentials = UserCredentials()
-print("Form Page",ClStorage.currentUser)
 # ClStorage.currentUser = "VaibhavSutar"
-
-
-class VerifyState(rx.State):
-    local_storage: str = rx.LocalStorage(name="auth_token")
-    redirect_to: str = ""
-
-    # async def verify_token(self, token: str) -> bool:
-    #     async with httpx.AsyncClient() as client:
-    #         result = await client.post(
-    #             f"{url}/user/authenticated",
-    #             cookies={"access_token": token},
-    #             headers={"Content-Type": "application/json"},
-    #         )
-    #         if result.status_code == 200 and result.json().get("success"):
-    #             return True
-    #     return False
-
-    async def redir(self):
-        """Redirect to the redirect_to route if logged in, or to the login page if not."""
-        print(self.local_storage)
-        print(self.router.page.path)
-        if not self.is_hydrated:
-            # If the state is not hydrated, wait until it is
-            return VerifyState.redir()
-        page = self.router.page.path
-        cookie = self.local_storage
-        # Skip the cookie check for the login route and other routes as necessary
-        if await self.verify_token(cookie):
-            # Redirect to dashboard if the cookie is valid
-            if page == "/signIn":
-                return rx.redirect("/")
-            else:
-                return None
-        else:
-            # Redirect to login if the cookie is not valid
-            if page != "/signIn":
-                return rx.redirect("/signIn")
-state :bool = True
 # def login(sekfm)
 def handle_Form_Submit(form_data):
     email = form_data.get("email")  # Access form_data correctly
@@ -56,22 +12,6 @@ def handle_Form_Submit(form_data):
             # user = auth.sign_in_with_email_and_password(email, password)
             rx.redirect("/signUp",external=True)
             # if state == True:
-            UserCredentials.set_my_local_storage = "Vaibhav"
-            # add_user_to_firestore("user","user.email")
-            # print("User signed in:", user["email"])
-            credentials.username = "Vaibhav"
-            user_state.authenticated = True
-            # userEmail = user["email"]
-            # print("User Email: ", userEmail)
-            ClStorage.currentUser = "Vaibhav"
-            print("User State: ", ClStorage.currentUser)
-            # ClStorage.set_currentUser
-            # currentUser("Vaibhav")
-            # UserCredentials.add_var()
-            # UserStorage.set_user_email("Vaibhav@gmail.com")
-            print("Username: ",credentials.username)
-            # rx.script("")
-            # userCred = auth.current_user()
             return rx.redirect("/")
         # Here you can perform any additional actions after successful sign-in
     except Exception as e:

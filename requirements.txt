@@ -1,1 +1,6 @@
+cryptography==42.0.2
+firebase-admin==6.4.0
+grpcio-status==1.60.1
+pip==24.0
+Pyrebase4==4.7.1
 reflex==0.3.10

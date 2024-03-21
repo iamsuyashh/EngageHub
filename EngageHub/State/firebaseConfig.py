@@ -100,10 +100,47 @@ def read_featured_video():
     except Exception as e:
         print("Error:", e)
         return []
+
 def update_featured_video_link(new_link):
     try:
         # Reference to the "featured video" collection
         collection_ref = db.collection('featuredvideo')
+
+        # Reference to the document to be updated
+        doc_ref = collection_ref.document("url")
+
+        # Update the 'link' field inside the 'url' field with the new link
+        doc_ref.set({'link': new_link})
+
+        print("Document link updated successfully.")
+
+    except Exception as e:
+        print("Error:", e)
+def read_live_stream_link():
+    try:
+        # Initialize an empty list to store event details
+        events_list = []
+
+        # Retrieve all documents from the 'Events' collection
+        url_list = db.collection('liveStream').document("url").get()
+        if url_list.exists:
+            # Convert the document to a dictionary
+            event_dict = url_list.to_dict()
+            events_list.append(event_dict)
+            return event_dict  # Return a list containing the event dictionary
+        else:
+            print(f"Event '{url_list}' does not exist")
+
+        # Return the list of event dictionaries
+        return events_list if events_list else []  # Return an empty list if events_list is None
+
+    except Exception as e:
+        print("Error:", e)
+        return []
+def update_live_stream_link(new_link):
+    try:
+        # Reference to the "featured video" collection
+        collection_ref = db.collection('liveStream')
 
         # Reference to the document to be updated
         doc_ref = collection_ref.document("url")
@@ -172,15 +209,49 @@ def read_all_data():
         print("Error:", e)
         return {}
     
-def createEvent(header, date, description, location, venue, redirect, link, time, url, file):
+def createEvent(header, date, description, location, venue, redirect, link, time, url):
     try:
         # Upload file to Firebase Storage
-        bucket = storage.bucket()
-        blob = bucket.blob(file.filename)
-        blob.upload_from_string(file.read(), content_type=file.content_type)
+        # Add event data to Firestore
+        event_data = {
+            "header": header,
+            "date": date,
+            "description": description,
+            "location": location,
+            "venue": venue,
+            "redirect": redirect,
+            "link": link,
+            "time": time,
+            "url": url,
+        }
 
-        # Get the download URL of the uploaded file
-        file_url = blob.public_url
+        db.collection('Event').document(header).set(event_data)
+
+        print("Event added to Firestore successfully!")
+    except Exception as ex:
+        print("Error:", ex)
+def read_upcoming_events(limit=3):
+    try:
+        # Initialize an empty list to store event details
+        events_list = []
+
+        # Retrieve a limited number of documents from the 'Events' collection
+        events_ref = db.collection('UpcomingEvents').limit(limit).stream()
+        for event in events_ref:
+            # Convert each event document to a dictionary
+            event_dict = event.to_dict()
+
+            # Append the event dictionary to the events list
+            events_list.append(event_dict)
+
+        # Return the list of event dictionaries
+        return events_list if events_list else []  # Return an empty list if events_list is None
+
+    except Exception as e:
+        print("Error:", e)
+        return []
+def updateEvent(header, date, description, location, venue, redirect, link, time, url):
+    try:
 
         # Add event data to Firestore
         event_data = {
@@ -193,7 +264,6 @@ def createEvent(header, date, description, location, venue, redirect, link, time
             "link": link,
             "time": time,
             "url": url,
-            "file_url": file_url
         }
 
         db.collection('Event').document(header).set(event_data)
@@ -201,7 +271,6 @@ def createEvent(header, date, description, location, venue, redirect, link, time
         print("Event added to Firestore successfully!")
     except Exception as ex:
         print("Error:", ex)
-
 def createUpcomingEvent(header,date,description,location,venue,redirect,link,time,url):
     try:
         event_list=[]
@@ -209,6 +278,7 @@ def createUpcomingEvent(header,date,description,location,venue,redirect,link,tim
             "header":header,
             "date": date,"description":description,"location":location,"venue":venue,"redirect":redirect,"link":link,"time":time,"url":url
         })
+        createEvent(header,date,description,location,venue,redirect,link,time,url)
         print("Event added to Firestore successfully!")
     except Exception as ex:
         print("Error",ex)
