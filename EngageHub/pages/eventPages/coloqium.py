@@ -1,10 +1,6 @@
 import reflex as rx
 from ...components import event_details,navbar,footer
 from ...State.firebaseConfig import read_event_info , db
-from ...State.CustomState import State
-from fastapi import FastAPI, Query
-
-    
 eventName = "Coloqium"
 # rx.asyncawait handle_event_details()
 event_data = read_event_info(eventName)

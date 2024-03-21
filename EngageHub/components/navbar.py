@@ -1,17 +1,8 @@
 import reflex as rx
 
-# from webui import styles
-# from webui.state import State
-from ..State.auth_state import AuthState,AUTH_TOKEN_LOCAL_STORAGE_KEY
-from ..State.auth_session import AuthSession
-
-def printLocal():
-    userState = rx.LocalStorage(AUTH_TOKEN_LOCAL_STORAGE_KEY)
-    print("User State: ",userState)
-    return printLocal
 def handleLogout():
     print("Logout")
-@rx.page(on_load=printLocal)
+@rx.page()
 def navbar():
     return rx.box(
         rx.hstack(

@@ -208,31 +208,22 @@ def adminEvents():
             ),
             rx.chakra.tbody(*table_rows),
             style={
-                "margin": "5rem auto",
-                "padding": "1rem",
+                # "margin": "5rem auto",
+                # "padding": "1rem",
                 "text-align": "center",
-                "height": "500px",  # Adjust table height as needed
-                "width": "80%",  # Adjust table width as needed
+                "height": "70%",  # Adjust table height as needed
+                "width": "70%",  # Adjust table width as needed
                 "max-height": "600px",  # Optional, for max table height
                 "min-height": "300px",  # Optional, for min table height
                 "max-width": "90vw",  # Optional, for max table width
                 "min-width": "300px",  # Optional, for min table width
             }
         ),
-        style={
-            "margin": "auto",
-            "text-align": "center",
-            "margin-top": "50vh",
-            "margin-left": "6vh",
-            "transform": "translateY(-50%)",
-            # "background-color":"red",
-            "width": "90vw",
-            # "margin": "2rem auto"
-        }
+        style={"text-align": "center", "max-width": "100vw", "overflow-x": "auto" , "width": "80vw"}
     ),
      style={
             # "background-color":"blue",
-            "width": "100vw",
+            # "width": "100vw",
            
      }
 )

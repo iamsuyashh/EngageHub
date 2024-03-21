@@ -12,6 +12,18 @@ import NextHead from "next/head"
 
 
 
+export function Button_5d4e77008a1b016ea27a78202f92ed58 () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+
+  const on_click_75e88266e59bd7fcf0de0ebf394b1812 = useCallback((_e) => addEvents([Event("state.carousel_state.next_image", {})], (_e), {}), [addEvents, Event])
+
+  return (
+    <Button onClick={on_click_75e88266e59bd7fcf0de0ebf394b1812} sx={{"position": "absolute", "right": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
+  {`-->`}
+</Button>
+  )
+}
+
 export function Image_10572dada479d5b718036c6ed1d3ba67 () {
   const state__carousel_state = useContext(StateContexts.state__carousel_state)
 
@@ -29,18 +41,6 @@ export function Button_e65140ba91c51800240365f1c3f069dd () {
   return (
     <Button onClick={on_click_ded72e95921a40fca507841609cd7a38} sx={{"position": "absolute", "left": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
   {`<--`}
-</Button>
-  )
-}
-
-export function Button_5d4e77008a1b016ea27a78202f92ed58 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_click_75e88266e59bd7fcf0de0ebf394b1812 = useCallback((_e) => addEvents([Event("state.carousel_state.next_image", {})], (_e), {}), [addEvents, Event])
-
-  return (
-    <Button onClick={on_click_75e88266e59bd7fcf0de0ebf394b1812} sx={{"position": "absolute", "right": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
-  {`-->`}
 </Button>
   )
 }
@@ -136,11 +136,11 @@ export default function Component() {
   {`Coloqium`}
 </Heading>
   <Text>
-  {`borivali`}
+  {`Malad`}
 </Text>
   <Link as={NextLink} href={`/`}>
   <Button>
-  {`Register`}
+  {`Read More`}
 </Button>
 </Link>
 </Box>
@@ -160,7 +160,7 @@ export default function Component() {
 </Text>
   <Link as={NextLink} href={`eventInfo/`}>
   <Button>
-  {`Register`}
+  {`Read More`}
 </Button>
 </Link>
 </Box>
@@ -180,7 +180,7 @@ export default function Component() {
 </Text>
   <Link as={NextLink} href={`/`}>
   <Button>
-  {`Register`}
+  {`Read More`}
 </Button>
 </Link>
 </Box>

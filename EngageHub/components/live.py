@@ -1,8 +1,8 @@
 import reflex as rx
-
-def live():
-   return rx.video(
-    url="https://www.youtube.com/embed/x7JMGS0u8Do?si=FNFXJyssfDks-ea4&amp;controls=0;autoplay;",
+from ..State.firebaseConfig import read_live_stream_link
+def live(url):
+    return rx.video(
+    url=url,
     width="100%",
     height="90vh",
     controls=False,

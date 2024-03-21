@@ -2,7 +2,7 @@
 
 
 import { Fragment } from "react"
-import { Box_1d2e65bd1d5e52f5559121b3b1621f3b, Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
+import { Box_367958c0d2626cdf5b619f9bf794a5b3, Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Image as ChakraImage, Link, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
@@ -86,7 +86,7 @@ export default function Component() {
 </Text>
 </Container>
   <VStack>
-  <Box_1d2e65bd1d5e52f5559121b3b1621f3b/>
+  <Box_367958c0d2626cdf5b619f9bf794a5b3/>
 </VStack>
 </Container>
 </Container>

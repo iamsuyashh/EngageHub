@@ -3,7 +3,7 @@
 
 import { Fragment, useCallback, useContext } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Button, Container, Input, Link, Table, TableContainer, Tbody, Td, Th, Thead, Tr, VStack } from "@chakra-ui/react"
+import { Button, Container, Heading, Input, Link, Table, TableContainer, Tbody, Td, Th, Thead, Tr, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import { DebounceInput } from "react-debounce-input"
@@ -12,6 +12,40 @@ import { Event, set_val } from "/utils/state"
 import NextHead from "next/head"
 
 
+
+export function Debounceinput_edbd5e4a5def75766e71f6474da2290b () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
+
+  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
+
+  return (
+    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} sx={{"margin-top": "20px"}} type={`text`} value={state__textfield_controlled.text}/>
+  )
+}
+
+export function Debounceinput_7bcf8d4f75c9721e43ec4e5f9fde1948 () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+  const state__life_stream_controller = useContext(StateContexts.state__life_stream_controller)
+
+  const on_change_1f891f3579afaf5b4dbf4b7e47feaf51 = useCallback((_e0) => addEvents([Event("state.life_stream_controller.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
+
+  return (
+    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_1f891f3579afaf5b4dbf4b7e47feaf51} sx={{"margin-top": "20px"}} type={`text`} value={state__life_stream_controller.text}/>
+  )
+}
+
+export function Button_fd04abeb9678bf1d800b5887d3f7ff5d () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+
+  const on_click_0b1d7433f40e822386cd0e2298bac511 = useCallback((_e) => addEvents([Event("state.life_stream_controller.onSubmit", {})], (_e), {}), [addEvents, Event])
+
+  return (
+    <Button onClick={on_click_0b1d7433f40e822386cd0e2298bac511}>
+  {`submit`}
+</Button>
+  )
+}
 
 export function Button_093dd66f76dc55c63e124d9de22a13db () {
   const [addEvents, connectError] = useContext(EventLoopContext);
@@ -22,17 +56,6 @@ export function Button_093dd66f76dc55c63e124d9de22a13db () {
     <Button onClick={on_click_9cb60e42aaa64d2892f2dba50cc9f35a}>
   {`submit`}
 </Button>
-  )
-}
-
-export function Debounceinput_01d728ea822013433f09b9baaf6b79c5 () {
-  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
-
-  return (
-    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} type={`text`} value={state__textfield_controlled.text}/>
   )
 }
 
@@ -101,8 +124,17 @@ export default function Component() {
 </Table>
 </TableContainer>
 </Container>
-  <Debounceinput_01d728ea822013433f09b9baaf6b79c5/>
+  <Container/>
+  <Heading>
+  {`Enter the Youtube Link for Home Page!`}
+</Heading>
+  <Debounceinput_edbd5e4a5def75766e71f6474da2290b/>
   <Button_093dd66f76dc55c63e124d9de22a13db/>
+  <Heading>
+  {`Enter Live Stream Link`}
+</Heading>
+  <Debounceinput_7bcf8d4f75c9721e43ec4e5f9fde1948/>
+  <Button_fd04abeb9678bf1d800b5887d3f7ff5d/>
 </Container>
   <NextHead>
   <title>
