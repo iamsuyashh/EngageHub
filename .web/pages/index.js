@@ -76,6 +76,23 @@ export default function Component() {
   <Box>
   <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}>
   <Flex>
+  <Link as={NextLink} href={`//Coloqium`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
+  <Heading>
+  {`Coloqium`}
+</Heading>
+  <Text>
+  {`borivali`}
+</Text>
+</Box>
+</CardBody>
+</Card>
+</Link>
+</Flex>
+  <Flex>
   <Link as={NextLink} href={`eventInfo//TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
@@ -93,16 +110,16 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
-  <Link as={NextLink} href={`//Coloqium`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`//TestUpcomingEvent`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
+  <ChakraImage src={`https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg`}/>
   <Heading>
-  {`Coloqium`}
+  {`TestUpcomingEvent`}
 </Heading>
   <Text>
-  {`borivali`}
+  {`St.Francis `}
 </Text>
 </Box>
 </CardBody>

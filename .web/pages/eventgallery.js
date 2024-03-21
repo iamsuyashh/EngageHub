@@ -12,15 +12,12 @@ import NextHead from "next/head"
 
 
 
-export function Button_5d4e77008a1b016ea27a78202f92ed58 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
+export function Image_10572dada479d5b718036c6ed1d3ba67 () {
+  const state__carousel_state = useContext(StateContexts.state__carousel_state)
 
-  const on_click_75e88266e59bd7fcf0de0ebf394b1812 = useCallback((_e) => addEvents([Event("state.carousel_state.next_image", {})], (_e), {}), [addEvents, Event])
 
   return (
-    <Button onClick={on_click_75e88266e59bd7fcf0de0ebf394b1812} sx={{"position": "absolute", "right": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
-  {`-->`}
-</Button>
+    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"object-fit": "cover", "width": "100vw", "height": "35vw"}}/>
   )
 }
 
@@ -36,12 +33,15 @@ export function Button_e65140ba91c51800240365f1c3f069dd () {
   )
 }
 
-export function Image_10572dada479d5b718036c6ed1d3ba67 () {
-  const state__carousel_state = useContext(StateContexts.state__carousel_state)
+export function Button_5d4e77008a1b016ea27a78202f92ed58 () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
 
+  const on_click_75e88266e59bd7fcf0de0ebf394b1812 = useCallback((_e) => addEvents([Event("state.carousel_state.next_image", {})], (_e), {}), [addEvents, Event])
 
   return (
-    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"object-fit": "cover", "width": "100vw", "height": "35vw"}}/>
+    <Button onClick={on_click_75e88266e59bd7fcf0de0ebf394b1812} sx={{"position": "absolute", "right": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
+  {`-->`}
+</Button>
   )
 }
 
@@ -133,6 +133,26 @@ export default function Component() {
   <Box>
   <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
   <Heading>
+  {`Coloqium`}
+</Heading>
+  <Text>
+  {`borivali`}
+</Text>
+  <Link as={NextLink} href={`/`}>
+  <Button>
+  {`Register`}
+</Button>
+</Link>
+</Box>
+</CardBody>
+</Card>
+</Flex>
+  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
+  <Heading>
   {`TantraUtsav`}
 </Heading>
   <Text>
@@ -151,12 +171,12 @@ export default function Component() {
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
+  <ChakraImage src={`https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg`}/>
   <Heading>
-  {`Coloqium`}
+  {`TestUpcomingEvent`}
 </Heading>
   <Text>
-  {`borivali`}
+  {`St.Francis `}
 </Text>
   <Link as={NextLink} href={`/`}>
   <Button>

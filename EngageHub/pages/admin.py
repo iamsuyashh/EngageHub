@@ -21,5 +21,7 @@ def admin_page():
              value=TextfieldControlled.text,
              on_change= TextfieldControlled.set_text
          ),
-         rx.button("submit", on_click=TextfieldControlled.onSubmit)
+         rx.button("submit", on_click=TextfieldControlled.onSubmit),
+        style={"margin": "5rem auto", "padding": "1rem", "text-align": "center","width":"100vw","height":"100vh"}  # Pass users_data to the usersinfo component
+
     )

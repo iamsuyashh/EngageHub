@@ -1,14 +1,49 @@
 /** @jsxImportSource @emotion/react */
 
 
-import { Fragment } from "react"
+import { Fragment, useCallback, useContext } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Link, Text } from "@chakra-ui/react"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Image as ChakraImage, Input, Link, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
+import { EventLoopContext } from "/utils/context"
+import { Event, getRefValue, getRefValues, set_val } from "/utils/state"
 import NextHead from "next/head"
 
 
+
+export function Box_acf2c4e2e8fef16816545212e653d189 () {
+  
+    const handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd = useCallback((ev) => {
+        const $form = ev.target
+        ev.preventDefault()
+        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
+
+        addEvents([Event("state.register_event_data.handle_submit", {form_data:form_data})])
+
+        if (true) {
+            $form.reset()
+        }
+    })
+    
+  const [addEvents, connectError] = useContext(EventLoopContext);
+
+
+  return (
+    <Box as={`form`} onSubmit={handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+  <VStack>
+  <Input name={`name`} placeholder={`Name`} sx={{"width": "100%"}} type={`text`}/>
+  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
+  <Input name={`header`} type={`hidden`} value={`Coloqium`}/>
+  <Input name={`pid_number`} placeholder={`Enter PID`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Input name={`ph_number`} placeholder={`Enter your Phone Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
+  {`Register`}
+</Button>
+</VStack>
+</Box>
+  )
+}
 
 export default function Component() {
 
@@ -63,9 +98,33 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <Text>
-  {`Loading...`}
+  <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
+  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
+  <Container sx={{"display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem"}}>
+  <Heading sx={{"color": "black", "font-size": "2rem", "margin-bottom": "0.5rem"}}>
+  {`Coloqium`}
+</Heading>
+  <Container sx={{"flex": "1", "margin-right": "2rem"}}>
+  <Text sx={{"margin-bottom": "0.2rem", "color": "black"}}>
+  {`a competion for project `}
 </Text>
+</Container>
+  <Container sx={{"margin-top": "0.5rem"}}>
+  <Text sx={{"font-weight": "bold", "color": "black"}}>
+  {`Date: 2024-03-14`}
+</Text>
+  <Text sx={{"font-weight": "bold", "color": "black"}}>
+  {`Time: 10:51`}
+</Text>
+  <Text sx={{"font-weight": "bold", "color": "black"}}>
+  {`Location: borivali, borivali`}
+</Text>
+</Container>
+  <VStack>
+  <Box_acf2c4e2e8fef16816545212e653d189/>
+</VStack>
+</Container>
+</Container>
   <Box sx={{"background-color": "indigo", "text-align": "center", "padding": "0rem"}}>
   <Container sx={{"padding": "1rem", "background-color": "indigo", "text-align": "center"}}>
   <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>

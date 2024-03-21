@@ -172,15 +172,29 @@ def read_all_data():
         print("Error:", e)
         return {}
     
-def createEvent(header, date, description, location, venue, redirect, link, time, url, file):
+def createEvent(header, date, description, location, venue, redirect, link, time, url):
     try:
         # Upload file to Firebase Storage
-        bucket = storage.bucket()
-        blob = bucket.blob(file.filename)
-        blob.upload_from_string(file.read(), content_type=file.content_type)
+        # Add event data to Firestore
+        event_data = {
+            "header": header,
+            "date": date,
+            "description": description,
+            "location": location,
+            "venue": venue,
+            "redirect": redirect,
+            "link": link,
+            "time": time,
+            "url": url,
+        }
 
-        # Get the download URL of the uploaded file
-        file_url = blob.public_url
+        db.collection('Event').document(header).set(event_data)
+
+        print("Event added to Firestore successfully!")
+    except Exception as ex:
+        print("Error:", ex)
+def updateEvent(header, date, description, location, venue, redirect, link, time, url):
+    try:
 
         # Add event data to Firestore
         event_data = {
@@ -193,7 +207,6 @@ def createEvent(header, date, description, location, venue, redirect, link, time
             "link": link,
             "time": time,
             "url": url,
-            "file_url": file_url
         }
 
         db.collection('Event').document(header).set(event_data)
@@ -201,7 +214,6 @@ def createEvent(header, date, description, location, venue, redirect, link, time
         print("Event added to Firestore successfully!")
     except Exception as ex:
         print("Error:", ex)
-
 def createUpcomingEvent(header,date,description,location,venue,redirect,link,time,url):
     try:
         event_list=[]
@@ -209,6 +221,7 @@ def createUpcomingEvent(header,date,description,location,venue,redirect,link,tim
             "header":header,
             "date": date,"description":description,"location":location,"venue":venue,"redirect":redirect,"link":link,"time":time,"url":url
         })
+        createEvent(header,date,description,location,venue,redirect,link,time,url)
         print("Event added to Firestore successfully!")
     except Exception as ex:
         print("Error",ex)
