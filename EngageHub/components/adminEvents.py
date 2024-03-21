@@ -8,7 +8,8 @@ def send_password_reset(email):
         print(f"Password reset email sent to {email}")
     except Exception as e:
         print("Error sending password reset email:", e)
-
+class EventFormData(rx.State):
+    form_data: dict = {}
 def adminEvents():
     def handle_edit_event_click(header):
         print(f"Edit Event clicked for: {header}")
@@ -20,15 +21,85 @@ def adminEvents():
             rx.chakra.td(user.get("header", "")),
             rx.chakra.td(user.get("venue", "")),
             rx.chakra.td(user.get("date", "")),
-            rx.chakra.td(
-                rx.chakra.form(
-                    rx.chakra.input(placeholder="Header", value=user.get("header", "")),
-                    rx.chakra.input(placeholder="Venue", value=user.get("venue", "")),
-                    rx.chakra.input(placeholder="Date", value=user.get("date", "")),
-                    rx.chakra.button("Submit",),
-                    style={"display": "flex", "flexDirection": "column", "gap": "1rem"}
-                )
+            rx.chakra.td(rx.button("Submit")),
+            rx.td(rx.form(
+            rx.vstack(
+                rx.input(
+                    placeholder="Enter your Event Title",
+                    # value=,
+                    name="header",
+                    type_="text",
+                    style={"margin-bottom" : "1em"},
+                    # margin_bottom="1em",
+                    width = "100%"
+                ),
+                rx.input(
+                    placeholder="Event Description",
+                    name="description",
+                    type_="text",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"
+                ),
+                rx.input(
+                    placeholder="Address",
+                    name="location",
+                    type_="text",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"),
+                rx.input(
+                    placeholder="Venue",
+                    name="venue",
+                    type_="text",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"),
+                rx.input(
+                    placeholder="Date",
+                    name="date",
+                    type_="date",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"
+                ),
+                rx.input(
+                    placeholder="Time",
+                    name="time",
+                    type_='time',
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"
+                ),
+                rx.input(
+                    placeholder="Image link",
+                    name="url",
+                    type_="text",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"
+                ),
+                 rx.input(
+                    placeholder="Redirect URl",
+                    name="redirect",
+                    type_="text",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"),
+                    rx.input(
+                    placeholder="Link",
+                    name="link",
+                    type_="text",
+                    style={"margin-bottom" : "1em"},
+                    margin_bottom="1em",
+                    width = "100%"),
+                rx.button("Submit", type_="submit" , bg = "indigo" , color = "white",variant="outline" , margin_top = "5em" , style={"margin-top" : "3em"}),
+
             ),
+            # on_submit=CreateEventData.handle_submit,
+            reset_on_submit=False,
+            style={ "padding" : "2em", "width" : "500px", "margin-top" : "3em"}
+        ),),
         )
         for user in users_data
     ]

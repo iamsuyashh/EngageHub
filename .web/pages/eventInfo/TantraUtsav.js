@@ -2,7 +2,7 @@
 
 
 import { Fragment } from "react"
-import { Box_367958c0d2626cdf5b619f9bf794a5b3, Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
+import { Box_1d2e65bd1d5e52f5559121b3b1621f3b, Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Image as ChakraImage, Link, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
@@ -86,7 +86,7 @@ export default function Component() {
 </Text>
 </Container>
   <VStack>
-  <Box_367958c0d2626cdf5b619f9bf794a5b3/>
+  <Box_1d2e65bd1d5e52f5559121b3b1621f3b/>
 </VStack>
 </Container>
 </Container>
@@ -96,9 +96,9 @@ export default function Component() {
   {`Connect with us on social media`}
 </Text>
   <Flex sx={{"margin-bottom": "1rem", "justify-content": "center", "color": "white"}}>
-  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://twitter.com'><img src='https://img.icons8.com/color/48/instagram-new--v1.png' alt='Twitter' style='margin-right:8px'></a>"}}/>
-  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://facebook.com'><img src='https://img.icons8.com/color/48/github--v1.png' alt='Facebook' style='margin-right:8px'></a>"}}/>
-  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://instagram.com'><img src='https://img.icons8.com/color/48/linkedin.png' style='margin-right:8px'></a>"}}/>
+  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://www.instagram.com/sfit_itsa/'><img src='https://img.icons8.com/color/48/instagram-new--v1.png' alt='Twitter' style='margin-right:8px'></a>"}}/>
+  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://github.com/VaibhavSutar/EngageHub'><img src='https://img.icons8.com/color/48/github--v1.png' alt='Facebook' style='margin-right:8px'></a>"}}/>
+  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://www.linkedin.com/school/sfit/?originalSubdomain=in'><img src='https://img.icons8.com/color/48/linkedin.png' style='margin-right:8px'></a>"}}/>
 </Flex>
   <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>
   {`For inquiries, contact us at info@engagehub.com`}
