@@ -1,5 +1,5 @@
 import reflex as rx
-
+from ..components.eventdetails import event_details
 event_list = [
      {"url": "https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg", "header": "Event 1", "location": "Location 1", "link": "/"},
      {"url": "https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg", "header": "Event 1", "location": "Location 1", "link": "/register"},
@@ -7,6 +7,7 @@ event_list = [
      {"url": "https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg", "header": "Event 1", "location": "Location 1", "link": "/register"},
 
 ]
+
 def qa(event_data : dict) -> rx.Component:
     return rx.flex(
         rx.card(

@@ -3,7 +3,6 @@ import urllib.parse
 from reflex import route
 from ..State.CustomState import GlobalState
 from .eventdetails import event_details
-
 class RouterState(rx.State):
     pass
 path = RouterState.router.page.raw_path
@@ -19,6 +18,8 @@ class EventState(rx.State):
         return self.eventName
 
 def qa(event_data : dict) -> rx.Component:
+    def on_click_handler():
+        print()
     # query_string = urllib.parse.urlencode({event_data["header"]})
     return rx.flex(
         rx.link(
@@ -51,6 +52,7 @@ def qa(event_data : dict) -> rx.Component:
         # on_click=EventState.set_event_name,
         href=f"{event_data['link']}/{event_data['header']}"
         # href=f"{event_data["link"]}",
+        # on_click=
         ),
     )
 

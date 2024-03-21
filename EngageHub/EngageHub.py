@@ -1,7 +1,7 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 from rxconfig import config
 from EngageHub.components import navbar , gallery_cards
-from EngageHub.pages import galleryPage, home, signUp, signIn,register,event,about,admin_page,eventInfo,livestream
+from EngageHub.pages import galleryPage, home, signUp, signIn,register,event,about,admin_page,eventInfo,livestream, upcomingEvents,adminEventPage
 from EngageHub.pages.eventPages import TantraUtsav,hackstomp,coloqium
 
 from EngageHub.State.firebaseConfig import auth
@@ -41,12 +41,10 @@ app.add_page(signIn, route="/signIn")
 app.add_page(register, route="/register")
 app.add_page(galleryPage,route="/eventgallery")
 app.add_page(about,route="/about")
-app.add_page(event,route="admin/event")
+app.add_page(event,route="/event")
 app.add_page(admin_page,route="/admin")
 app.add_page(eventInfo,route="/eventInfo")
 app.add_page(TantraUtsav,route="/eventInfo/TantraUtsav/")
-app.add_page(hackstomp,route="/eventInfo/Hackstomp/")
-app.add_page(coloqium,route="/eventInfo/Coloqium/")
-
-
+app.add_page(hackstomp,route="/eventInfo/hackstomp/")
+app.add_page(adminEventPage,route="adminEvents")
 app.compile()

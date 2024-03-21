@@ -8,3 +8,6 @@ from .about import about
 from .eventinfo import eventInfo
 from .admin import admin_page
 from .livesteam import livestream
+from .upcomingEvents import upcomingEvents
+from ..components.adminEvents import adminEvents
+from .adminEventPage import adminEventPage

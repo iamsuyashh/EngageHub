@@ -3,7 +3,7 @@
 
 import { Fragment } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Card, CardBody, Container, Flex, Heading, HStack, Image as ChakraImage, Link, SimpleGrid, Spacer, Text, VStack } from "@chakra-ui/react"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Card, CardBody, Container, Flex, Heading, HStack, Image as ChakraImage, Link, List, SimpleGrid, Spacer, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import dynamic from "next/dynamic"
@@ -76,6 +76,23 @@ export default function Component() {
   <Box>
   <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}>
   <Flex>
+  <Link as={NextLink} href={`//Coloqium`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
+  <Heading>
+  {`Coloqium`}
+</Heading>
+  <Text>
+  {`borivali`}
+</Text>
+</Box>
+</CardBody>
+</Card>
+</Link>
+</Flex>
+  <Flex>
   <Link as={NextLink} href={`eventInfo//TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
@@ -93,16 +110,16 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
-  <Link as={NextLink} href={`//Coloqium`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`//TestUpcomingEvent`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
+  <ChakraImage src={`https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg`}/>
   <Heading>
-  {`Coloqium`}
+  {`TestUpcomingEvent`}
 </Heading>
   <Text>
-  {`borivali`}
+  {`St.Francis `}
 </Text>
 </Box>
 </CardBody>
@@ -114,6 +131,51 @@ export default function Component() {
   <Spacer/>
 </Flex>
 </VStack>
+  <Container sx={{"max-width": "800px", "margin": "0 auto", "padding": "20px", "background-color": "#f8f9fa", "border-radius": "8px", "box-shadow": "0 0 10px rgba(0, 0, 0, 0.1)", "margin-top": "-20vw", "justify-content": "center", "align-items": "center"}}>
+  <Heading sx={{"margin-bottom": "20px", "font-size": "2em", "level": 1}}>
+  {`Blog`}
+</Heading>
+  <ChakraImage alt={`ITSA Logo`} src={`https://i.ibb.co/tbxGhMn/itsa-logo.png`} sx={{"display": "block", "margin": "0 auto", "max-width": "20vw", "height": "auto", "margin-bottom": "20px", "border-radius": "8px"}}/>
+  <Text sx={{"margin-bottom": "20px"}}>
+  {`ITSA is a departmental organization for Information Technology. Founded in the year 2011-12, our committee organizes events to bridge the gap between classroom education and the technical skills required by students to be industry-ready.`}
+</Text>
+  <Text sx={{"margin-bottom": "20px"}}>
+  {`Our workshops foster students' exposure to leading domains in technology to offer a headstart. We focus on holistic growth, so our students become complete engineers.`}
+</Text>
+  <Heading sx={{"margin-bottom": "10px", "level": 2}}>
+  {`Objectives of ITSA`}
+</Heading>
+  <List>
+  <List sx={{"margin-bottom": "5px"}}>
+  {`Inspire, Enable, Empower, and Energize our student members to enhance their technical interests`}
+</List>
+  <List sx={{"margin-bottom": "5px"}}>
+  {`To bridge the gap between academic and industry through organizing regular Events/Seminars/Workshops`}
+</List>
+  <List sx={{"margin-bottom": "5px"}}>
+  {`To organize technical awareness programs for young professionals specifically targeted for placement activities`}
+</List>
+  <List sx={{"margin-bottom": "5px"}}>
+  {`To kindle students' interest in research activities and projects`}
+</List>
+</List>
+  <Heading sx={{"margin-bottom": "10px", "level": 2}}>
+  {`Vision`}
+</Heading>
+  <Text sx={{"margin-bottom": "20px"}}>
+  {`To be a chrysalis where bright youngsters are transformed into technological entrepreneurs and innovative leaders of tomorrow’s world, consistent with the Franciscan vision of integrity, peace, and love.`}
+</Text>
+  <Heading sx={{"margin-bottom": "10px", "level": 2}}>
+  {`Mission`}
+</Heading>
+  <Text sx={{"margin-bottom": "20px"}}>
+  {`To churn highly competent engineering graduates with a commitment to result-oriented work, a perennial zest for learning, a quest for excellence, an open mind, and the universal values of honesty, dignity, and mutual care.`}
+</Text>
+  <Spacer/>
+  <Text sx={{"margin-bottom": "20px"}}>
+  {`To continually improve and progress on the path of developing postgraduate scholars who will be competent in exploring, developing, and disseminating new knowledge in their areas of specialization so that the repository of new knowledge and innovation and its dissemination will be enhanced in scope and effectiveness`}
+</Text>
+</Container>
   <Spacer/>
   <Box sx={{"background-color": "indigo", "text-align": "center", "padding": "0rem"}}>
   <Container sx={{"padding": "1rem", "background-color": "indigo", "text-align": "center"}}>

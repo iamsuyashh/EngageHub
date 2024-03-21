@@ -1,19 +1,62 @@
 import reflex as rx
-from ..State.firebaseConfig import createEvent
+from ..State.firebaseConfig import createEvent, createUpcomingEvent
 class CreateEventData(rx.State):
     form_data: dict = {}
+    checked_checked = True
 
     def handle_submit(self, form_data: dict):
         """Handle the form submit."""
         self.form_data = form_data
          # Check if any field is empty
-        if not all(form_data.values()):
-                print("Please fill in all fields.")
-                return
-       
-        print(form_data)
-        rx.window_alert("Hello")
+        # if not all(form_data.values()):
+        #         # print("Please fill in all fields.")
+        #         return rx.alert("Please fill in all fields.")
         handle_Form_Submit(form_data)
+
+    # def handle_upcoming_submit(self, form_data: dict):
+    #     """Handle the form submit."""
+    #     self.form_data = form_data
+    #      # Check if any field is empty
+    #     # if not all(form_data.values()):
+    #     #         # print("Please fill in all fields.")
+    #     #         return rx.alert("Please fill in all fields.")
+    #     rx.cond(
+    #          CreateEventData.checked_checked,
+    #          upcoming_Form_Submit(form_data)
+    #     ),
+    #         # upcoming_Form_Submit(form_data)
+    #     print(form_data)
+    #     rx.window_alert("Hello")
+    #     handle_Form_Submit(form_data)
+# def upcoming_Form_Submit(form_data):
+#     header = form_data.get("header")  # Access form_data correctly
+#     date = form_data.get("date")
+#     description = form_data.get("description")
+#     location = form_data.get("location")
+#     venue = form_data.get("venue")
+#     redirect = form_data.get("redirect")
+#     link = form_data.get("link")
+#     time = form_data.get("time")
+#     url = form_data.get("url")
+
+    
+   
+#     try:
+#             # if CreateEventData.checked_checked == True:
+#             #     upcoming = createUpcomingEvent(header,date,description,location,venue,redirect,link,time,url)
+#             status = createEvent(header,date,description,location,venue,redirect,link,time,url)
+#             if status  == True:
+#                  rx.alert("success")
+#             # ClStorage.set_currentUser
+#             # currentUser("Vaibhav")
+#             # UserCredentials.add_var()
+#             # UserStorage.set_user_email("Vaibhav@gmail.com")
+#             return rx.redirect("/")
+#         # Here you can perform any additional actions after successful sign-in
+#     except Exception as e:
+#         print("Error:", e)
+#         # Handle sign-in error, e.g., display error message to the user
+#     return rx.text("Sign-in successful!")       
 def handle_Form_Submit(form_data):
     header = form_data.get("header")  # Access form_data correctly
     date = form_data.get("date")
@@ -24,12 +67,15 @@ def handle_Form_Submit(form_data):
     link = form_data.get("link")
     time = form_data.get("time")
     url = form_data.get("url")
+    file = form_data.get("my_upload")
 
     
    
     try:
-            status = createEvent(header,date,description,location,venue,redirect,link,time,url)
-            if status:
+            if CreateEventData.checked_checked == True:
+                upcoming = createUpcomingEvent(header,date,description,location,venue,redirect,link,time,url)
+            status = createEvent(header,date,description,location,venue,redirect,link,time,url,file)
+            if status  == True:
                  rx.alert("success")
             # ClStorage.set_currentUser
             # currentUser("Vaibhav")
@@ -115,6 +161,7 @@ def event_form():
                     margin_bottom="1em",
                     width = "100%"),
                 rx.button("Submit", type_="submit" , bg = "indigo" , color = "white",variant="outline" , margin_top = "5em" , style={"margin-top" : "3em"}),
+
             ),
             on_submit=CreateEventData.handle_submit,
             reset_on_submit=True,

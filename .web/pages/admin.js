@@ -3,7 +3,7 @@
 
 import { Fragment, useCallback, useContext } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Button, Container, Input, Link, Table, TableContainer, Tbody, Td, Th, Thead, Tr, VStack } from "@chakra-ui/react"
+import { Button, Container, Heading, Input, Link, Table, TableContainer, Tbody, Td, Th, Thead, Tr, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import { DebounceInput } from "react-debounce-input"
@@ -13,26 +13,26 @@ import NextHead from "next/head"
 
 
 
-export function Button_093dd66f76dc55c63e124d9de22a13db () {
+export function Debounceinput_edbd5e4a5def75766e71f6474da2290b () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
+
+  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
+
+  return (
+    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} sx={{"margin-top": "20px"}} type={`text`} value={state__textfield_controlled.text}/>
+  )
+}
+
+export function Button_693313095b8f5f5d87956603f0669ece () {
   const [addEvents, connectError] = useContext(EventLoopContext);
 
   const on_click_9cb60e42aaa64d2892f2dba50cc9f35a = useCallback((_e) => addEvents([Event("state.textfield_controlled.onSubmit", {})], (_e), {}), [addEvents, Event])
 
   return (
-    <Button onClick={on_click_9cb60e42aaa64d2892f2dba50cc9f35a}>
+    <Button onClick={on_click_9cb60e42aaa64d2892f2dba50cc9f35a} sx={{"margin-top": "10px", "color": "white", "background-color": "indigo"}}>
   {`submit`}
 </Button>
-  )
-}
-
-export function Debounceinput_01d728ea822013433f09b9baaf6b79c5 () {
-  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
-
-  return (
-    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} type={`text`} value={state__textfield_controlled.text}/>
   )
 }
 
@@ -50,67 +50,66 @@ export default function Component() {
   <Link as={NextLink} href={`/admin`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
   {`Home`}
 </Link>
-  <Link as={NextLink} href={`admin/event`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
-  {`Create event`}
+  <Link as={NextLink} href={`/adminEvents`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
+  {`Events`}
+</Link>
+  <Link as={NextLink} href={`/event`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
+  {`Create Event`}
+</Link>
+  <Link as={NextLink} href={`/upcomingEvents`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
+  {`Create upcoming Events`}
 </Link>
 </VStack>
 </Container>
   <Container>
-  <TableContainer sx={{"margin": "2rem auto", "text-align": "center", "margin-top": "50vh", "margin-left": "6vh", "transform": "translateY(-50%)", "max-width": "90%"}}>
-  <Table sx={{"margin": "2rem auto", "padding": "1rem", "text-align": "center"}}>
+  <Heading sx={{"text-align": "center", "font-size": "2rem", "color": "indigo", "margin-bottom": "2rem", "margin-top": "100px"}}>
+  {`Registered Users`}
+</Heading>
+  <TableContainer sx={{"margin": "2rem auto", "text-align": "center", "max-width": "100vw", "overflow-x": "auto", "width": "50vw"}}>
+  <Table sx={{"margin": "0 auto", "padding": "1rem", "text-align": "center", "font-size": "1.2rem", "width": "100%", "margin-top": "50px"}}>
   <Thead>
   <Tr>
-  <Th>
+  <Th sx={{"font-weight": "bold", "color": "indigo", "padding": "10px"}}>
+  {`Email`}
+</Th>
+  <Th sx={{"font-weight": "bold", "color": "indigo", "padding": "10px"}}>
   {`Name`}
 </Th>
-  <Th>
-  {`Age`}
+  <Th sx={{"font-weight": "bold", "color": "indigo", "padding": "10px"}}>
+  {`Phone Number`}
 </Th>
-  <Th>
-  {`Location`}
+  <Th sx={{"font-weight": "bold", "color": "indigo", "padding": "10px"}}>
+  {`Actions`}
 </Th>
 </Tr>
 </Thead>
   <Tbody>
   <Tr>
-  <Td>
-  {`John`}
+  <Td sx={{"font-weight": "bold", "color": "black", "padding": "10px"}}>
+  {`test4@gmail.com`}
+</Td>
+  <Td sx={{"font-weight": "bold", "color": "black", "padding": "10px"}}>
+  {`Vaibhav`}
+</Td>
+  <Td sx={{"font-weight": "bold", "color": "black", "padding": "10px"}}>
+  {`9819079774`}
 </Td>
   <Td>
-  {`30`}
-</Td>
-  <Td>
-  {`New York`}
-</Td>
-</Tr>
-  <Tr>
-  <Td>
-  {`Jane`}
-</Td>
-  <Td>
-  {`31`}
-</Td>
-  <Td>
-  {`San Francisco`}
-</Td>
-</Tr>
-  <Tr>
-  <Td>
-  {`Joe`}
-</Td>
-  <Td>
-  {`32`}
-</Td>
-  <Td>
-  {`Los Angeles`}
+  <Button sx={{"background-color": "indigo", "color": "white", "font-weight": "bold", "width": "100%", "padding": "10px"}}>
+  {`Reset Password`}
+</Button>
 </Td>
 </Tr>
 </Tbody>
 </Table>
 </TableContainer>
 </Container>
-  <Debounceinput_01d728ea822013433f09b9baaf6b79c5/>
-  <Button_093dd66f76dc55c63e124d9de22a13db/>
+  <Container/>
+  <Heading>
+  {`Enter the Youtube Link for Home Page!`}
+</Heading>
+  <Debounceinput_edbd5e4a5def75766e71f6474da2290b/>
+  <Button_693313095b8f5f5d87956603f0669ece/>
 </Container>
   <NextHead>
   <title>

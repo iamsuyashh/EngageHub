@@ -1,6 +1,6 @@
 """The home page. This file includes examples abstracting complex UI into smaller components."""
 import reflex as rx
-from ..components import navbar, footer , featuredVideo , upcomingEvents , carousel
+from ..components import navbar, footer , featuredVideo , upcomingEvents , carousel , blog_page
 from ..State.CustomState import UserCredentials , user_state
 from ..State.firebaseConfig import auth, firebase, read_event_details, read_all_data, read_featured_video
 from ..components.form import ClStorage
@@ -15,10 +15,13 @@ print("Shared Value",StateTwo.same_shared_value)
 def display_username(self):
     # Access the username from LocalStorageState
     return rx.text(f"Hello, {self.ClStorage.currentUser}")
-
-# Now you can use the current_user variable in your code
-def home(): 
+def on_load():
     event_details = read_event_details() 
+    return event_details
+# Now you can use the current_user variable in your code
+
+def home(): 
+    event_details = read_event_details()
     url = read_featured_video()
     link = url["link"]
     """The home Page ."""
@@ -31,10 +34,13 @@ def home():
     #   carousel(),
       #Upcoming Events
        upcomingEvents(event_details),
+        blog_page(),
        rx.spacer(),
        footer(),
-       style={"max-width": "100vw", "background-color":"#F8F8FA"}
+       style={"max-width": "100vw", "background-color":"#F8F8FA"},
+        
     )                
+   
 
 
 '''

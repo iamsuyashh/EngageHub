@@ -15,9 +15,16 @@ def admin_page():
     return rx.container(
          sidebar(),
          users_info(),  # Pass users_data to the usersinfo component
+
+     # This is the home page youtube link 
+        rx.container(
+            
+        ),
+        rx.heading("Enter the Youtube Link for Home Page!"),
          rx.input(
              value=TextfieldControlled.text,
-             on_change= TextfieldControlled.set_text
+             on_change= TextfieldControlled.set_text,
+             style={"margin-top" : "20px"}
          ),
-         rx.button("submit", on_click=TextfieldControlled.onSubmit)
+         rx.button("submit", on_click=TextfieldControlled.onSubmit , style={"margin-top" : "10px" , "color":"white" , "background-color" : "indigo"})
     )

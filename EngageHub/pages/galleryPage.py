@@ -3,6 +3,7 @@ from ..components import navbar
 from ..components.gallery import gallery_cards
 from ..components import carousel
 from ..State.firebaseConfig import read_event_details
+
 event_list = read_event_details()
 def galleryPage():
     return rx.container(

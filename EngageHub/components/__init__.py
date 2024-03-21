@@ -12,5 +12,8 @@ from .eventdetails import event_details
 from .imageCarsouel import carousel
 from .users import users_info
 from .sidebar import sidebar
+from .adminEvents import adminEvents
 from .live import live
+from .blog import blog_page
+# from ..pages.adminEvents import adminEvents
 # from .videoCarousel import videoCarousel

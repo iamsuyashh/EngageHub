@@ -71,18 +71,18 @@ export default function Component() {
 </Heading>
   <Container sx={{"flex": "1", "margin-right": "2rem"}}>
   <Text sx={{"margin-bottom": "0.2rem", "color": "black"}}>
-  {`EngageHub organized a 3D Modeling Workshop using Blender on 16th February at 5 PM. The workshop taught participants the magic of creating stunning 3D models and animations using Blender. It was suitable for both beginners and experienced users. The event was followed by a blender-render competition, which added to the excitement.`}
+  {`Technical Event`}
 </Text>
 </Container>
   <Container sx={{"margin-top": "0.5rem"}}>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Date: February 16, 2023`}
+  {`Date: 2024-03-22`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Time: 9 pm`}
+  {`Time: 10:16`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Location: Mira , Vasai`}
+  {`Location: Kandivali, Vasai`}
 </Text>
 </Container>
   <VStack>
