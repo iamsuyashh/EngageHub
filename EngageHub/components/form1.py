@@ -33,7 +33,7 @@ def signup_form():
             rx.vstack(
                 rx.input(
                     placeholder="Enter your Name",
-                    name="event_title",
+                    name="name",
                     style={"margin-bottom" : "1em"},
                     # margin_bottom="1em",
                     width = "100%"
@@ -48,7 +48,7 @@ def signup_form():
                 ),
                 rx.input(
                     placeholder="Enter Your phone number",
-                    name="number",
+                    name="phoneNumber",
                     type_="tel",
                     style={"margin-bottom" : "1em"},
                     margin_bottom="1em",

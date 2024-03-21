@@ -15,6 +15,8 @@ def admin_page():
     return rx.container(
          sidebar(),
          users_info(),  # Pass users_data to the usersinfo component
+
+     # This is the home page youtube link 
          rx.input(
              value=TextfieldControlled.text,
              on_change= TextfieldControlled.set_text

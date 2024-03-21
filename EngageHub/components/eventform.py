@@ -146,14 +146,6 @@ def event_form():
                     margin_bottom="1em",
                     width = "100%"
                 ),
-                rx.upload(
-                    rx.text(
-                        "Drag and drop files here or click to select files"
-                    ),
-                    id="my_upload",
-                    border="1px dotted rgb(107,99,246)",
-                    padding="5em",
-                    ),
                  rx.input(
                     placeholder="Redirect URl",
                     name="redirect",

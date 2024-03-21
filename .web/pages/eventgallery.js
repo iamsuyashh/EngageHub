@@ -12,6 +12,15 @@ import NextHead from "next/head"
 
 
 
+export function Image_10572dada479d5b718036c6ed1d3ba67 () {
+  const state__carousel_state = useContext(StateContexts.state__carousel_state)
+
+
+  return (
+    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"object-fit": "cover", "width": "100vw", "height": "35vw"}}/>
+  )
+}
+
 export function Button_e65140ba91c51800240365f1c3f069dd () {
   const [addEvents, connectError] = useContext(EventLoopContext);
 
@@ -33,15 +42,6 @@ export function Button_5d4e77008a1b016ea27a78202f92ed58 () {
     <Button onClick={on_click_75e88266e59bd7fcf0de0ebf394b1812} sx={{"position": "absolute", "right": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
   {`-->`}
 </Button>
-  )
-}
-
-export function Image_10572dada479d5b718036c6ed1d3ba67 () {
-  const state__carousel_state = useContext(StateContexts.state__carousel_state)
-
-
-  return (
-    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"object-fit": "cover", "width": "100vw", "height": "35vw"}}/>
   )
 }
 

@@ -7,7 +7,6 @@ import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Card, CardBody
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import dynamic from "next/dynamic"
-import { AddIcon } from "@chakra-ui/icons"
 import NextHead from "next/head"
 
 const ReactPlayer = dynamic(() => import('react-player'), { ssr: false });
@@ -116,22 +115,23 @@ export default function Component() {
 </Flex>
 </VStack>
   <Spacer/>
-  <Box sx={{"background-color": "indigo", "text-align": "center", "padding": "1rem"}}>
-  <Flex sx={{"margin-bottom": "1rem"}}>
-  <AddIcon sx={{"name": "fab fa-twitter", "color": "white", "size": "lg", "mr": "2"}}/>
-  <AddIcon sx={{"name": "fab fa-facebook-f", "color": "white", "size": "lg", "mr": "2"}}/>
-  <AddIcon sx={{"name": "fab fa-instagram", "color": "white", "size": "lg", "mr": "2"}}/>
-  <AddIcon sx={{"name": "fab fa-linkedin-in", "color": "white", "size": "lg", "mr": "2"}}/>
-</Flex>
+  <Box sx={{"background-color": "indigo", "text-align": "center", "padding": "0rem"}}>
+  <Container sx={{"padding": "1rem", "background-color": "indigo", "text-align": "center"}}>
   <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>
   {`Connect with us on social media`}
 </Text>
+  <Flex sx={{"margin-bottom": "1rem", "justify-content": "center", "color": "white"}}>
+  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://twitter.com'><img src='https://img.icons8.com/color/48/instagram-new--v1.png' alt='Twitter' style='margin-right:8px'></a>"}}/>
+  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://facebook.com'><img src='https://img.icons8.com/color/48/github--v1.png' alt='Facebook' style='margin-right:8px'></a>"}}/>
+  <Box dangerouslySetInnerHTML={{"__html": "<a href='https://instagram.com'><img src='https://img.icons8.com/color/48/linkedin.png' style='margin-right:8px'></a>"}}/>
+</Flex>
   <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>
   {`For inquiries, contact us at info@engagehub.com`}
 </Text>
   <Text sx={{"color": "white", "size": "sm"}}>
   {`© 2024 EngageHub`}
 </Text>
+</Container>
 </Box>
 </Container>
   <NextHead>

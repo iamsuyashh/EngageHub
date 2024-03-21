@@ -35,7 +35,30 @@ def add_user_to_firestore(user_data):
         print("User added to Firestore successfully!")
     except Exception as e:
         print("Error:", e)
+def read_users():
+    try:
+        # Retrieve all documents from the 'users' collection
+        users_ref = db.collection('users').get()
+        users_data = []
+        for user in users_ref:
+            users_data.append(user.to_dict())
+        return users_data
 
+    except Exception as e:
+        print("Error:", e)
+        return []
+def read_events():
+    try:
+        # Retrieve all documents from the 'users' collection
+        users_ref = db.collection('Event').get()
+        users_data = []
+        for user in users_ref:
+            users_data.append(user.to_dict())
+        return users_data
+
+    except Exception as e:
+        print("Error:", e)
+        return []
 def read_event_details():
     try:
         # Initialize an empty list to store event details

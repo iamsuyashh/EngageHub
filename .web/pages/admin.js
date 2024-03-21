@@ -13,6 +13,17 @@ import NextHead from "next/head"
 
 
 
+export function Debounceinput_01d728ea822013433f09b9baaf6b79c5 () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
+
+  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
+
+  return (
+    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} type={`text`} value={state__textfield_controlled.text}/>
+  )
+}
+
 export function Button_093dd66f76dc55c63e124d9de22a13db () {
   const [addEvents, connectError] = useContext(EventLoopContext);
 
@@ -22,17 +33,6 @@ export function Button_093dd66f76dc55c63e124d9de22a13db () {
     <Button onClick={on_click_9cb60e42aaa64d2892f2dba50cc9f35a}>
   {`submit`}
 </Button>
-  )
-}
-
-export function Debounceinput_01d728ea822013433f09b9baaf6b79c5 () {
-  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
-
-  return (
-    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} type={`text`} value={state__textfield_controlled.text}/>
   )
 }
 
@@ -50,6 +50,9 @@ export default function Component() {
   <Link as={NextLink} href={`/admin`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
   {`Home`}
 </Link>
+  <Link as={NextLink} href={`/adminEvents`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
+  {`Events`}
+</Link>
   <Link as={NextLink} href={`/event`} sx={{"color": "indigo", "marginBottom": "0.5em"}}>
   {`Create Event`}
 </Link>
@@ -60,52 +63,38 @@ export default function Component() {
 </Container>
   <Container>
   <TableContainer sx={{"margin": "2rem auto", "text-align": "center", "margin-top": "50vh", "margin-left": "6vh", "transform": "translateY(-50%)", "max-width": "90%"}}>
-  <Table sx={{"margin": "2rem auto", "padding": "1rem", "text-align": "center"}}>
+  <Table sx={{"margin": "5rem auto", "padding": "1rem", "text-align": "center"}}>
   <Thead>
   <Tr>
+  <Th>
+  {`Email`}
+</Th>
   <Th>
   {`Name`}
 </Th>
   <Th>
-  {`Age`}
+  {`Phone Number`}
 </Th>
   <Th>
-  {`Location`}
+  {`Actions`}
 </Th>
 </Tr>
 </Thead>
   <Tbody>
   <Tr>
   <Td>
-  {`John`}
+  {`test4@gmail.com`}
 </Td>
   <Td>
-  {`30`}
+  {`Vaibhav`}
 </Td>
   <Td>
-  {`New York`}
-</Td>
-</Tr>
-  <Tr>
-  <Td>
-  {`Jane`}
+  {`9819079774`}
 </Td>
   <Td>
-  {`31`}
-</Td>
-  <Td>
-  {`San Francisco`}
-</Td>
-</Tr>
-  <Tr>
-  <Td>
-  {`Joe`}
-</Td>
-  <Td>
-  {`32`}
-</Td>
-  <Td>
-  {`Los Angeles`}
+  <Button>
+  {`Reset Password`}
+</Button>
 </Td>
 </Tr>
 </Tbody>
