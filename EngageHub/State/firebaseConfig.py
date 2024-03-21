@@ -271,6 +271,17 @@ def updateEvent(header, date, description, location, venue, redirect, link, time
         print("Event added to Firestore successfully!")
     except Exception as ex:
         print("Error:", ex)
+def delteEvent(header):
+    try:
+
+        # Add event data to Firestore
+        db.collection('Event').document(header).delete()
+        print(f"Event '{header}' deleted successfully!")
+        db.collection('UpcomingEvents').document(header).delete()
+        print(f"Event '{header}' deleted successfully!")
+        return True
+    except Exception as ex:
+        print("Error:", ex)
 def createUpcomingEvent(header,date,description,location,venue,redirect,link,time,url):
     try:
         event_list=[]
@@ -295,4 +306,3 @@ def register_for_event(header,name,email,pid,ph_Number):
     except Exception as ex:
         print("Error",ex)
         return False
-

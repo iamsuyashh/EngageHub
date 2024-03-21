@@ -1,6 +1,6 @@
 import reflex as rx
 from reflex.components import table_container
-from ..State.firebaseConfig import read_events,auth,updateEvent
+from ..State.firebaseConfig import read_events,auth,updateEvent,delteEvent
 
 def send_password_reset(email):
     try:
@@ -50,6 +50,18 @@ class EventFormData1(rx.State):
         #         # print("Please fill in all fields.")
         #         return rx.alert("Please fill in all fields.")
         # handle_Form_Submit(form_data)
+
+    def handle_delete(self, form_data: dict):
+        """Handle the form submit."""
+        header = form_data.get("header",self.header)
+        print("Header",header)
+        status  = delteEvent(header)
+        if status:
+            rx.alert("Event Deleted.")
+
+        # self.update_event_data(form_data)
+        # handle_Form_Delete(self.form_data)
+
 def handle_Form_Submit(form_data):
     header = form_data.get("header")  # Access form_data correctly
     date = form_data.get("date")
@@ -87,7 +99,8 @@ def adminEvents():
         rx.chakra.td(user.get("header", "")),
         rx.chakra.td(user.get("venue", "")),
         rx.chakra.td(user.get("date", "")),
-        rx.chakra.td(rx.button("Edit Event", on_click=EventFormData1.update_event_data(user)))
+        rx.chakra.td(rx.button("Edit Event", on_click=EventFormData1.update_event_data(user))),
+        rx.chakra.td(rx.button("Delete Event", on_click=EventFormData1.handle_delete(user)))
     )
     for user in users_data
 ] + [
@@ -183,9 +196,9 @@ def adminEvents():
                     margin_bottom="1em",
                     width = "100%"),
                 rx.button("Edit Event", type_="submit" , bg = "indigo" , color = "white",variant="outline" , margin_top = "5em" , style={"margin-top" : "3em"}),
-
+                #  rx.button("Delete Event" ,on_click=EventFormData1.handle_delete,bg = "indigo" , color = "white",variant="outline" , margin_top = "5em" , style={"margin-top" : "3em"}),
             ),
-                 on_submit=EventFormData1.handle_submit,
+                on_submit=EventFormData1.handle_submit,
                 reset_on_submit=False,
                 style={"padding": "2em", "width": "500px"}
             )

@@ -45,7 +45,6 @@ export function Fragment_fd0e7cb8f9fb4669a6805377d925fba0 () {
 }
 
 export function Box_367958c0d2626cdf5b619f9bf794a5b3 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
   
     const handleSubmit_158b22f76ba0dcc4d61b38dab63a8d26 = useCallback((ev) => {
         const $form = ev.target
@@ -59,6 +58,7 @@ export function Box_367958c0d2626cdf5b619f9bf794a5b3 () {
         }
     })
     
+  const [addEvents, connectError] = useContext(EventLoopContext);
 
 
   return (
