@@ -6,5 +6,6 @@ def event():
     return rx.container(
         sidebar(),
         event_form(),
-        style={"max-width": "100vw"} 
+        style={"margin": "5rem auto", "padding": "1rem", "text-align": "center","width":"100vw","height":"100vh"}
+
     )

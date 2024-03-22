@@ -12,10 +12,9 @@ import NextHead from "next/head"
 
 
 
-export function Box_9623548b06558c6d0b2945e0dc3a9e22 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
+export function Box_c9b8b273e6949d702c400154f1ef1fb4 () {
   
-    const handleSubmit_1481f77324dceaf7e603b81f7184595c = useCallback((ev) => {
+    const handleSubmit_46ff3d752207f946241948cb11da8bba = useCallback((ev) => {
         const $form = ev.target
         ev.preventDefault()
         const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
@@ -27,10 +26,11 @@ export function Box_9623548b06558c6d0b2945e0dc3a9e22 () {
         }
     })
     
+  const [addEvents, connectError] = useContext(EventLoopContext);
 
 
   return (
-    <Box as={`form`} onSubmit={handleSubmit_1481f77324dceaf7e603b81f7184595c} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+    <Box as={`form`} onSubmit={handleSubmit_46ff3d752207f946241948cb11da8bba} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
   <VStack>
   <Input name={`name`} placeholder={`Enter your Name`} sx={{"margin-bottom": "1em", "width": "100%"}} type={`text`}/>
   <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
@@ -38,7 +38,7 @@ export function Box_9623548b06558c6d0b2945e0dc3a9e22 () {
   <Input name={`password`} placeholder={`Enter Your Password`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`password`}/>
   <Container>
   <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
-  {`Login`}
+  {`Sign Up`}
 </Button>
 </Container>
 </VStack>
@@ -103,7 +103,7 @@ export default function Component() {
   {`Sign up`}
 </Heading>
   <VStack>
-  <Box_9623548b06558c6d0b2945e0dc3a9e22/>
+  <Box_c9b8b273e6949d702c400154f1ef1fb4/>
 </VStack>
 </Container>
   <NextHead>

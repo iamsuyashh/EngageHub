@@ -1,6 +1,6 @@
 import reflex as rx
 from reflex.components import table_container
-from ..State.firebaseConfig import read_events,auth,updateEvent,delteEvent,get_registered_user
+from ..State.firebaseConfig import read_events,auth,updateEvent,delteEvent,fetch_registered_users
 
 def send_password_reset(email):
     try:
@@ -39,7 +39,11 @@ class EventFormData1(rx.State):
         self.link = new_data.get("link", self.link)
         self.time = new_data.get("time", self.time)
         self.url = new_data.get("url", self.url)
-        print("Users data : ",new_data.get("registered_users"))
+        # print("Users data : ",new_data.get("registered_users"))
+        regi_user = fetch_registered_users(self.header)
+        self.registerd_users = fetch_registered_users(self.header)
+        print("Users Registered : ",regi_user)
+
         self.registered_users = new_data.get("registered_users")
         self.form_data = {**self.form_data, **new_data}
 
@@ -96,15 +100,13 @@ def adminEvents():
     def handle_edit_event_click(header):
         print(f"Edit Event clicked for: {header}")
         
-    def get_registered_users_from_events(events):
-        registered_users_dict = {}
-        for event in users_data:
-            registered_users_dict[event['header']] = event.get('registered_users', {})
-        return registered_users_dict
     users_data = read_events() or []
-    registerUser =  get_registered_users_from_events("TantraUtsav")
-    print("Registered Users: ",registerUser)
+    # user_dict = dict(users_data)
+    # user = user_dict.get("registered_users")
+
     print('Users Data: ',users_data)
+    # print('Users Data: ',users_data)
+
         # header = user.get("header",""),
     table_rows = [
     rx.chakra.tr(
@@ -189,15 +191,15 @@ def adminEvents():
                     margin_bottom="1em",
                     width = "100%"
                 ),
-                 rx.input(
-                    placeholder="Redirect URl",
-                    value=EventFormData1.redirect,
-                    on_change=EventFormData1.set_redirect,
-                    name="redirect",
-                    type_="text",
-                    style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
-                    width = "100%"),
+                #  rx.input(
+                #     placeholder="Redirect URl",
+                #     value=EventFormData1.redirect,
+                #     on_change=EventFormData1.set_redirect,
+                #     name="redirect",
+                #     type_="text",
+                #     style={"margin-bottom" : "1em"},
+                #     margin_bottom="1em",
+                #     width = "100%"),
                     rx.input(
                     placeholder="Link",
                     value=EventFormData1.link,
@@ -220,7 +222,7 @@ def adminEvents():
     ),
     rx.chakra.tr(
         #  rx.chakra.td([user.get('name', {})]),
-        rx.input(value=registerUser.get("name","")),
+        # rx.input(value=user.get("name","")),
         # rx.chakra.td(user.get("date", "")),
         # rx.chakra.td(rx.button("Edit Event", on_click=EventFormData1.update_event_data(user))),
         # rx.chakra.td(rx.button("Delete Event", on_click=EventFormData1.handle_delete(user)))

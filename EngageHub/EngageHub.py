@@ -48,7 +48,6 @@ app.add_page(TantraUtsav,route="/eventInfo/TantraUtsav/")
 app.add_page(hackstomp,route="/eventInfo/hackstomp/")
 app.add_page(adminEventPage,route="/adminEvents")
 app.add_page(upcomingEvents,route="/upcomingEvents")
-
 app.add_page(livestream,route="/live/")
 
 # app.add_custom_404_page()

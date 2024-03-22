@@ -12,15 +12,6 @@ import NextHead from "next/head"
 
 
 
-export function Image_10572dada479d5b718036c6ed1d3ba67 () {
-  const state__carousel_state = useContext(StateContexts.state__carousel_state)
-
-
-  return (
-    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"object-fit": "cover", "width": "100vw", "height": "35vw"}}/>
-  )
-}
-
 export function Button_e65140ba91c51800240365f1c3f069dd () {
   const [addEvents, connectError] = useContext(EventLoopContext);
 
@@ -30,6 +21,15 @@ export function Button_e65140ba91c51800240365f1c3f069dd () {
     <Button onClick={on_click_ded72e95921a40fca507841609cd7a38} sx={{"position": "absolute", "left": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
   {`<--`}
 </Button>
+  )
+}
+
+export function Image_10572dada479d5b718036c6ed1d3ba67 () {
+  const state__carousel_state = useContext(StateContexts.state__carousel_state)
+
+
+  return (
+    <ChakraImage src={state__carousel_state.images.at(state__carousel_state.current_image_index)} sx={{"object-fit": "cover", "width": "100vw", "height": "35vw"}}/>
   )
 }
 
@@ -131,27 +131,7 @@ export default function Component() {
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
-  <Heading>
-  {`Coloqium`}
-</Heading>
-  <Text>
-  {`Malad`}
-</Text>
-  <Link as={NextLink} href={`/`}>
-  <Button>
-  {`Read More`}
-</Button>
-</Link>
-</Box>
-</CardBody>
-</Card>
-</Flex>
-  <Flex sx={{"marginY": "1em", "marginX": "1em"}}>
-  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
-  <CardBody>
-  <Box>
-  <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`}/>
+  <ChakraImage src={`https://i.ibb.co/7RLzM8k/mosiac.jpg`}/>
   <Heading>
   {`Hackstomp`}
 </Heading>

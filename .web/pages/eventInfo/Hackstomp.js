@@ -2,7 +2,7 @@
 
 
 import { Fragment } from "react"
-import { Box_3c09d9bc87a2ee680971069a8a51644b, Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
+import { Box_b0d3365414439dd65e9e45bc2cfd7a2a, Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Image as ChakraImage, Link, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
@@ -64,7 +64,7 @@ export default function Component() {
 </HStack>
 </Box>
   <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
-  <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
+  <ChakraImage src={`https://i.ibb.co/7RLzM8k/mosiac.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
   <Container sx={{"display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem"}}>
   <Heading sx={{"color": "black", "font-size": "2rem", "margin-bottom": "0.5rem"}}>
   {`Hackstomp`}
@@ -86,7 +86,7 @@ export default function Component() {
 </Text>
 </Container>
   <VStack>
-  <Box_3c09d9bc87a2ee680971069a8a51644b/>
+  <Box_b0d3365414439dd65e9e45bc2cfd7a2a/>
 </VStack>
 </Container>
 </Container>

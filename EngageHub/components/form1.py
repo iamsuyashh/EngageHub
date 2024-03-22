@@ -9,8 +9,6 @@ class RegisterData(rx.State):
             username = form_data.get("email")
             password = form_data.get("password")
             
-    
-
             try:
                 user = auth.create_user_with_email_and_password(username,password)
                 add_user_to_firestore(form_data)
@@ -18,6 +16,7 @@ class RegisterData(rx.State):
                 auth.send_email_verification(user['idToken'])
                 print("User Cred: ", user)
                 print(auth.current_user)
+                return rx.redirect("/signIn")
 
             except Exception as e:
                 print("Error:", e)
@@ -60,7 +59,7 @@ def signup_form():
                     style={"margin-bottom" : "1em"},
                     margin_bottom="1em",
                     width = "100%"),
-                rx.container(rx.button("Login", type_="submit" , bg = "indigo" , color = "white",variant="outline" , margin_top = "5em" , style={"margin-top" : "3em"}),  
+                rx.container(rx.button("Sign Up", type_="submit" , bg = "indigo" , color = "white",variant="outline" , margin_top = "5em" , style={"margin-top" : "3em"}),  
                 )
                 
             ),

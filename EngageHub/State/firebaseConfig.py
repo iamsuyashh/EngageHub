@@ -225,7 +225,7 @@ def read_all_data():
         print("Error:", e)
         return {}
     
-def createEvent(header, date, description, location, venue, redirect, link, time, url):
+def createEvent(header, date, description, location, venue, link, time, url):
     try:
         # Upload file to Firebase Storage
         # Add event data to Firestore
@@ -235,7 +235,6 @@ def createEvent(header, date, description, location, venue, redirect, link, time
             "description": description,
             "location": location,
             "venue": venue,
-            "redirect": redirect,
             "link": link,
             "time": time,
             "url": url,
@@ -266,7 +265,7 @@ def read_upcoming_events(limit=3):
     except Exception as e:
         print("Error:", e)
         return []
-def updateEvent(header, date, description, location, venue, redirect, link, time, url):
+def updateEvent(header, date, description, location, venue, link, time, url):
     try:
 
         # Add event data to Firestore
@@ -276,7 +275,6 @@ def updateEvent(header, date, description, location, venue, redirect, link, time
             "description": description,
             "location": location,
             "venue": venue,
-            "redirect": redirect,
             "link": link,
             "time": time,
             "url": url,
@@ -301,14 +299,14 @@ def delteEvent(header):
         return True
     except Exception as ex:
         print("Error:", ex)
-def createUpcomingEvent(header,date,description,location,venue,redirect,link,time,url):
+def createUpcomingEvent(header,date,description,location,venue,link,time,url):
     try:
         event_list=[]
         db.collection('UpcomingEvents').document(header).set({
             "header":header,
-            "date": date,"description":description,"location":location,"venue":venue,"redirect":redirect,"link":link,"time":time,"url":url
+            "date": date,"description":description,"location":location,"venue":venue,"link":link,"time":time,"url":url
         })
-        createEvent(header,date,description,location,venue,redirect,link,time,url)
+        createEvent(header,date,description,location,venue,link,time,url)
         print("Event added to Firestore successfully!")
     except Exception as ex:
         print("Error",ex)
@@ -332,7 +330,19 @@ def fetch_images():
     docs = db.collection("Carousel").stream()
     for doc in docs:
         images.append(doc.to_dict()['url'])
+        print("Images:",images)
     return images
 def add_images(images):
     for image_url in images:
         db.collection("Carousel").add({'url': image_url})
+def fetch_registered_users(event_name):
+    event_ref = db.collection('Event').document(event_name)
+    registered_users_dict = {}
+    if event_ref.get().exists:
+        registered_users_ref = event_ref.collection('registered_users').get()
+        for user_doc in registered_users_ref:
+            user_id = user_doc.id
+            user_data = user_doc.to_dict()
+            registered_users_dict[user_id] = user_data
+        print("registered_users_dict", registered_users_dict)
+    return registered_users_dict

@@ -65,7 +65,7 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <ReactPlayer controls={false} height={`60vh`} url={`https://www.youtube.com/live/x7JMGS0u8Do?feature=shared`} width={`100%`}/>
+  <ReactPlayer controls={false} height={`60vh`} url={`https://youtu.be/hvVGFVUadvA?feature=shared`} width={`100%`}/>
   <VStack sx={{"margin": "10", "height": "100vh"}}>
   <Flex direction={`column`}>
   <Flex>
@@ -76,11 +76,11 @@ export default function Component() {
   <Box>
   <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}>
   <Flex>
-  <Link as={NextLink} href={`/`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`/eventInfo/hackstomp/`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
-  <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`}/>
+  <ChakraImage src={`https://i.ibb.co/7RLzM8k/mosiac.jpg`}/>
   <Heading>
   {`Hackstomp`}
 </Heading>
