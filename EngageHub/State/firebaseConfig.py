@@ -49,16 +49,32 @@ def read_users():
         return []
 def read_events():
     try:
-        # Retrieve all documents from the 'users' collection
-        users_ref = db.collection('Event').get()
-        users_data = []
-        for user in users_ref:
-            users_data.append(user.to_dict())
-        return users_data
+        events_ref = db.collection('Event').get()
+        events_data = []
+        for event in events_ref:
+            event_data = event.to_dict()
+            # Fetch the registered users for this event
+            registered_users_ref = event.reference.collection('registered_users').get()
+            registered_users_data = []
+            for user in registered_users_ref:
+                registered_users_data.append(user.to_dict())
+            event_data['registered_users'] = registered_users_data
+            events_data.append(event_data)
+            # print(events_data)
+        return events_data
 
     except Exception as e:
         print("Error:", e)
         return []
+def get_registered_user(eventName):
+    events = read_events()
+    for event in events:
+        if event['header'] == eventName:
+            print(event.get('registered_users', []))
+            return event.get('registered_users', [])
+
+    return []
+
 def read_event_details():
     try:
         # Initialize an empty list to store event details
@@ -267,7 +283,10 @@ def updateEvent(header, date, description, location, venue, redirect, link, time
         }
 
         db.collection('Event').document(header).set(event_data)
-
+        event_ref = db.collection('UpcomingEvents').document(header)
+        event = event_ref.get()
+        if event.exists:
+             event_ref.set(event_data)
         print("Event added to Firestore successfully!")
     except Exception as ex:
         print("Error:", ex)
@@ -306,3 +325,14 @@ def register_for_event(header,name,email,pid,ph_Number):
     except Exception as ex:
         print("Error",ex)
         return False
+    
+    # Image Carousel
+def fetch_images():
+    images = []
+    docs = db.collection("Carousel").stream()
+    for doc in docs:
+        images.append(doc.to_dict()['url'])
+    return images
+def add_images(images):
+    for image_url in images:
+        db.collection("Carousel").add({'url': image_url})

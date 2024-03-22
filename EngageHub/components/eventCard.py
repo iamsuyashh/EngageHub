@@ -50,7 +50,7 @@ def qa(event_data : dict) -> rx.Component:
         margin_y="1em",
         margin_x="1em",
         # on_click=EventState.set_event_name,
-        href=f"{event_data['link']}/{event_data['header']}"
+        href=event_data["link"]
         # href=f"{event_data["link"]}",
         # on_click=
         ),

@@ -6,33 +6,33 @@ import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_compo
 import { Button, Container, Heading, Input, Link, Table, TableContainer, Tbody, Td, Th, Thead, Tr, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
-import { DebounceInput } from "react-debounce-input"
 import { EventLoopContext, StateContexts } from "/utils/context"
 import { Event, set_val } from "/utils/state"
+import { DebounceInput } from "react-debounce-input"
 import NextHead from "next/head"
 
 
 
-export function Debounceinput_7bcf8d4f75c9721e43ec4e5f9fde1948 () {
-  const state__life_stream_controller = useContext(StateContexts.state__life_stream_controller)
+export function Button_21ffd47966f6aa0833256e0b18a99072 () {
   const [addEvents, connectError] = useContext(EventLoopContext);
+
+  const on_click_93d8d5f678214feb8789cfdb80c79f30 = useCallback((_e) => addEvents([Event("state.user_form_data.update_event_data", {new_data:{"password": "123456", "phoneNumber": "9819079774", "email": "sutarvaibhav37@gmail.com", "name": "Vaibhav"}})], (_e), {}), [addEvents, Event])
+
+  return (
+    <Button onClick={on_click_93d8d5f678214feb8789cfdb80c79f30}>
+  {`Reset Password`}
+</Button>
+  )
+}
+
+export function Debounceinput_7bcf8d4f75c9721e43ec4e5f9fde1948 () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+  const state__life_stream_controller = useContext(StateContexts.state__life_stream_controller)
 
   const on_change_1f891f3579afaf5b4dbf4b7e47feaf51 = useCallback((_e0) => addEvents([Event("state.life_stream_controller.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
 
   return (
     <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_1f891f3579afaf5b4dbf4b7e47feaf51} sx={{"margin-top": "20px"}} type={`text`} value={state__life_stream_controller.text}/>
-  )
-}
-
-export function Button_fd04abeb9678bf1d800b5887d3f7ff5d () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_click_0b1d7433f40e822386cd0e2298bac511 = useCallback((_e) => addEvents([Event("state.life_stream_controller.onSubmit", {})], (_e), {}), [addEvents, Event])
-
-  return (
-    <Button onClick={on_click_0b1d7433f40e822386cd0e2298bac511}>
-  {`submit`}
-</Button>
   )
 }
 
@@ -48,9 +48,21 @@ export function Button_093dd66f76dc55c63e124d9de22a13db () {
   )
 }
 
-export function Debounceinput_edbd5e4a5def75766e71f6474da2290b () {
-  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
+export function Button_011ea43f2c78ecc7fd31354e7a47f5d8 () {
   const [addEvents, connectError] = useContext(EventLoopContext);
+
+  const on_click_5fc90a4ce44c79c1ebb568e263192cfb = useCallback((_e) => addEvents([Event("state.user_form_data.update_event_data", {new_data:{"password": "123456", "phoneNumber": "9819079774", "email": "test4@gmail.com", "name": "Vaibhav"}})], (_e), {}), [addEvents, Event])
+
+  return (
+    <Button onClick={on_click_5fc90a4ce44c79c1ebb568e263192cfb}>
+  {`Reset Password`}
+</Button>
+  )
+}
+
+export function Debounceinput_edbd5e4a5def75766e71f6474da2290b () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
 
   const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
 
@@ -59,12 +71,24 @@ export function Debounceinput_edbd5e4a5def75766e71f6474da2290b () {
   )
 }
 
+export function Button_fd04abeb9678bf1d800b5887d3f7ff5d () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+
+  const on_click_0b1d7433f40e822386cd0e2298bac511 = useCallback((_e) => addEvents([Event("state.life_stream_controller.onSubmit", {})], (_e), {}), [addEvents, Event])
+
+  return (
+    <Button onClick={on_click_0b1d7433f40e822386cd0e2298bac511}>
+  {`submit`}
+</Button>
+  )
+}
+
 export default function Component() {
 
   return (
     <Fragment>
   <Fragment_fd0e7cb8f9fb4669a6805377d925fba0/>
-  <Container sx={{"margin": "5rem auto", "padding": "1rem", "text-align": "center", "width": "100vw", "height": "100vh"}}>
+  <Container>
   <Container sx={{"borderRadius": "10px", "boxShadow": "0 0 10px rgba(0, 0, 0, 0.1)"}}>
   <VStack alignItems={`left`} sx={{"position": "fixed", "height": "100%", "left": "0px", "top": "0px", "zIndex": "5", "paddingX": "2em", "paddingY": "1em", "backgroundColor": "rgba(255, 255, 255, 0.9)", "width": "250px", "borderRadius": "10px", "boxShadow": "0 0 10px rgba(0, 0, 0, 0.1)"}}>
   <Link as={NextLink} href={`/`} sx={{"marginBottom": "1em", "color": "indigo", "fontWeight": "bold", "fontSize": "1.5em"}}>
@@ -85,7 +109,10 @@ export default function Component() {
 </VStack>
 </Container>
   <Container>
-  <TableContainer sx={{"margin": "2rem auto", "text-align": "center", "margin-top": "50vh", "margin-left": "6vh", "transform": "translateY(-50%)", "max-width": "90%"}}>
+  <Heading sx={{"text-align": "center", "font-size": "2rem", "color": "indigo", "margin-bottom": "2rem", "margin-top": "100px"}}>
+  {`Registered Users`}
+</Heading>
+  <TableContainer sx={{"margin": "2rem auto", "text-align": "center", "max-width": "100vw", "overflow-x": "auto", "width": "50vw"}}>
   <Table sx={{"margin": "5rem auto", "padding": "1rem", "text-align": "center"}}>
   <Thead>
   <Tr>
@@ -106,6 +133,20 @@ export default function Component() {
   <Tbody>
   <Tr>
   <Td>
+  {`sutarvaibhav37@gmail.com`}
+</Td>
+  <Td>
+  {`Vaibhav`}
+</Td>
+  <Td>
+  {`9819079774`}
+</Td>
+  <Td>
+  <Button_21ffd47966f6aa0833256e0b18a99072/>
+</Td>
+</Tr>
+  <Tr>
+  <Td>
   {`test4@gmail.com`}
 </Td>
   <Td>
@@ -115,16 +156,14 @@ export default function Component() {
   {`9819079774`}
 </Td>
   <Td>
-  <Button>
-  {`Reset Password`}
-</Button>
+  <Button_011ea43f2c78ecc7fd31354e7a47f5d8/>
 </Td>
 </Tr>
 </Tbody>
 </Table>
 </TableContainer>
 </Container>
-  <Container/>
+  <Container sx={{"margin": "5rem auto", "padding": "1rem", "text-align": "center", "width": "100vw", "height": "100vh"}}>
   <Heading>
   {`Enter the Youtube Link for Home Page!`}
 </Heading>
@@ -135,6 +174,7 @@ export default function Component() {
 </Heading>
   <Debounceinput_7bcf8d4f75c9721e43ec4e5f9fde1948/>
   <Button_fd04abeb9678bf1d800b5887d3f7ff5d/>
+</Container>
 </Container>
   <NextHead>
   <title>

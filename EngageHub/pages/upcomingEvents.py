@@ -25,8 +25,7 @@ def handle_Form_Submit(form_data):
     time = form_data.get("time")
     url = form_data.get("url")
 
-    
-   
+
     try:
             status = createUpcomingEvent(header,date,description,location,venue,redirect,link,time,url)
             if status  == True:

@@ -3,7 +3,7 @@
 
 import { Fragment } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Image as ChakraImage, Link, List, SimpleGrid, Spacer, Text, VStack } from "@chakra-ui/react"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Card, CardBody, Container, Flex, Heading, HStack, Image as ChakraImage, Link, List, SimpleGrid, Spacer, Text, VStack } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
 import dynamic from "next/dynamic"
@@ -74,7 +74,42 @@ export default function Component() {
 </Heading>
 </Flex>
   <Box>
-  <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}/>
+  <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}>
+  <Flex>
+  <Link as={NextLink} href={`/`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`}/>
+  <Heading>
+  {`Hackstomp`}
+</Heading>
+  <Text>
+  {`BORIVALI `}
+</Text>
+</Box>
+</CardBody>
+</Card>
+</Link>
+</Flex>
+  <Flex>
+  <Link as={NextLink} href={`/eventInfo/TantraUtsav/`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`}/>
+  <Heading>
+  {`TantraUtsav`}
+</Heading>
+  <Text>
+  {`borivali`}
+</Text>
+</Box>
+</CardBody>
+</Card>
+</Link>
+</Flex>
+</SimpleGrid>
 </Box>
   <Spacer/>
 </Flex>

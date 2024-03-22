@@ -64,7 +64,7 @@ export default function Component() {
 </HStack>
 </Box>
   <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
+  <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
   <Container sx={{"display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem"}}>
   <Heading sx={{"color": "black", "font-size": "2rem", "margin-bottom": "0.5rem"}}>
   {`TantraUtsav`}
@@ -76,13 +76,13 @@ export default function Component() {
 </Container>
   <Container sx={{"margin-top": "0.5rem"}}>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Date: 2024-03-22`}
+  {`Date: 2024-03-29`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Time: 10:16`}
+  {`Time: 23:34`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Location: Kandivali, Vasai`}
+  {`Location: Auditorium, borivali`}
 </Text>
 </Container>
   <VStack>

@@ -45,6 +45,7 @@ export function Fragment_fd0e7cb8f9fb4669a6805377d925fba0 () {
 }
 
 export function Box_367958c0d2626cdf5b619f9bf794a5b3 () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
   
     const handleSubmit_158b22f76ba0dcc4d61b38dab63a8d26 = useCallback((ev) => {
         const $form = ev.target
@@ -58,7 +59,6 @@ export function Box_367958c0d2626cdf5b619f9bf794a5b3 () {
         }
     })
     
-  const [addEvents, connectError] = useContext(EventLoopContext);
 
 
   return (
@@ -67,6 +67,39 @@ export function Box_367958c0d2626cdf5b619f9bf794a5b3 () {
   <Input name={`name`} placeholder={`Name`} sx={{"width": "100%"}} type={`text`}/>
   <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
   <Input name={`header`} type={`hidden`} value={`TantraUtsav`}/>
+  <Input name={`pid_number`} placeholder={`Enter PID`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Input name={`ph_number`} placeholder={`Enter your Phone Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
+  <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
+  {`Register`}
+</Button>
+</VStack>
+</Box>
+  )
+}
+
+export function Box_3c09d9bc87a2ee680971069a8a51644b () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+  
+    const handleSubmit_158b22f76ba0dcc4d61b38dab63a8d26 = useCallback((ev) => {
+        const $form = ev.target
+        ev.preventDefault()
+        const form_data = {...Object.fromEntries(new FormData($form).entries()), ...{}}
+
+        addEvents([Event("state.register_event_data.handle_submit", {form_data:form_data})])
+
+        if (true) {
+            $form.reset()
+        }
+    })
+    
+
+
+  return (
+    <Box as={`form`} onSubmit={handleSubmit_158b22f76ba0dcc4d61b38dab63a8d26} sx={{"padding": "2em", "width": "500px", "margin-top": "3em"}}>
+  <VStack>
+  <Input name={`name`} placeholder={`Name`} sx={{"width": "100%"}} type={`text`}/>
+  <Input name={`email`} placeholder={`Enter your email`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`email`}/>
+  <Input name={`header`} type={`hidden`} value={`Hackstomp`}/>
   <Input name={`pid_number`} placeholder={`Enter PID`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
   <Input name={`ph_number`} placeholder={`Enter your Phone Number`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`number`}/>
   <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>

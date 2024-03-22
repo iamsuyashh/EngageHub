@@ -23,11 +23,8 @@ def admin_page():
     return rx.container(
          sidebar(),
          users_info(),  # Pass users_data to the usersinfo component
-
      # This is the home page youtube link 
         rx.container(
-            
-        ),
         rx.heading("Enter the Youtube Link for Home Page!"),
          rx.input(
              value=TextfieldControlled.text,
@@ -44,4 +41,5 @@ def admin_page():
          rx.button("submit", on_click=LifeStreamController.onSubmit),
         style={"margin": "5rem auto", "padding": "1rem", "text-align": "center","width":"100vw","height":"100vh"}  # Pass users_data to the usersinfo component
 
+    )
     )

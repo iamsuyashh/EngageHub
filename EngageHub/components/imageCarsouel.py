@@ -1,14 +1,8 @@
 import reflex as rx
-
+from ..State.firebaseConfig import add_images,fetch_images
 class CarouselState(rx.State):
     current_image_index: int = 0
-    images: list[str] = [
-        'https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg',
-        'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-        '../../assets/event.jpeg',
-        # ... add more images as required
-    ]
-
+    images: list[str] = fetch_images()
     def next_image(self):
         if self.current_image_index < len(self.images) - 1:
             self.current_image_index += 1
