@@ -65,7 +65,7 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <ReactPlayer controls={false} height={`60vh`} url={`https://www.youtube.com/live/x7JMGS0u8Do?feature=shared`} width={`100%`}/>
+  <ReactPlayer controls={false} height={`60vh`} url={`https://youtu.be/hvVGFVUadvA?feature=shared`} width={`100%`}/>
   <VStack sx={{"margin": "10", "height": "100vh"}}>
   <Flex direction={`column`}>
   <Flex>
@@ -76,11 +76,19 @@ export default function Component() {
   <Box>
   <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}>
   <Flex>
+<<<<<<< HEAD
   <Link as={NextLink} href={`//Hackstomp`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
   <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`}/>
+=======
+  <Link as={NextLink} href={`/eventInfo/hackstomp/`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://i.ibb.co/7RLzM8k/mosiac.jpg`}/>
+>>>>>>> f2170d7d345a16fd9a2765d325e65eb2f2ebdb10
   <Heading>
   {`Hackstomp`}
 </Heading>
@@ -93,16 +101,28 @@ export default function Component() {
 </Link>
 </Flex>
   <Flex>
+<<<<<<< HEAD
   <Link as={NextLink} href={`//TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
   <ChakraImage src={`https://i.ibb.co/sR2jPYR/prolog.jpg`}/>
+=======
+  <Link as={NextLink} href={`/eventInfo/TantraUtsav/`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`}/>
+>>>>>>> f2170d7d345a16fd9a2765d325e65eb2f2ebdb10
   <Heading>
   {`TantraUtsav`}
 </Heading>
   <Text>
+<<<<<<< HEAD
   {`Vasai`}
+=======
+  {`borivali`}
+>>>>>>> f2170d7d345a16fd9a2765d325e65eb2f2ebdb10
 </Text>
 </Box>
 </CardBody>

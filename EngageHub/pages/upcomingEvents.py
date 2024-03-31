@@ -20,15 +20,14 @@ def handle_Form_Submit(form_data):
     description = form_data.get("description")
     location = form_data.get("location")
     venue = form_data.get("venue")
-    redirect = form_data.get("redirect")
+    # redirect = form_data.get("redirect")
     link = form_data.get("link")
     time = form_data.get("time")
     url = form_data.get("url")
 
-    
-   
+
     try:
-            status = createUpcomingEvent(header,date,description,location,venue,redirect,link,time,url)
+            status = createUpcomingEvent(header,date,description,location,venue,link,time,url)
             if status  == True:
                  rx.alert("success")
             # ClStorage.set_currentUser
@@ -102,13 +101,13 @@ def upcomingEvents():
                     margin_bottom="1em",
                     width = "100%"
                 ),
-                 rx.input(
-                    placeholder="Redirect URl",
-                    name="redirect",
-                    type_="text",
-                    style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
-                    width = "100%"),
+                #  rx.input(
+                #     placeholder="Redirect URl",
+                #     name="redirect",
+                #     type_="text",
+                #     style={"margin-bottom" : "1em"},
+                #     margin_bottom="1em",
+                #     width = "100%"),
                     rx.input(
                     placeholder="Link",
                     name="link",
@@ -123,5 +122,5 @@ def upcomingEvents():
             style={ "padding" : "2em", "width" : "500px", "margin-top" : "3em"}
         ),
    ),
-        style={"max-width": "100vw"} 
+            style={"margin": "5rem auto", "padding": "1rem", "text-align": "center","width":"100vw","height":"100vh"}
     )

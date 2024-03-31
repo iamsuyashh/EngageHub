@@ -1,17 +1,16 @@
 /** @jsxImportSource @emotion/react */
 
 
-import { Fragment, useCallback, useContext } from "react"
+import { Fragment } from "react"
 import { Fragment_fd0e7cb8f9fb4669a6805377d925fba0 } from "/utils/stateful_components"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Image as ChakraImage, Input, Link, Text, VStack } from "@chakra-ui/react"
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Button, Container, Flex, Heading, HStack, Link, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 import "focus-visible/dist/focus-visible"
-import { EventLoopContext } from "/utils/context"
-import { Event, getRefValue, getRefValues, set_val } from "/utils/state"
 import NextHead from "next/head"
 
 
 
+<<<<<<< HEAD
 export function Box_acf2c4e2e8fef16816545212e653d189 () {
   
     const handleSubmit_17388008c9d876f4b3f6fa35cdde2ebd = useCallback((ev) => {
@@ -45,6 +44,8 @@ export function Box_acf2c4e2e8fef16816545212e653d189 () {
   )
 }
 
+=======
+>>>>>>> f2170d7d345a16fd9a2765d325e65eb2f2ebdb10
 export default function Component() {
 
   return (
@@ -98,16 +99,10 @@ export default function Component() {
 </HStack>
 </HStack>
 </Box>
-  <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
-  <Container sx={{"display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem"}}>
-  <Heading sx={{"color": "black", "font-size": "2rem", "margin-bottom": "0.5rem"}}>
-  {`Coloqium`}
-</Heading>
-  <Container sx={{"flex": "1", "margin-right": "2rem"}}>
-  <Text sx={{"margin-bottom": "0.2rem", "color": "black"}}>
-  {`a competion for project `}
+  <Text>
+  {`Loading...`}
 </Text>
+<<<<<<< HEAD
 </Container>
   <Container sx={{"margin-top": "0.5rem"}}>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
@@ -125,6 +120,8 @@ export default function Component() {
 </VStack>
 </Container>
 </Container>
+=======
+>>>>>>> f2170d7d345a16fd9a2765d325e65eb2f2ebdb10
   <Box sx={{"background-color": "indigo", "text-align": "center", "padding": "0rem"}}>
   <Container sx={{"padding": "1rem", "background-color": "indigo", "text-align": "center"}}>
   <Text sx={{"color": "white", "size": "sm", "mb": "2"}}>

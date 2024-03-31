@@ -1,6 +1,6 @@
 import reflex as rx
 from reflex.components import table_container
-from ..State.firebaseConfig import read_events,auth,updateEvent,delteEvent
+from ..State.firebaseConfig import read_events,auth,updateEvent,delteEvent,fetch_registered_users
 
 def send_password_reset(email):
     try:
@@ -25,6 +25,7 @@ class EventFormData1(rx.State):
     time:str =""
     url:str =""
     form_data: dict = {}
+    registerd_users: dict= {}
     # Add other relevant state variables here
     
     def update_event_data(self, new_data: dict):
@@ -38,9 +39,17 @@ class EventFormData1(rx.State):
         self.link = new_data.get("link", self.link)
         self.time = new_data.get("time", self.time)
         self.url = new_data.get("url", self.url)
+        # print("Users data : ",new_data.get("registered_users"))
+        regi_user = fetch_registered_users(self.header)
+        self.registerd_users = fetch_registered_users(self.header)
+        print("Users Registered : ",regi_user)
 
+        self.registered_users = new_data.get("registered_users")
         self.form_data = {**self.form_data, **new_data}
-        
+
+    def set_registered_users(self, users_data: list):
+        self.registered_users = users_data
+
     def handle_submit(self, form_data: dict):
         """Handle the form submit."""
         self.update_event_data(form_data)
@@ -90,9 +99,14 @@ def handle_Form_Submit(form_data):
 def adminEvents():
     def handle_edit_event_click(header):
         print(f"Edit Event clicked for: {header}")
-
+        
     users_data = read_events() or []
+    # user_dict = dict(users_data)
+    # user = user_dict.get("registered_users")
+
     print('Users Data: ',users_data)
+    # print('Users Data: ',users_data)
+
         # header = user.get("header",""),
     table_rows = [
     rx.chakra.tr(
@@ -119,7 +133,7 @@ def adminEvents():
                     on_change=EventFormData1.set_header,
                     width = "100%"
                 ),
-                rx.input(
+                rx.text_area(
                     placeholder="Event Description",
                     value=EventFormData1.description,
                     on_change=EventFormData1.set_description,
@@ -177,15 +191,15 @@ def adminEvents():
                     margin_bottom="1em",
                     width = "100%"
                 ),
-                 rx.input(
-                    placeholder="Redirect URl",
-                    value=EventFormData1.redirect,
-                    on_change=EventFormData1.set_redirect,
-                    name="redirect",
-                    type_="text",
-                    style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
-                    width = "100%"),
+                #  rx.input(
+                #     placeholder="Redirect URl",
+                #     value=EventFormData1.redirect,
+                #     on_change=EventFormData1.set_redirect,
+                #     name="redirect",
+                #     type_="text",
+                #     style={"margin-bottom" : "1em"},
+                #     margin_bottom="1em",
+                #     width = "100%"),
                     rx.input(
                     placeholder="Link",
                     value=EventFormData1.link,
@@ -203,10 +217,17 @@ def adminEvents():
                 style={"padding": "2em", "width": "500px"}
             )
         ),
-        colspan=4  # Merge all columns into one for the form
-    )
+        colspan=4  ,
+        # Merge all columns into one for the form
+    ),
+    rx.chakra.tr(
+        #  rx.chakra.td([user.get('name', {})]),
+        # rx.input(value=user.get("name","")),
+        # rx.chakra.td(user.get("date", "")),
+        # rx.chakra.td(rx.button("Edit Event", on_click=EventFormData1.update_event_data(user))),
+        # rx.chakra.td(rx.button("Delete Event", on_click=EventFormData1.handle_delete(user)))
+    ),
 ]
-
 
     return rx.container(
     table_container(
@@ -240,99 +261,3 @@ def adminEvents():
            
      }
 )
-
-
-'''
-
-rx.vstack(
-                rx.input(
-                    placeholder="Enter your Event Title",
-                    value=EventFormData1.header,
-                    name="header",
-                    type_="text",
-                    style={"margin-bottom" : "1em"},
-                    # margin_bottom="1em",
-                    on_change=EventFormData1.set_header,
-                    width = "100%"
-                ),
-                rx.input(
-                    placeholder="Event Description",
-                    value=EventFormData1.description,
-                    on_change=EventFormData1.set_description,
-                    name="description",
-                    type_="text",
-                    style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
-                    width = "100%"
-                ),
-                rx.input(
-                    placeholder="Address",
-                     value=EventFormData1.location,
-                    on_change=EventFormData1.set_location,
-                    name="location",
-                    type_="text",
-                    style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
-                    width = "100%"),
-                rx.input(
-                    placeholder="Venue",
-                    value=EventFormData1.venue,
-                    on_change=EventFormData1.set_venue,
-                    name="venue",
-                    type_="text",
-                    style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
-                    width = "100%"),
-                rx.input(
-                    placeholder="Date",
-                    value=EventFormData1.date,
-                    on_change=EventFormData1.set_date,
-                    name="date",
-                    type_="date",
-                    style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
-                    width = "100%"
-                ),
-                rx.input(
-                    placeholder="Time",
-                    value=EventFormData1.time,
-                    on_change=EventFormData1.set_time,
-                    name="time",
-                    type_='time',
-                    style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
-                    width = "100%"
-                ),
-                rx.input(
-                    placeholder="Image link",
-                    value=EventFormData1.url,
-                    on_change=EventFormData1.set_url,
-                    name="url",
-                    type_="text",
-                    style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
-                    width = "100%"
-                ),
-                 rx.input(
-                    placeholder="Redirect URl",
-                    value=EventFormData1.redirect,
-                    on_change=EventFormData1.set_redirect,
-                    name="redirect",
-                    type_="text",
-                    style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
-                    width = "100%"),
-                    rx.input(
-                    placeholder="Link",
-                    value=EventFormData1.link,
-                    on_change=EventFormData1.set_link,
-                    name="link",
-                    type_="text",
-                    style={"margin-bottom" : "1em"},
-                    margin_bottom="1em",
-                    width = "100%"),
-                rx.button("Submit", type_="submit" , bg = "indigo" , color = "white",variant="outline" , margin_top = "5em" , style={"margin-top" : "3em"}),
-
-            ),
-
-'''

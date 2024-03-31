@@ -131,14 +131,14 @@ export default function Component() {
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
+  <ChakraImage src={`https://i.ibb.co/7RLzM8k/mosiac.jpg`}/>
   <Heading>
-  {`Coloqium`}
+  {`Hackstomp`}
 </Heading>
   <Text>
-  {`Malad`}
+  {`BORIVALI `}
 </Text>
-  <Link as={NextLink} href={`/`}>
+  <Link as={NextLink} href={`/eventInfo/hackstomp/`}>
   <Button>
   {`Read More`}
 </Button>
@@ -152,6 +152,7 @@ export default function Component() {
   <CardBody>
   <Box>
   <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`}/>
+<<<<<<< HEAD
   <Heading>
   {`Hackstomp`}
 </Heading>
@@ -172,13 +173,19 @@ export default function Component() {
   <CardBody>
   <Box>
   <ChakraImage src={`https://i.ibb.co/sR2jPYR/prolog.jpg`}/>
+=======
+>>>>>>> f2170d7d345a16fd9a2765d325e65eb2f2ebdb10
   <Heading>
   {`TantraUtsav`}
 </Heading>
   <Text>
-  {`Vasai`}
+  {`borivali`}
 </Text>
+<<<<<<< HEAD
   <Link as={NextLink} href={`/`}>
+=======
+  <Link as={NextLink} href={`/eventInfo/TantraUtsav/`}>
+>>>>>>> f2170d7d345a16fd9a2765d325e65eb2f2ebdb10
   <Button>
   {`Read More`}
 </Button>

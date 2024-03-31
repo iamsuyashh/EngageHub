@@ -64,7 +64,11 @@ export default function Component() {
 </HStack>
 </Box>
   <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
+<<<<<<< HEAD
   <ChakraImage src={`https://i.ibb.co/sR2jPYR/prolog.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
+=======
+  <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
+>>>>>>> f2170d7d345a16fd9a2765d325e65eb2f2ebdb10
   <Container sx={{"display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem"}}>
   <Heading sx={{"color": "black", "font-size": "2rem", "margin-bottom": "0.5rem"}}>
   {`TantraUtsav`}
@@ -76,6 +80,7 @@ export default function Component() {
 </Container>
   <Container sx={{"margin-top": "0.5rem"}}>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
+<<<<<<< HEAD
   {`Date: 2024-03-30`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
@@ -83,6 +88,15 @@ export default function Component() {
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
   {`Location: Auditorium, Vasai`}
+=======
+  {`Date: 2024-03-29`}
+</Text>
+  <Text sx={{"font-weight": "bold", "color": "black"}}>
+  {`Time: 23:34`}
+</Text>
+  <Text sx={{"font-weight": "bold", "color": "black"}}>
+  {`Location: Auditorium, borivali`}
+>>>>>>> f2170d7d345a16fd9a2765d325e65eb2f2ebdb10
 </Text>
 </Container>
   <VStack>

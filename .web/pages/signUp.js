@@ -12,8 +12,12 @@ import NextHead from "next/head"
 
 
 
+<<<<<<< HEAD
 export function Box_ca2d47a1d0abc6dbcb73bb5fe5231e10 () {
   const [addEvents, connectError] = useContext(EventLoopContext);
+=======
+export function Box_c9b8b273e6949d702c400154f1ef1fb4 () {
+>>>>>>> f2170d7d345a16fd9a2765d325e65eb2f2ebdb10
   
     const handleSubmit_46ff3d752207f946241948cb11da8bba = useCallback((ev) => {
         const $form = ev.target
@@ -38,7 +42,7 @@ export function Box_ca2d47a1d0abc6dbcb73bb5fe5231e10 () {
   <Input name={`password`} placeholder={`Enter Your Password`} sx={{"margin-bottom": "1em", "marginBottom": "1em", "width": "100%"}} type={`password`}/>
   <Container>
   <Button sx={{"margin-top": "3em", "bg": "indigo", "color": "white", "marginTop": "5em"}} type={`submit`} variant={`outline`}>
-  {`Login`}
+  {`Sign Up`}
 </Button>
 </Container>
 </VStack>
@@ -103,7 +107,11 @@ export default function Component() {
   {`Sign up`}
 </Heading>
   <VStack>
+<<<<<<< HEAD
   <Box_ca2d47a1d0abc6dbcb73bb5fe5231e10/>
+=======
+  <Box_c9b8b273e6949d702c400154f1ef1fb4/>
+>>>>>>> f2170d7d345a16fd9a2765d325e65eb2f2ebdb10
 </VStack>
 </Container>
   <NextHead>
