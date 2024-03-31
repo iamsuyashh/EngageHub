@@ -64,25 +64,25 @@ export default function Component() {
 </HStack>
 </Box>
   <Container sx={{"max-width": "100vw", "padding": "2rem", "display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem", "background-color": "#ffffff", "border": "1px solid #ddd", "border-radius": "10px", "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.1)"}}>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
+  <ChakraImage src={`https://i.ibb.co/sR2jPYR/prolog.jpg`} sx={{"object-fit": "cover", "border-radius": "10px", "position": "relative", "width": "100%", "height": "30vw"}}/>
   <Container sx={{"display": "flex", "flex-direction": "column", "align-items": "center", "gap": "1rem"}}>
   <Heading sx={{"color": "black", "font-size": "2rem", "margin-bottom": "0.5rem"}}>
   {`TantraUtsav`}
 </Heading>
   <Container sx={{"flex": "1", "margin-right": "2rem"}}>
   <Text sx={{"margin-bottom": "0.2rem", "color": "black"}}>
-  {`Technical Event`}
+  {`"TantraUtsav" is a technical event focused on exploring the intersection of technology with the ancient tradition of Tantra. It features keynote speeches, panel discussions, workshops, and demonstrations showcasing innovative applications of technology in spiritual practices, meditation, and holistic wellness. Participants have the opportunity to network with experts, engage in hands-on activities, and collaborate on projects aimed at leveraging technology for personal growth and spiritual awakening.`}
 </Text>
 </Container>
   <Container sx={{"margin-top": "0.5rem"}}>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Date: 2024-03-22`}
+  {`Date: 2024-03-30`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Time: 10:16`}
+  {`Time: 12:00`}
 </Text>
   <Text sx={{"font-weight": "bold", "color": "black"}}>
-  {`Location: Kandivali, Vasai`}
+  {`Location: Auditorium, Vasai`}
 </Text>
 </Container>
   <VStack>

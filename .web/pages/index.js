@@ -76,16 +76,33 @@ export default function Component() {
   <Box>
   <SimpleGrid columns={[3]} sx={{"height": "35vh", "width": "70vw", "rows": [2]}}>
   <Flex>
-  <Link as={NextLink} href={`//TestUpcomingEvent`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Link as={NextLink} href={`//Hackstomp`} sx={{"marginY": "1em", "marginX": "1em"}}>
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
-  <ChakraImage src={`https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg`}/>
+  <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`}/>
   <Heading>
-  {`TestUpcomingEvent`}
+  {`Hackstomp`}
 </Heading>
   <Text>
-  {`St.Francis `}
+  {`BORIVALI `}
+</Text>
+</Box>
+</CardBody>
+</Card>
+</Link>
+</Flex>
+  <Flex>
+  <Link as={NextLink} href={`//TantraUtsav`} sx={{"marginY": "1em", "marginX": "1em"}}>
+  <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
+  <CardBody>
+  <Box>
+  <ChakraImage src={`https://i.ibb.co/sR2jPYR/prolog.jpg`}/>
+  <Heading>
+  {`TantraUtsav`}
+</Heading>
+  <Text>
+  {`Vasai`}
 </Text>
 </Box>
 </CardBody>

@@ -13,6 +13,29 @@ import NextHead from "next/head"
 
 
 
+export function Button_fd04abeb9678bf1d800b5887d3f7ff5d () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+
+  const on_click_0b1d7433f40e822386cd0e2298bac511 = useCallback((_e) => addEvents([Event("state.life_stream_controller.onSubmit", {})], (_e), {}), [addEvents, Event])
+
+  return (
+    <Button onClick={on_click_0b1d7433f40e822386cd0e2298bac511}>
+  {`submit`}
+</Button>
+  )
+}
+
+export function Debounceinput_edbd5e4a5def75766e71f6474da2290b () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
+
+  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
+
+  return (
+    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} sx={{"margin-top": "20px"}} type={`text`} value={state__textfield_controlled.text}/>
+  )
+}
+
 export function Debounceinput_7bcf8d4f75c9721e43ec4e5f9fde1948 () {
   const [addEvents, connectError] = useContext(EventLoopContext);
   const state__life_stream_controller = useContext(StateContexts.state__life_stream_controller)
@@ -31,29 +54,6 @@ export function Button_093dd66f76dc55c63e124d9de22a13db () {
 
   return (
     <Button onClick={on_click_9cb60e42aaa64d2892f2dba50cc9f35a}>
-  {`submit`}
-</Button>
-  )
-}
-
-export function Debounceinput_edbd5e4a5def75766e71f6474da2290b () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
-  const state__textfield_controlled = useContext(StateContexts.state__textfield_controlled)
-
-  const on_change_e04f95d65ace8dfd4a46dbe2c433b3e6 = useCallback((_e0) => addEvents([Event("state.textfield_controlled.set_text", {value:_e0.target.value})], (_e0), {}), [addEvents, Event])
-
-  return (
-    <DebounceInput debounceTimeout={50} element={Input} onChange={on_change_e04f95d65ace8dfd4a46dbe2c433b3e6} sx={{"margin-top": "20px"}} type={`text`} value={state__textfield_controlled.text}/>
-  )
-}
-
-export function Button_fd04abeb9678bf1d800b5887d3f7ff5d () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_click_0b1d7433f40e822386cd0e2298bac511 = useCallback((_e) => addEvents([Event("state.life_stream_controller.onSubmit", {})], (_e), {}), [addEvents, Event])
-
-  return (
-    <Button onClick={on_click_0b1d7433f40e822386cd0e2298bac511}>
   {`submit`}
 </Button>
   )

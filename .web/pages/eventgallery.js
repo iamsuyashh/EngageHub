@@ -12,6 +12,18 @@ import NextHead from "next/head"
 
 
 
+export function Button_e65140ba91c51800240365f1c3f069dd () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
+
+  const on_click_ded72e95921a40fca507841609cd7a38 = useCallback((_e) => addEvents([Event("state.carousel_state.previous_image", {})], (_e), {}), [addEvents, Event])
+
+  return (
+    <Button onClick={on_click_ded72e95921a40fca507841609cd7a38} sx={{"position": "absolute", "left": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
+  {`<--`}
+</Button>
+  )
+}
+
 export function Image_10572dada479d5b718036c6ed1d3ba67 () {
   const state__carousel_state = useContext(StateContexts.state__carousel_state)
 
@@ -29,18 +41,6 @@ export function Button_5d4e77008a1b016ea27a78202f92ed58 () {
   return (
     <Button onClick={on_click_75e88266e59bd7fcf0de0ebf394b1812} sx={{"position": "absolute", "right": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
   {`-->`}
-</Button>
-  )
-}
-
-export function Button_e65140ba91c51800240365f1c3f069dd () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
-
-  const on_click_ded72e95921a40fca507841609cd7a38 = useCallback((_e) => addEvents([Event("state.carousel_state.previous_image", {})], (_e), {}), [addEvents, Event])
-
-  return (
-    <Button onClick={on_click_ded72e95921a40fca507841609cd7a38} sx={{"position": "absolute", "left": "10px", "top": "50%", "transform": "translateY(-50%)"}}>
-  {`<--`}
 </Button>
   )
 }
@@ -151,14 +151,14 @@ export default function Component() {
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
-  <ChakraImage src={`https://i.ibb.co/SBgYbZt/audience-1853662-640.jpg`}/>
+  <ChakraImage src={`https://i.ibb.co/LtXsngP/ielts.jpg`}/>
   <Heading>
-  {`TantraUtsav`}
+  {`Hackstomp`}
 </Heading>
   <Text>
-  {`Vasai`}
+  {`BORIVALI `}
 </Text>
-  <Link as={NextLink} href={`eventInfo/`}>
+  <Link as={NextLink} href={`/`}>
   <Button>
   {`Read More`}
 </Button>
@@ -171,12 +171,12 @@ export default function Component() {
   <Card size={`lg`} sx={{"height": "100%", "width": "100%", "drop-shadow": "1", "text-decoration": "none", "asChild": true}}>
   <CardBody>
   <Box>
-  <ChakraImage src={`https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_640.jpg`}/>
+  <ChakraImage src={`https://i.ibb.co/sR2jPYR/prolog.jpg`}/>
   <Heading>
-  {`TestUpcomingEvent`}
+  {`TantraUtsav`}
 </Heading>
   <Text>
-  {`St.Francis `}
+  {`Vasai`}
 </Text>
   <Link as={NextLink} href={`/`}>
   <Button>
